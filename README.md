@@ -5,6 +5,6 @@ Rep para la clase de Python
 2. Carolina Flores
 
 # Movies
-1.Ratattouille
-2.Parasite
-3.Interestellar
+1. Ratattouille
+2. Parasite
+3. Interestellar
