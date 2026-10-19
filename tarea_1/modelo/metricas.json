@@ -1,0 +1,51 @@
+{
+  "fecha_ejecucion": "2026-10-18",
+  "n_noticias": 376,
+  "n_test": 57,
+  "f1_macro_test": 0.8918,
+  "accuracy_test": 0.8947,
+  "zero_shot_f1_40": 0.6336,
+  "zero_shot_accuracy_40": 0.65,
+  "llm_f1_dataset": 0.8753,
+  "acuerdo_llm_humano": 18,
+  "modelo_llm": "Qwen2.5-1.5B-Instruct-GGUF-Q4_K_M",
+  "modelo_base": "distilbert/distilbert-base-multilingual-cased",
+  "comparativa": [
+    {
+      "enfoque": "Zero-shot BETO-XNLI",
+      "entrenamiento": "ninguno",
+      "entrada": "titular",
+      "accuracy": 0.7193,
+      "f1_macro": 0.7027,
+      "latencia_ms": 314.2681,
+      "tamaño_MB": 420
+    },
+    {
+      "enfoque": "LLM Qwen2.5-1.5B (supervisión débil)",
+      "entrenamiento": "ninguno (prompt)",
+      "entrada": "titular + bajada",
+      "accuracy": 0.8772,
+      "f1_macro": 0.8771,
+      "latencia_ms": 2810.7942,
+      "tamaño_MB": 1100
+    },
+    {
+      "enfoque": "DistilBERT fine-tuned (etiquetas LLM)",
+      "entrenamiento": "263 titulares",
+      "entrada": "titular",
+      "accuracy": 0.8246,
+      "f1_macro": 0.8057,
+      "latencia_ms": 28.6568,
+      "tamaño_MB": 540
+    },
+    {
+      "enfoque": "DistilBERT fine-tuned (sección)",
+      "entrenamiento": "263 titulares",
+      "entrada": "titular",
+      "accuracy": 0.8947,
+      "f1_macro": 0.8918,
+      "latencia_ms": 28.6568,
+      "tamaño_MB": 540
+    }
+  ]
+}
