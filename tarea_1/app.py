@@ -122,3 +122,53 @@ else:
     st.download_button("Descargar CSV con los filtros actuales", type="secondary",
                        data=tabla.to_csv(index=False).encode("utf-8-sig"),
                        file_name="noticias_filtradas.csv", mime="text/csv")
+
+# ------------------------------------------------------------------ probador en vivo
+@st.cache_resource(show_spinner="Cargando el modelo DistilBERT…")
+def cargar_clasificador():
+    from transformers import logging as hf_logging, pipeline  # import diferido: la página carga sin esperar a torch
+    hf_logging.disable_progress_bar()
+    return pipeline("text-classification", model=str(MODELO), top_k=None, device=-1)
+
+
+st.subheader("Probador en vivo")
+st.caption("Escribe o pega un titular nuevo y el modelo DistilBERT ajustado en la Parte 2 predice su categoría. "
+           "Solo conoce las 4 categorías, así que siempre elige una de ellas.")
+with st.form("probador"):
+    titular = st.text_area("Titular", placeholder="Ej.: Congreso aprueba nuevo retiro de fondos de AFP",
+                           max_chars=300, height=90)
+    enviado = st.form_submit_button("Clasificar titular", type="primary")
+
+if enviado:
+    texto = titular.strip()
+    if not texto:
+        st.warning("Escribe un titular para clasificarlo.")
+    elif not (MODELO / "model.safetensors").exists():
+        st.error("No se encontró `modelo/model.safetensors`: los pesos (541 MB) no se suben a GitHub. "
+                 "Ejecuta `02_clasificacion.ipynb` para generarlos (ver README).")
+    else:
+        salida = cargar_clasificador()(texto)
+        if salida and isinstance(salida[0], list):  # algunas versiones devuelven una lista por texto
+            salida = salida[0]
+        res = pd.DataFrame(salida).sort_values("score", ascending=False)
+        res["categoria"] = res["label"].map(NOMBRES)
+        res["probabilidad"] = res["score"] * 100
+        top = res.iloc[0]
+
+        c1, c2 = st.columns([1, 2])
+        c1.metric("Categoría predicha", top["categoria"])
+        c1.metric("Probabilidad", f"{top['score']:.1%}")
+        c2.dataframe(res[["categoria", "probabilidad"]], hide_index=True, width="stretch",
+                     column_config={
+                         "categoria": "Categoría",
+                         "probabilidad": st.column_config.ProgressColumn(
+                             "Probabilidad", format="%.1f%%", min_value=0, max_value=100),
+                     })
+        if top["score"] < 0.6:
+            st.info("Probabilidad baja: el titular podría mezclar temas de varias categorías "
+                    "o no pertenecer a ninguna de las 4.")
+
+st.divider()
+entrenamiento = next(c["entrenamiento"] for c in metricas["comparativa"] if c["enfoque"].endswith("(sección)"))
+st.caption(f"Datos: El Comercio (elcomercio.pe), descargados el 18/10/2026. Modelo: {metricas['modelo_base']} "
+           f"ajustado con {entrenamiento}. Tarea 1 – Diplomado de Python.")
