@@ -62,3 +62,14 @@ sel_medios = st.sidebar.multiselect("Medio", medios, default=medios)
 sel_categorias = st.sidebar.multiselect("Categoría", ETIQUETAS, default=ETIQUETAS, format_func=NOMBRES.get)
 filtrado = df[df["medio"].isin(sel_medios) & df["etiqueta"].isin(sel_categorias)]
 st.sidebar.caption(f"{len(filtrado)} de {len(df)} noticias con los filtros actuales.")
+
+# ------------------------------------------------------------------ indicadores
+zero_shot_test = next(c["f1_macro"] for c in metricas["comparativa"] if c["enfoque"].startswith("Zero-shot"))
+acuerdo = metricas["acuerdo_llm_humano"]
+c1, c2, c3 = st.columns(3)
+c1.metric("Noticias recolectadas", f"{len(df)}", delta=f"{len(filtrado)} con los filtros", delta_color="off")
+c2.metric("F1 macro en test (DistilBERT)", f"{metricas['f1_macro_test']:.2f}",
+          delta=f"{metricas['f1_macro_test'] - zero_shot_test:+.2f} vs. zero-shot en el mismo test",
+          help=f"Calculado sobre {metricas['n_test']} titulares de test reservados, nunca usados para entrenar.")
+c3.metric("Acuerdo LLM vs. auditoría humana", f"{acuerdo / 20:.0%}" if acuerdo is not None else "pendiente",
+          delta=f"{acuerdo}/20 casos revisados a ciegas" if acuerdo is not None else None, delta_color="off")
