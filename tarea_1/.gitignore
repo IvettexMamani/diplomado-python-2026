@@ -1,0 +1,14 @@
+# Pesos del modelo: GitHub rechaza archivos de más de 100 MB
+modelo/*.safetensors
+modelo/*.bin
+modelo/*.pt
+modelo/*.gguf
+modelo/checkpoint-*/
+modelo/runs/
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
