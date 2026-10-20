@@ -1,9 +1,5 @@
 # Tarea 2 – OCR, transcripción y extracción con LLM
 
-**Pregunta del proyecto:** _pendiente_
-
-**Respuesta corta:** _pendiente_
-
 ## Datos
 
 | | |
