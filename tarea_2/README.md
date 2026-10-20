@@ -10,21 +10,6 @@
 | Fuentes y licencias | `datos/fuentes.csv`: fuente, licencia y acceso de cada archivo |
 | Fecha de extracción | _pendiente_ |
 
-## Resultados
-
-| Modelo | CER | WER | Latencia en CPU |
-| :--- | :---: | :---: | :---: |
-| _pendiente_ | | | |
-
-## Hallazgos
-
-1. _pendiente_
-2. _pendiente_
-
-## Limitaciones
-
-1. _pendiente_
-2. _pendiente_
 
 ## Estructura
 
