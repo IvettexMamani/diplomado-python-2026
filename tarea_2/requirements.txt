@@ -1,0 +1,1 @@
+# Versiones exactas: se fijan al terminar la tarea (pip freeze) y se prueban en un entorno limpio

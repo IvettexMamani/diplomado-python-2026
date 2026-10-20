@@ -1,0 +1,32 @@
+# Originales pesados (escaneos, PDFs, audios completos): se guardan en datos/raw/ y no se suben
+datos/raw/
+
+# Audio y video sueltos; la muestra ligera y publicable va en datos/ejemplos/
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.opus
+*.mp4
+*.mkv
+*.webm
+!datos/ejemplos/**
+
+# Pesos del modelo: GitHub rechaza archivos de más de 100 MB
+modelos/*.safetensors
+modelos/*.bin
+modelos/*.pt
+modelos/*.pth
+modelos/*.gguf
+modelos/*.onnx
+modelos/checkpoint-*/
+modelos/runs/
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+
+# Credenciales (claves de API del LLM)
+.env
+.streamlit/secrets.toml
