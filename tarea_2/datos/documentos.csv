@@ -1,1 +1,866 @@
 id,archivo,tipo,fuente,texto_ocr,modelo_ocr,texto_referencia
+impreso1,datos/raw/documentos/impreso1.jpg,impreso,"SEACE, bases integradas AS N° 013-2024-INDECOPI-1 (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE. – BASES INTEGRADAS
+DEBER DE COLABORACIÓN
+La Entidad y todo proveedor que se someta a las presentes Bases, sea como participante, postor
+y/o contratista, deben conducir su actuación conforme a los principios previstos en la Ley de
+Contrataciones del Estado.
+En este contexto, se encuentran obligados a prestar su colaboración al OSCE y a la Secretaría
+Técnica de la Comisión de Defensa de la Libre Competencia del INDECOPI, en todo momento
+según corresponda a sus competencias, a fin de comunicar presuntos casos de fraude, colusión
+y corrupción por parte de los funcionarios y servidores de la Entidad, así como los proveedores y
+demás actores que participan en el proceso de contratación.
+De igual forma, deben poner en conocimiento del OSCE y a la Secretaría Técnica de la Comisión
+de Defensa de la Libre Competencia del INDECOPI los indicios de conductas anticompetitivas
+que se presenten durante el proceso de contratación, en los términos del Decreto Legislativo N°
+1034, ""Ley de Represión de Conductas Anticompetitivas"", o norma que la sustituya, así como las
+demás normas de la materia.
+La Entidad y todo proveedor que se someta a las presentes Bases, sea como participante, postor
+y/o contratista del proceso de contratación deben permitir al OSCE o a la Secretaría Técnica de
+la Comisión de Defensa de la Libre Competencia del INDECOPI el acceso a la información referida
+a las contrataciones del Estado que sea requerida, prestar testimonio o absolución de posiciones
+que se requieran, entre otras formas de colaboración.
+1","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+impreso2,datos/raw/documentos/impreso2.jpg,impreso,"SEACE, bases integradas AS N° 013-2024-INDECOPI-1 (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE. – BASES INTEGRADAS
+CAPÍTULO I
+ETAPAS DEL PROCEDIMIENTO DE SELECCIÓN
+1-1-
+REFERENCIAS
+Cuando en el presente documento se mencione la palabra Ley, se entiende que se está
+haciendo referencia a la Ley N° 30225, Ley de Contrataciones del Estado, y cuando se
+mencione la palabra Reglamento, se entiende que se está haciendo referencia al Reglamento
+de la Ley de Contrataciones del Estado aprobado por Decreto Supremo N° 344-2018-EF.
+Las referidas normas incluyen sus respectivas modificaciones, de ser el caso.
+1.2.
+CONVOCATORIA
+Se realiza a través de su publicación en el SEACE de conformidad con lo señalado en el artículo
+54 del Reglamento, en la fecha señalada en el calendario del procedimiento de selección,
+debiendo adjuntar las bases y resumen ejecutivo.
+1.3.REGISTRO DE PARTICIPANTES
+El registro de participantes se realiza conforme al artículo 55 del Reglamento. En el caso de un
+consorcio, basta que se registre uno (1) de sus integrantes.
+Importante
+2. Para registrarse como participante en un procedimiento de selección convocado por las
+Entidades del Estado Peruano, es necesario que los proveedores cuenten con inscripción
+vigente y estar habilitados ante el Registro Nacional de Proveedores (RNP) que administra el
+Organismo Supervisor de las Contrataciones del Estado (OSCE). Para obtener mayor
+información, se puede ingresar a la siguiente dirección electrónica: www.rnp.gob.pe.
+3. Los proveedores que deseen registrar su participación deben ingresar al SEACE utilizando su
+Certificado SEACE (usuario y contraseña). Asimismo, deben observar las instrucciones
+señaladas en el documento de orientación “Guía para el registro de participantes electrónico”
+publicado en https://www2.seace.gob.pe/.
+4. En caso los proveedores no cuenten con inscripción vigente en el RNP y/o se encuentren
+inhabilitados o suspendidos para ser participantes, postores y/o contratistas, el SEACE
+restringirá su registro, quedando a potestad de estos intentar nuevamente registrar su
+participación en el procedimiento de selección en cualquier otro momento, dentro del plazo
+establecido para dicha etapa, siempre que haya obtenido la vigencia de su inscripción o
+quedado sin efecto la sanción que le impuso el Tribunal de Contrataciones del Estado.
+1.4. FORMULACIÓN DE CONSULTAS Y OBSERVACIONES A LAS BASES
+La formulación de consultas y observaciones a las bases se efectúa de conformidad con lo
+establecido en los numerales 72.1 y 72.2 del artículo 72 del Reglamento, así como el literal a)
+del artículo 89 del Reglamento.
+Importante
+No pueden formularse consultas ni observaciones respecto del contenido de una ficha de
+homologación aprobada. Las consultas y observaciones que se formulen sobre el particular, se
+tienen como no presentadas.","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+impreso3,datos/raw/documentos/impreso3.jpg,impreso,"SEACE, bases integradas AS N° 013-2024-INDECOPI-1 (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD INTELECTUAL-
+INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE– BASES INTEGRADAS
+CAPÍTULO III
+DEL CONTRATO
+3.1. PERFECCIONAMIENTO DEL CONTRATO
+Los plazos y el procedimiento para perfeccionar el contrato se realizan conforme a lo indicado en
+el artículo 141 del Reglamento.
+El contrato se perfecciona con la suscripción del documento que lo contiene, salvo en los contratos
+cuyo monto del valor estimado no supere los doscientos mil Soles (S/ 200,000.00), en los que se
+puede perfeccionar con la recepción de la orden de servicios, conforme a lo previsto en la sección
+específica de las bases.
+En el caso de procedimientos de selección por relación de ítems, se puede perfeccionar el contrato
+con la suscripción del documento o con la recepción de una orden de servicios, cuando el valor
+estimado del ítem corresponda al parámetro establecido en el párrafo anterior.
+Importante
+El órgano encargado de las contrataciones o el comité de selección, según corresponda, debe
+consignar en la sección específica de las bases la forma en que se perfeccionará el contrato, sea
+con la suscripción del contrato o la recepción de la orden de servicios. En caso la Entidad
+perfeccione el contrato con la recepción de la orden de servicios no debe incluir la proforma del
+contrato establecida en el Capítulo V de la sección específica de las bases.
+Para perfeccionar el contrato, el postor ganador de la buena pro debe presentar los documentos
+señalados en el artículo 139 del Reglamento y los previstos en la sección específica de las bases.
+3.2 GARANTÍAS
+Las garantías que deben otorgar los postores y/o contratistas, según corresponda, son las de fiel
+cumplimiento del contrato y por los adelantos.
+3.2.1 GARANTÍA DE FIEL CUMPLIMIENTO
+Como requisito indispensable para perfeccionar el contrato, el postor ganador debe
+entregar a la Entidad la garantía de fiel cumplimiento del mismo por una suma equivalente
+al diez por ciento (10%) del monto del contrato original. Esta se mantiene vigente hasta la
+conformidad de la recepción de la prestación a cargo del contratista.
+3.2.2
+GARANTÍA DE FIEL CUMPLIMIENTO POR PRESTACIONES ACCESORIAS
+En las contrataciones que conllevan la ejecución de prestaciones accesorias, tales como
+mantenimiento, reparación o actividades afines, se otorga una garantía adicional por una
+suma equivalente al diez por ciento (10%) del monto del contrato de la prestación
+accesoria, la misma que debe ser renovada periódicamente hasta el cumplimiento total de
+las obligaciones garantizadas.
+Importante","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+impreso4,datos/raw/documentos/impreso4.jpg,impreso,"SEACE, bases integradas AS N° 013-2024-INDECOPI-1 (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD INTELECTUAL-
+INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE– BASES INTEGRADAS
+1.8. PLAZO DE PRESTACIÓN DEL SERVICIO
+El plazo del servicio será de trescientos sesenta y cinco (365) días calendarios equivalentes a
+doce (12) meses, contados a partir de la renovación de las licencias.
+1.9. COSTO DE REPRODUCCIÓN Y ENTREGA DE BASES
+Los participantes registrados tienen el derecho de recabar un ejemplar de las bases, para cuyo
+efecto deben cancelar S/ 5.00 (cinco con 00/100 Soles) en la Caja del Indecopi. El ejemplar de
+las bases se entregará en Av. Del Aire Nº 384 – San Borja.
+1.10. BASE LEGAL
+1. Decreto Legislativo N° 1440, Decreto Legislativo del Sistema Nacional de Presupuesto Público
+2. Ley N° 31953, Ley de Presupuesto del Sector Público para el Año Fiscal 2024
+3. Ley N° 31954, Ley de Equilibrio Financiero del Presupuesto del Sector Público para el Año Fiscal
+2024
+4. Ley Nº 31955, Ley de Endeudamiento del Sector Público para el Año Fiscal 2024
+5.
+Texto Único Ordenado de la Ley Nº 30225, Ley de Contrataciones del Estado aprobado mediante
+Decreto Supremo N° 082-2019-EF.
+6.
+Decreto Supremo N° 344-2018-EF, Reglamento de la Ley N° 30225, Ley de Contrataciones del
+Estado, modificado por los Decretos Supremos N° 377-2019-EF, N° 168-2020-EF, N° 250-2020-
+EF, N° 162-2021-EF y N° 234-2022-EF.
+7. Decreto Supremo Nº 004-2019-JUS, que aprueba el Texto Único Ordenado de la Ley Nº 27444,
+Ley del Procedimiento Administrativo General.
+8. Decreto Supremo N° 021-2019-JUS, que aprueba el Texto Único Ordenado de la Ley N° 27806,
+Ley de Transparencia y de Acceso a la Información Pública.
+9. Código Civil.
+10. Directivas del OSCE.
+11. Texto Único Ordenado de la Ley de Impulso al Desarrollo Productivo y al Crecimiento Empresarial,
+aprobado por el Decreto Supremo Nº 013-2013-PRODUCE.
+12. Cualquier otra disposición legal vigente que permita desarrollar el objeto de la convocatoria, que no
+contravenga lo regulado por la Ley de Contrataciones del Estado y su Reglamento
+Las referidas normas incluyen sus respectivas modificaciones, de ser el caso.
+15","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+impreso5,datos/raw/documentos/impreso5.jpg,impreso,"SEACE, bases integradas AS N° 013-2024-INDECOPI-1 (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE. – BASES INTEGRADAS
+CAPÍTULO II
+DEL PROCEDIMIENTO DE SELECCIÓN
+2.1. CALENDARIO DEL PROCEDIMIENTO DE SELECCIÓN
+Según el cronograma de la ficha de selección de la convocatoria publicada en el SEACE.
+Importante
+De conformidad con la vigesimosegunda Disposición Complementaria Final del Reglamento, en
+caso la Entidad (Ministerios y sus organismos públicos, programas o proyectos adscritos) haya
+difundido el requerimiento a través del SEACE siguiendo el procedimiento establecido en dicha
+disposición, no procede formular consultas u observaciones al requerimiento.
+2.2. CONTENIDO DE LAS OFERTAS
+La oferta contendrá, además de un índice de documentos3, la siguiente documentación:
+2.2.1. Documentación de presentación obligatoria
+2.2.1.1. Documentos para la admisión de la oferta
+a) Declaración jurada de datos del postor. (Anexo N° 1)
+b) Documento que acredite la representación de quien suscribe la oferta no se exige su
+presentación, por lo que será verificado en la Plataforma de Interoperabilidad del
+Estado – PIDE, conforme a la disposición indicada en el cuadro de advertencia
+siguiente:
+Advertencia
+De acuerdo con el artículo 4 del Decreto Legislativo N° 1246, las Entidades están
+prohibidas de exigir a los administrados o usuarios la información que puedan
+obtener directamente mediante la interoperabilidad a que se refieren los artículos 2
+y 3 de dicho Decreto Legislativo. En esa medida, si la Entidad es usuaria de la
+Plataforma de Interoperabilidad del Estado – PIDE⁴ y siempre que el servicio web
+se encuentre activo en el Catálogo de Servicios de dicha plataforma, no
+corresponderá exigir el certificado de vigencia de poder y/o documento nacional de
+identidad.
+En caso de persona jurídica, copia del certificado de vigencia de poder del
+representante legal, apoderado o mandatario designado para tal efecto.
+En caso de persona natural, copia del documento nacional de identidad o
+documento análogo, o del certificado de vigencia de poder otorgado por persona
+natural, del apoderado o mandatario, según corresponda.
+En el caso de consorcios, este documento debe ser presentado por cada uno de
+los integrantes del consorcio que suscriba la promesa de consorcio, según
+corresponda.
+3
+La omisión del índice no determina la no admisión de la oferta.
+4
+Para mayor información de las Entidades usuarias y del Catálogo de Servicios de la Plataforma de Interoperabilidad del
+Estado - PIDE ingresar al siguiente enlace https://www.gobiemodigital.gob.pe/interoperabilidad/
+16","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+impreso6,datos/raw/documentos/impreso6.jpg,impreso,"SEACE, bases integradas AS N° 013-2024-INDECOPI-1 (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE. – BASES INTEGRADAS
+TÉRMINOS DE REFERENCIA
+En atención a lo señalado la Dirección requiere renovar el servicio de soporte y
+mantenimiento del software Open Text EnCase Forensic, tanto para la extracción en el
+momento de la supervisión como para el procesamiento de la evidencia en el laboratorio
+forense.
+OBJETIVOS DE LA CONTRATACIÓN
+4.1. OBJETIVO GENERAL
+Fortalecer la capacidad operativa de la Dirección Nacional de Investigación y
+Promoción de la Libre Competencia para llevar a cabo investigaciones efectivas sobre
+conductas anticompetitivas en el mercado, mediante el uso de herramientas forenses
+especializadas para la extracción, procesamiento y análisis forense de evidencia digital
+recabadas durante visitas de inspección.
+4.2.
+OBJETIVO ESPECÍFICO
+Fortalecer la capacidad operativa de la Dirección Nacional de Investigación y
+Promoción de la Libre Competencia.
+Llevar a cabo investigaciones efectivas sobre conductas anticompetitivas en el
+mercado.
+Usar herramientas forenses especializadas para la extracción, procesamiento y
+análisis de evidencia digital.
+5. ALCANCES Y DESCRIPCIÓN DEL SERVICIO A CONTRATAR
+5.1. ACTIVIDADES
+El proveedor coordinara con la Dirección Nacional de Investigación y Promoción de la
+Libre Competencia - DLC solicitando los números de serie de las licencias para realizar
+la activación, al correo activosinformaticos@indecopi.gob.pe y st-clc@indecopi.gob.pe
+al día hábil siguiente de suscrito el contrato.
+5.2. CARACTERÍSTICAS Y CONDICIONES
+Servicio
+Periodo de vigencia del
+Cantidad
+servicio
+SERVICIO
+DE
+SOPORTE
+MANTENIMIENTO DE SOFTWARE
+El periodo del servicio es por
+OPEN TEXT ENCASE FORENSIC
+trecientos sesenta y cinco (365)
+2
+PARA
+LA
+EXTRACCIÓN,
+días calendario, contados a partir
+PROCESAMIENTO Y ANÁLISIS DE
+de la renovación de las licencias.
+INFORMACIÓN O EQUIVALENTE
+Condiciones: Durante el periodo contratado, el Indecopi tendrá derecho a lo siguiente
+(sin costo adicional).
+Actualizaciones del software (updates o fixes), nuevas versiones del software
+(upgrades), versiones previas (downgrades), las cuales podrán ser descargadas
+desde el portal del fabricante o contratista.
+Soporte vía telefónica o correo electrónico.
+Página 2 de 9
+22","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+impreso7,datos/raw/documentos/impreso7.jpg,impreso,"SEACE, bases integradas AS N° 013-2024-INDECOPI-1 (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE. – BASES INTEGRADAS
+CAPÍTULO IV
+FACTORES DE EVALUACIÓN
+La evaluación se realiza sobre la base de cien (1oo) puntos.
+Para determinar la oferta con el mejor puntaje y el orden de prelación de las ofertas, se considera
+lo siguiente:
+PUNTAJE / METODOLOGÍA PARA SU
+FACTOR DE EVALUACIÓN
+ASIGNACIÓN
+A.PRECIO
+Evaluación:
+La evaluación consistirá en otorgar el
+máximo puntaje a la oferta de precio más
+Se evaluará considerando el precio ofertado por el postor.
+bajo y otorgar a las demás ofertas puntajes
+inversamenteproporcionalesasus
+Acreditación:
+respectivos precios, según la siguiente
+fórmula:
+Se acreditará mediante el documento que contiene el precio
+de la oferta (Anexo Nº 6).
+Pi
+Om x PMP
+oi
+i= Oferta
+Pi= Puntaje de la oferta a evaluar
+Oi=Precio i
+Om= Precio de la oferta más baja
+PMP=Puntaje máximo del precio
+100 puntos
+Importante
+Los factores de evaluación elaborados por el órgano encargado de las contrataciones o el comité de
+selección, según corresponda, son objetivos y guardan vinculación, razonabilidad y proporcionalidad con
+el objeto de la contratación. Asimismo, estos no pueden calificar con puntaje el cumplimiento de los
+Términos de Referencia ni los requisitos de calificación.
+32","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+impreso8,datos/raw/documentos/impreso8.jpg,impreso,"SEACE, bases integradas AS N° 013-2024-INDECOPI-1 (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL-INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE. – BASES INTEGRADAS
+Donde:
+F = 0.25 para plazos mayores a sesenta (60) días o;
+F = 0.40 para plazos menores o iguales a sesenta (60) días.
+El retraso se justifica a través de la solicitud de ampliación de plazo debidamente aprobado.
+Adicionalmente, se considera justificado el retraso y en consecuencia no se aplica penalidad,
+cuando EL CONTRATISTA acredite, de modo objetivamente sustentado, que el mayor tiempo
+transcurrido no le resulta imputable. En este último caso la calificación del retraso como justificado
+por parte de EL INDECoPI no da lugar al pago de gastos generales ni costos directos de ningún
+tipo, conforme el numeral 162.5 del artículo 162 del Reglamento de la Ley de Contrataciones del
+Estado.
+Importante
+De haberse previsto establecer penalidades distintas a la penalidad por mora, incluir dichas
+penalidades, los supuestos de aplicación de penalidad, la forma de cálculo de la penalidad para cada
+supuesto y el procedimiento mediante el cual se verifica el supuesto a penalizar, conforme el artículo
+163 del Reglamento de la Ley de Contrataciones del Estado.
+OTRAS PENALIDADES
+Nº
+Procedimiento de
+Supuestos de penalidad
+Penalidad por aplicar
+verificación
+1% de la UIT vigente
+Demora en la presentación
+A través del Informe
+7
+por cada día de
+del entregable
+retraso
+emitido por la DLC.
+Estas penalidades se deducen de los pagos a cuenta o del pago final, según corresponda; o si
+fuera necesario, se cobra del monto resultante de la ejecución de la garantía de fiel cumplimiento.
+Estos dos (2) tipos de penalidades pueden alcanzar cada una un monto máximo equivalente al diez
+por ciento (10%) del monto del contrato vigente, o de ser el caso, del ítem que debió ejecutarse.
+Cuando se llegue a cubrir el monto máximo de la penalidad por mora o el monto máximo para otras
+penalidades, de ser el caso, EL INDECOPI puede resolver el contrato por incumplimiento.
+CLÁUSULA DÉCIMA TERCERA: RESOLUCIÓN DEL CONTRATO
+Cualquiera de las partes puede resolver el contrato, de conformidad con el numeral 32.3 del artículo
+32 y artículo 36 de la Ley de Contrataciones del Estado, y el artículo 164 de su Reglamento. De
+darse el caso, EL INDEcoPI procederá de acuerdo con lo establecido en el artículo 165 del
+Reglamento de la Ley de Contrataciones del Estado.
+CLÁUSULA DÉCIMA CUARTA: RESPONSABILIDAD DE LAS PARTES
+Cuando se resuelva el contrato por causas imputables a algunas de las partes, se debe resarcir los
+daños y perjuicios ocasionados, a través de la indemnización correspondiente. Ello no obsta la
+aplicación de las sanciones administrativas, penales y pecuniarias a que dicho incumplimiento diere
+lugar, en el caso que éstas correspondan.
+Lo señalado precedentemente no exime a ninguna de las partes del cumplimiento de las demás
+obligaciones previstas en el presente contrato.
+CLÁUSULA DÉCIMA QUINTA: ANTICORRUPCIÓN
+EL CONTRATIsTA declara y garantiza no haber, directa o indirectamente, o tratándose de una
+persona jurídica a través de sus socios, integrantes de los órganos de administración, apoderados,
+representantes legales, funcionarios, asesores o personas vinculadas a las que se refiere el artículo
+36","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+foto1,datos/raw/documentos/foto1.jpg,foto,"Foto propia de la Directiva N° 002-2024-GR/GOB.REG.TACNA (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","t00
+REGION
+TACNA
+DISPOSICIONES Y PROCEDIMIENTOS
+PARA LA ENTREGA RECEPCIÓN DEL
+CARGO EN EL GOBIERNO REGIONAL DE
+TACNA
+TACNA-PERU","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+foto2,datos/raw/documentos/foto2.jpg,foto,"Foto propia de la Directiva N° 002-2024-GR/GOB.REG.TACNA (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","DIRECTIVA EJECUTIVA REGIONAL
+Nro. 00 2024-GR/GOB.REG.TACNA
+Fecha: Tacna, 2 4 ABR 2024
+DISPOSICIONES Y PROCEDIMIENTOS PARA LA ENTREGA -
+RECEPCIÓN DEL CARGO EN EL GOBIERNO REGIONAL DE TACNA
+OBJETIVO
+1. Establecer normas y procedimientos para una adecuada Entrega-Recepción del cargo de los
+servidores y funcionarios que laboran en el Gobierno Regional de Tacna,
+independientemente del vínculo laboral o contractual que se mantenga.
+2. Constituirse en un instrumento orientador para el personal que labora en el Gobierno
+Regional de Tacna, cualquiera sea su nivel jerárquico, respecto de las acciones que deben
+realizar en la entrega-recepción del cargo.
+11
+FINALIDAD
+Garantizar que el proceso de entrega y recepción de cargo se desarrolle de manera ordenada,
+eficiente y documentada, permitiendo la continuidad y el normal funcionamiento de las
+diferentes dependencias (Unidades Orgánicas, Unidades de Organización, Unidades Ejecutoras)
+del Pliego 460 Gobierno Regional de Tacna, para así salvaguardar la logística asignada, el acervo
+documentario y demás bienes asignados al personal saliente de la entidad.
+III. ALCANCE
+Las disposiciones contenidas en la presente Directiva, son de aplicación y cumplimiento
+obligatorio del personal sea Funcionario, Empleado de Confianza y demás servidores públicos
+(profesional, técnico y auxiliar) en condición de nombrados o contratados en planilla. Este
+último alcance incluye al personal que presta servicios bajo el Régimen de Contratación
+Administrativa de Servicios (CAS) y con cargo los Proyectos de Inversión Pública, que labora o
+presta servicios en la Sede Regional, Unidades de Organización y Unidades Ejecutoras que
+dependen funcionalmente del Gobierno Regional de Tacna. La presente Directiva no resulta
+aplicable en el Proyecto Especial Tacna, quién deberá elaborar su normativa interna que rija el
+accionar de la entrega-recepción del cargo.
+IV.
+BASE LEGAL
+Decreto Supremo N° 004-2019-JUS; Decreto Supremo que aprueba el Texto único Ordenado
+de la Ley N° 27444- Ley del Procedimiento Administrativo General.
+Ley N° 28175; Ley Marco del Empleo Público
+Ley N° 29849; Ley que establece la eliminación progresiva del Régimen Especial del Decreto
+legislativo N° 1057y otorga derechos laborales.","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+foto3,datos/raw/documentos/foto3.jpg,foto,"Foto propia de la Directiva N° 002-2024-GR/GOB.REG.TACNA (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)"," Ley N° 30161; Ley que regula la presentación de declaración jurada de ingresos, bienes y
+rentas de los funcionarios y servidores públicos del Estado y sus modificatorias.
+Decreto Legislativo N° 276; Ley de Bases de la Carrera Administrativa y de Remuneraciones
+del Sector Público.
+Decreto Supremo N° 005-90-PCM; Reglamento de la Ley de la Carrera Administrativa,
+Artículo 191°.
+Decreto Legislativo N°1057; Que regula el Régimen Especial de Contratación Administrativa
+de Servicios y su reglamento.
+Decreto Supremo N° 032-72-PCM; Normas para el Servidor Público que renuncia a su cargo.
+Resolución Directoral N° 001-78-INAP/DNP-UN; aprueba el Manual Normativo N° 55-78-
+INAP ""Entrega de Cargo"".
+Resolución de Contraloría General N° 320-2006-CG; aprueba Normas de Control Interno.
+Resolución Ejecutiva Regional N° 274-2022-GR/GOB.REG.TACNA; que aprueba el
+REGIONAL
+Reglamento de Control de Asistencia, Puntualidad y Permanencia del Personal del Gobierno
+Regional de Tacna y sus modificatorias.
+Resolución Directoral N° 002-2007-EF/7.15 y modificatorias, que aprueba la Directiva
+General de Tesorería N° 001-2007-EF/77.15.
+Ordenanza Regional N° O16-2022-CR/GOB.REG.TACNA; aprueba el reglamento de
+Organización y Funciones (ROF) y el Organigrama estructural del Gobierno Regional de Tacna
+y sus modificatorias
+V.
+MARCO CONCEPTUAL
+5.1. Entrega de Cargo
+La entrega de cargo se constituye en un acto administrativo por el cual todo funcionario,
+empleado de confianza, directivo superior o servidor público que labora o presta servicios
+en el Gobierno Regional de Tacna, cualquiera sea su vínculo laboral o contractual, al
+ausentarse de manera temporal o definitiva en el servicio queda obligado a dar cuenta
+al personal que lo sustituya o al representante de la institución, sobre la documentación
+y bienes asignados bajo su responsabilidad, de manera física y electrónica,
+determinándose asimismo el estado situacional de los mismos (ejecutados, pendientes,
+extraviados, etc.). Se concluye con la conformidad de las partes intervinientes.
+5.2. Acta de Entrega - Recepción del Cargo
+Es el documento que suscriben las partes intervinientes en el cual dejan constancia de la
+entrega del cargo por el servidor saliente y la recepción del mismo por el jefe inmediato
+correspondiente y personal entrante a ocupar el cargo.
+5.3. Empleado de Confianza
+El que desempeña cargo de confianza técnico o político distinto al del funcionario
+público, encontrándose en el entorno de quién lo designa o remueve libremente y cuyo
+cargo se encuentra en el Cuadro para Asignación de Personal (CAP) o CAP Provisional.
+N","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+foto4,datos/raw/documentos/foto4.jpg,foto,"Foto propia de la Directiva N° 002-2024-GR/GOB.REG.TACNA (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","5.4. Funcionario Público
+El que desarrolla funciones de preeminencia política, conocida por norma expresa, que
+representan al Estado o a un sector de la población, desarrollan políticas del Estado y/o
+dirigen organismos o entidades públicas.
+5.5.
+Servidor Público
+Ciudadano en ejercicio que presta servicio en entidades de la Administración Pública con
+nombramiento o contrato laboral de autoridad competente, con las formalidades de Ley,
+en jornada legal y sujeto a dependencia y retribución remunerativa permanente en
+periodos regulares.
+5.6.
+Constancia de No Adeudo de Rendición de Viáticos / Encargos
+Es el documento emitido por la Sub Gerencia de Contabilidad o quién haga sus veces, en
+el cual se deja constancia si el servidor público cuenta o no con alguna deuda pecuniaria
+pendiente de rendición a favor del Gobierno Regional de Tacna.
+5.7. Constancia de No Adeudo de Rendición de Fondos de Caja Chica
+Es el documento emitido por la Sub Gerencia de Tesorería o quién haga sus veces, en el
+cual se deja constancia si el servidor público cuenta o no con alguna deuda con cargo al
+fondo de Caja Chica.
+5.8.
+Constancia de No Adeuda de Bienes
+Es el documento emitido por la Sub Gerencia de Control Patrimonial o quién haga sus
+veces, en el cual se deja constancia si el servidor público cuenta o no con bienes
+SU&GERENTE
+institucionales pendiente de entrega.
+VL.
+DISPOSICIONES GENERALES
+6.1. La entrega - recepción de cargo se realizará en los casos siguientes:
+a) Término del vínculo laboral (renuncia, cese, jubilación, destitución, incapacidad
+permanente, resolución de contrato, resolución o vencimiento de contrato) o
+culminación de designación en cargo de confianza.
+b)
+Desplazamiento de personal (Reasignación, permuta, rotación, destaque,
+designación, encargo de puesto o de funciones y comisión de servicios cuando ésta
+exceda de los 30 días).
+c)
+Uso físico del periodo vacacional mayor a diez (10) días.
+d)
+Licencias con o sin goce de remuneraciones superiores a diez (10) días.
+e)
+Suspensión en el cargo por medida disciplinaria sin goce de remuneraciones mayor
+de 15 días.
+f)
+Encargo de Funciones y Comisión de Servicios, cuando son otorgados por un periodo
+mayor a quince (15) días.
+6.2. En el caso que al personal saliente se encuentre en estado de incapacidad temporal o
+permanente o gozando de una licencia por enfermedad, el Jefe Inmediato
+conjuntamente con la Sub Gerencia de Recursos Humanos o quién haga sus veces,
+3","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+foto5,datos/raw/documentos/foto5.jpg,foto,"Foto propia de la Directiva N° 002-2024-GR/GOB.REG.TACNA (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","efectuarán las acciones necesarias con el fin de garantizar una adecuada asunción del
+cargo vacante por parte del personal reemplazante.
+6.3.
+A la culminación de la gestión o al cesar en sus cargos los funcionarios que desempeñan
+funciones en el Gobierno Regional de Tacna y que se el Artículo 2° de la Ley N° 30161 -
+Ley que regula la presentación de declaración jurada de ingresos, bienes y rentas de los
+funcionarios y servidores públicos del Estado; así como, todo el personal que administran
+o manejan fondos, quedan obligados a presentar una copia de la Declaración Jurada de
+Ingresos y de Bienes y Rentas, la misma que se adicionará al documento de ""Acta de
+Entrega - Recepción de Cargo"", en cumplimiento de lo dispuesto en la referida Ley N°
+30161 y sus modificatorias.
+GERENTE
+REGIONAL
+DISPOSICIONES ESPECÍFICAS
+7.1. El personal saliente deberá formular el Acta de Entrega - Recepción del Cargo, conforme
+a los Formatos y Anexo que adjuntos forman parte de la presente Directiva:
+Formato N° 01: Registro de No Adeudo de Rendición de Viáticos/Encargos
+Formato N° 02: Registro de No Adeudo de Rendición del Fondo de Caja Chica
+Formato N° 03: Registro de No Adeudo de Bienes
+Anexo N° 01: Informe de Gestión
+7.2.
+En el caso, que por fuerza mayor no fuera posible suscribir el Acta de Entrega - Recepción
+del Cargo por parte del personal saliente, el Jefe Inmediato en el término de la distancia
+designará a un servidor para que conjuntamente con la Sub Gerencia de Control
+Patrimonial o quién haga sus veces, procedan a efectuar la toma del respectivo
+Inventario de los bienes y equipos a su cargo, asimismo se formule la relación del acervo
+documentario, archivos y material de oficina asignado, entre otros. Concluido este acto
+se hará alcance del mismo al personal entrante.
+7.3.
+El personal saliente hará entrega de cargo a su Jefe Inmediato, Jefe Inmediato Superior
+o personal entrante según corresponda, en un plazo máximo de tres (03) días contados
+a partir de la efectivización de los casos previstos en el Numeral 6.1 de la presente
+directiva, solicitando la conformidad de las Sub Gerencias de Contabilidad y Tesorería y
+de Control Patrimonial o quiénes hagan sus veces, en los formatos señalados en el
+numeral7.1.
+7.4. Las Sub Gerencias de Contabilidad, Tesorería y de Control Patrimonial o quiénes hagan sus
+veces, luego de verificado el estado situacional de la Información de su competencia,
+otorgarán la conformidad en el Formato correspondiente, hasta en un plazo de (48) horas
+y bajo responsabilidad.
+7.5. La Sub Gerencia de Recursos Humanos o quién haga sus veces, es responsable de
+mantener un archivo ordenado alfabéticamente (en relación a su apellido paterno) de
+las Actas de Entrega - Recepción del Cargo. Asimismo, debe cumplirse con insertar copia
+del Acta en el Legajo Personal de cada funcionario o servidor saliente, con el objetivo de
+organizar y actualizar el Escalafón.
+4","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+foto6,datos/raw/documentos/foto6.jpg,foto,"Foto propia de la Directiva N° 002-2024-GR/GOB.REG.TACNA (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","recc
+nombrado, contratado por servicios personales, CAS y con cargo a los proyectos de
+inversión, queda obligado a utilizar los formatos que rigen para la entrega del cargo -
+recepción y de gestionar su conformidad ante las instancias que corresponda.
+7.7.
+El personal entrante que recibe el cargo no recepcionará el Acta de Entrega de Recepción
+del Cargo, si este no adjunta el Inventario de los bienes asignados, los Formatos con la
+conformidad respectiva y, en caso corresponda, el Informe de Gestión (Anexo N° 01).
+7.8.
+La entrega de cargo por parte de los Funcionarios, Empleados de Confianza y Directivos
+Superiores, deberá también incluir un Informe de Gestión, donde se indique el número
+de personal que estuvo a su cargo, condición laboral y las funciones o servicios
+encomendados, así como la información que precisa la Norma Técnica de Control Interno
+700-07 Transferencia de Gestión, para ello utilizará la información contenida en el Anexo
+N° 01 de la presenta Directiva.
+VIII. DEL PROCEDIMIENTO
+8.1. La Sub Gerencia de Recursos Humanos o quién haga sus veces, al tomar conocimiento de
+alguna de las situaciones descritas dentro del numeral 6.1 de la presente directiva,
+procederá a solicitar al servidor mediante documento que realice la entrega del cargo
+conforme a la directiva vigente, otorgándole un plazo de (03) días para esta acción.
+Asimismo, dispondrá se le excluya del Sistema de Control de Asistencia.
+8.2. En cuanto a los servidores bajo el Decreto Legislativo N° 276 - Proyecto de Inversión y
+CAS, los jefes inmediatos solicitarán, al término de su vínculo laboral, la respectiva
+entrega de cargo otorgándole un plazo de (03) días hábiles para esta acción.
+8.3.
+El personal saliente elaborará el Acta de Entrega - Recepción del Cargo y demás Formatos
+que forman parte de la entrega del cargo, en cuatro (04) ejemplares.
+8.4.
+Seguidamente, el personal saliente gestionará la conformidad (V°B°) de las Sub Gerencias
+de Contabilidad, Tesorería y de Control Patrimonial o quienes hagan sus veces, utilizando
+los Formatos que correspondan.
+8.5. La Sub Gerencia de Contabilidad o quién haga sus veces verificará si el personal saliente
+tiene viáticos o encargos de recursos pendientes de rendición de cuentas; cuyo caso, se
+puede presentar dos (02) situaciones:
+Si los tuviere, el servidor involucrado deberá regularizar la rendición de viáticos y/o
+los encargos pendientes de rendición.
+Si no tuviere, el Sub Gerente de Contabilidad o quién haga las veces, otorga la
+conformidad (V°B°) al Registro de No Adeudos de Rendición de Viáticos / Encargos
+(FORMATO N°01).
+8.6. La Sub Gerencia de Tesorería o quién haga sus veces, verificará si el personal saliente
+tiene adeudos con cargo al Fondo de Caja Chica u otros; en este caso, se puede presentar
+dos (02) situaciones:
+5","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+foto7,datos/raw/documentos/foto7.jpg,foto,"Foto propia de la Directiva N° 002-2024-GR/GOB.REG.TACNA (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","Si los tuviere, el servidor saliente involucrado debe cumplir con regularizar dichas
+deudas pendientes de rendición.
+Si no los tuviere, el Sub Gerente de Tesorería o quién haga sus veces, otorga la
+conformidad (V°B°) respectiva en el Registro de No Adeudos de Rendición del Fondo
+de Caja Chica (FORMATO N° 02).
+8.7.
+La Sub Gerencia de Control Patrimonial o quién haga sus veces, bajo responsabilidad y en el
+plazo no mayora (48) horas, verificará y cotejará in situ los bienes asignados, contratando la
+información con el Inventario físico Individual del personal saliente; en este caso, se
+puede presentar las siguientes situaciones:
+Si detecta que tiene bienes pendientes de entrega, el interesado debe cumplir con
+regularizar tal situación, en el plazo de (48) horas, previo requerimiento de la Sub
+Gerencia de Control Patrimonial
+8
+En caso de que el personal no regularice la situación del bien en condición de
+faltante por pérdida, sustracción o deterioro, se aplicará la normativa vigente al
+respecto, para de esta manera efectivizar la devolución o reposición del bien o en su
+defecto la responsabilidad pecuniaria para proceder al descuento en planilla (de ser
+el caso), luego de lo cual se podrá otorgar la conformidad.
+Si lo encuentra conforme, otorga la conformidad (V°B°) en el Registro de No
+Adeudos de Bienes Patrimoniales (FORMATO N° 03).
+La Sub Gerencia de Control Patrimonial o quién haga sus veces, luego de formalizada la
+entrega de cargo, deberá en el término de la distancia, procesar un nuevo inventario
+físico individual de bienes a ser asignados al personal entrante, para que asuma la
+responsabilidad y custodia de los bienes a su cargo.
+8.8.
+El Jefe inmediato o el servidor que éste designe, verificará la situación actual de los
+trabajos pendientes y de la documentación en trámite, dando conformidad u
+observándola según sea el caso. Efectuada la verificación colocará V°B° al Acta de Entrega
+- Recepción y dispondrá que el personal saliente proceda a efectuar ña entrega de cargo
+al personal entrante o servidor designado para el caso, procediéndose a suscribir el Acta
+de Entrega - Recepción del cargo en (04) ejemplares, con la siguiente distribución:
+a) Jefe Inmediato / Inmediato Superior del órgano al que perteneció el personal
+saliente.
+b) Personal saliente que efectúa la entrega de cargo.
+c) Personal entrante que recepciona la entrega de cargo.
+d) Sub Gerencia de Recursos Humanos o quién haga sus veces.
+El Jefe inmediato o el servidor que éste designe, procederá a suscribir el Acta de Entrega -
+Recepción y/o observarla, hasta un plazo máximo de 03 días, de recibida la misma. bajo
+responsabilidad.
+De ser ei caso haya observaciones, el jefe inmediato deberá comunicar al servidor saliente
+que realice las subsanaciones correspondientes, otorgándole en el plazo de (03) días, de
+no realizada las subsanaciones correspondientes, comunicará a la Sub Gerencia de
+Recursos Humanos para las acciones correspondientes.
+6","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+foto8,datos/raw/documentos/foto8.jpg,foto,"Foto propia de la Directiva N° 002-2024-GR/GOB.REG.TACNA (texto oficial sin derecho de autor, D. Leg. 822 art. 9 b)","en el numeral 8.1. En caso de requerirse más plazo, deberá solicitarlo de manera
+oportuna y con la debida justificación a la Sub Gerencia de Recursos Humanos con copia
+al Jefe Inmediato, otorgándole hasta máximo (03) días hábiles improrrogables.
+8.10. La entrega de cargo y su recepción se efectúa en el plazo de tres (03) días hábiles
+contados desde el día siguiente de la conciusión del víncuio, tal como se precisa en el
+numeral 8.1 de la presente Directiva. En caso de incumplimiento de lo dispuesto, el
+servidor reemplazante o el jefe inmediato, debe cumplir de manera inmediata con
+comunicar a la Sub Gerencia de Recursos Humanos o quien haga sus veces, a fin de que
+haga el requerimiento dentro de las 24 horas de comunicado el hecho, solicitando el
+cumplimiento de la entrega dentro del plazo de dos (02) días hábiles, bajo apercibimiento
+GERENTE
+de proceder conforme a Ley""
+REGIONAL
+8.11. De continuar la negativa del ex servidor público para participar en la diligencia de entrega
+y recepción de cargo, el jefe inmediato o quién éste designe, procederá en forma
+conjunta con el representante del Sub Gerente de Control Patrimonial o quién haga sus
+veces, a elaborar la respectiva relación de los documentos, archivos, material y equipo
+de oficina asignados, procediendo a suscribir la correspondiente acta, dejándose
+constancia de la inasistencia del obligado en el rubro de ""Observaciones"" y que dicha
+situación no lo exime de la responsabilidad a que hubiera lugar con relación a las
+observaciones detectadas al momento de levantarse el acta, ni .en caso que
+posteriormente se advierta la pérdida de bienes y/o del acervo documentario asignados
+por la entidad. Consecuentemente, el Jefe Inmediato remitirá una copia del ""Acta de
+Entrega - Recepción de Cargo"", para su conocimiento del obligado.
+8.12. De encontrarse todo conforme, se procederá a la firma del ""Acta de Entrega - Recepción
+de Cargo"" sin observaciones, por parte del servidor público involucrado y su jefe
+inmediato o quien éste designe o el servidor público entrante, según corresponda.
+IX.RESPONSABILIDADES
+9.1. Es de responsabilidad el cumplimiento de la presente Directiva:
+a) El Jefe Inmediato o Jefe Inmediato Superior del personal saliente;
+b)
+Los Sub Gerentes de las Sub Gerencias de Recursos Humanos, Contabilidad, Tesorería
+y de Control Patrimonial o quiénes hagan sus veces, en los demás órganos
+dependientes del Gobierno Regional de Tacna;
+c)
+El personal saliente quién tiene la responsabilidad de efectuar la entrega del cargo
+dentro del plazo establecido y conforme a la presente directiva.
+d)
+El personal entrante quién debe recepcionar el cargo; y,
+e)
+El Jefe Inmediato o personal asignado para intervenir en el acto de entrega -
+recepción del cargo, ante ausencia del personal saliente responsable.
+9.2. El personal responsable debe proceder conforme a las disposiciones establecidas en la
+presente directiva, la omisión de lo dispuesto será considerado como una falta
+administrativa sujeta de sanción conforme a ley, según las implicancias administrativas que","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+manuscrito1,datos/raw/documentos/manuscrito1.jpg,manuscrito,"Biblioteca Nacional del Perú (texto en dominio público; foto © BNP, uso académico local)","Id estructura de los versos me perters
+ca, que en cuanto a lo de la puterni
+dad de la ided el dia del pricio, en
+meopatica, para que Lo dulce no
+el vallecito de Josafat y a la hora de
+empalague
+apagar faroles, cada padre reconocera
+gCreo Nambién que, en al-
+a Sus hijos, no sin agrarecerme el
+vestido huerr que q puse.
+originalidad en Ias imagenes. Alo su
+elpweta
+mo podra aspirar a vestin cor may
+Ticarde Jalma
+i menos gracia y delicadeza, las zala-
+merias con que, durante Siglos ysiglos,
+Lima-1900-
+han venido los hijos de Apolo ensal-
+zando a la mujer.
+Jobre poco mas omenos, pien
+L
+So lo mismo respecto al libro de au-
+tm.? Su faaricter de letra y su fir
+ma al pie de un pensamiento tuel
+gan, pues, las paginas de prosa, bas
+Tando poguisimas renglones rimados
+para Uenar el compromiso.
+Expliguebe asi el lector las
+lianos, ringleses, portugueses y aun","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+manuscrito2,datos/raw/documentos/manuscrito2.jpg,manuscrito,"Biblioteca Nacional del Perú (texto en dominio público; foto © BNP, uso académico local)","4
+Consep
+Adios!.
+Cristiae y caallere, tu coran a
+(Enela ua viagea cuana)
+perdoneu at que agravio
+Adios; oh peregrina. que ves comer las horas
+cobarde te infirio.
+comiendo infatigable de ma quimera en pos!
+Mas olvidar la ofeusa, borrar el torpe insulto
+Iue en In camino no halles eepinas pungavoras,
+de la memoria...hagalo el sinvergüenza estutto.
+que nubes en In cielo Jamas consienta Din
+el hombre digno, no!
+7
+Curiosidad
+1
+(álbum)
+ANatalia
+No por forma de estricta galanteria
+(Calbin)
+de troimbre cortes
+Rien me ligeron mis cleaj de mis paisanas-
+Te dye, ha pocas tardes: — Senora mia,
+sabe usted que son lindas las bogotanas?
+besé sus pies.-
+te vi y me dije: Vamos! pues no era broma!
+que te ls vi, al desenido, cierta manana
+Ja ertu beldai, Natalia, para mi axioma,
+sin la botina,
+Ti otro Jipiter fuera Capitoling,
+y de deeir a gritos me entri una gana-
+arbitro imeusable de tu destino
+;Cosa divina!-
+Desde entouces, Curiose, pues Dis lo guise
+(aungue un Vate, mi ainige, suspire y gima)
+por Carcel sempiterna te daba hima.
+descubrir quiero
+Si Tienes algun angel del Paraiso
+y por Cadena
+un espos y....de chiers media docena.
+por zapatero
+Deftnicion
+Q
+It crimen es, seed, (decia un Juer)
+() La independenisa de Cuta
+un cambio a retaguardia de la hvnradez.","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+manuscrito3,datos/raw/documentos/manuscrito3.jpg,manuscrito,"Wikimedia Commons, Academia Nacional de la Historia de Argentina (dominio público)","Pih D Jamingo Fristan
+PrayuaOnaro 2de1822
+Mi mfon Amiga inlyoa an
+ig 
+aaaelyl ofal lomanJomales
+nte cone as ventaaao
+à perer i paralicamor mstaa movimientor
+do un momento g viter tantr inidentun
+Vena martro otecton con nr delibexa
+Gone aon la inantancia   pedeor un ma
+a tan cocelente g? poca vee  prerent tal.
+ves lo penderomo p? ciemppxe.
+Aio mi anigo,Digamev. ia
+aliviad dla teniana y male t. arm beaino
+CAMo
+Goomarraf
+Mchar oas ami Vicaris y Ecenig","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+manuscrito4,datos/raw/documentos/manuscrito4.jpg,manuscrito,"El Peruano, Archivo General de la Nación (texto en dominio público; foto © El Peruano, uso académico local)","DS Jomm Sige Miwa la Latra
+CTDO
+CAJ-3
+Triaille ine G 192
+DoC.978
+F01.1
+ g  L
+dede cost agecil l fimade in 
+an ui antosior ni una palabra
+Ehimo N. cuante m sonica sohe lo procamacion
+s la Lnpands de ea, gve lay Suda gha e de la m
+iaan oo log ln me ee.Sia gu fan
+ton ime paw,y o sen wn como lo 
+roble Ciudad de Euenca. Hada umro seia Sanamadr sin
+buto la Sangue a ln Amoricamon g. ha comido à tomanty
+ ,aL n  a no se saci.
+Poy Ni mil bu po l ct 
+de u olaan ecd ld ,
+ a  p   n  l i p
+onstaniets
+ol","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+manuscrito5,datos/raw/documentos/manuscrito5.jpg,manuscrito,"BYU Script Tutorial (texto en dominio público; imagen sin licencia indicada, uso académico local)","el orden de Citels embia fus embapadres a nuegro
+may fincto pudre pobre algunos agrauus que eneffa
+corre legon fechos yporque eftaordenegal queno es
+ragon que fea preludicada trecemos a muestro muy fancto
+padre al allegio delos Revecendigimos cardenales quue
+ran remediar los dichos agrauios aNuestra Renerendis
+si ma paternidat mry affectuofamente rogamos guepon
+anremplarion muapra quuxa trabafar entodo loguelos","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+manuscrito6,datos/raw/documentos/manuscrito6.jpg,manuscrito,"Wikimedia Commons, Academia Nacional de la Historia de Argentina (dominio público)","$30
+Sr I. M. Rodriguer R.
+Pambayeque
+Prefecto del Dept?3
+Mi querido Fr Irefecto:
+El Ir Pedro Adolfo Espinoga,
+despues de conversar conmigo, regresa a Mbotu-
+pe lugar de su pesidencia para ocuparse de sus a-
+suntos particulares.
+Recomiindolo mii especialmente a su
+distingnida comsidevacion i a la de sus auto.
+pidades suballernas.
+ectuosamente rgye
+lverola","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+manuscrito7,datos/raw/documentos/manuscrito7.jpg,manuscrito,"Revista de Arte, Biblioteca Nacional de España (texto en dominio público; foto © Revistadearte.com, uso académico local)","apitulo 4. delor aburor acerca dellugar
+SiendsLstemplaadeDi doneLon
+n conuna mag.yalcançn Sobernme
+econlantar ora gxandeabur geno
+demar solemmda enguduulamomar enplen
+enld adt
+vamdadecoaxiamelandealguna","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+manuscrito8,datos/raw/documentos/manuscrito8.jpg,manuscrito,"Wikimedia Commons, Biblioteca Nacional del Perú (CC0 1.0)","1
+Riberalta, junio 10 de 1912.
+ootuh
+Sener don Ricardo Palma
+Livng.
+J
+Mi respetado g querido maestro:
+.833488353m|~799251a3..2.08
+Desde estao apartades co-
+Da0a. .4
+marcas deses manifestar a Al el profimndo dolor que he
+0209
+pentido al informarme que sspiritus estreches, vengativos,
+25
+han arrancado a' ll, por la fuerza, de la caea que l reedi-
+5
+ficara,-pam honra die Peris- a coeta de tants esfuerzos
+Jamás hubiena ereido que mandataris
+algimo se atrevrera a turbar el posiego que aual ningimo
+Tiene U. merecido, despues de tants aios de labor patrio-
+tica, feeinda g benefin; Jarmas hubierm peneado que
+hombre algimo osara faltar las canas de tan insigue lite-
+72.22~.~5.
+rato, canas resketadas siemmpre per profeirs g extraños, por
+jovenes g cregis, por ricos g pobres.
+Desde 1888, que se firndi la Sociedad Geografca
+<0907005051<30
+g. roarpo m departament en la tarti alta de la Riblisten
+35>35.9..0
+Natioval, es decir quatro anes desoues que ab, la hiciera
+renacer con sus esfuerzos, reputacion snfluencias, he si-
+a
+do puedo tecir testigo de sn inmernen labor de su asidui
+5.1..38303.
+dad, de sus fatigas.
+Todo su tiempo era absorbido for
+en esa otra hiya puya, la Riblisteca;  alli, en en palita","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
+manuscrito9,datos/raw/documentos/manuscrito9.jpg,manuscrito,"Wikimedia Commons, Biblioteca Nacional del Perú (dominio público)","Fogill, 27 de pli 917
+of.Toi lui
+SSannco.
+Hhonvscmente coumovid bé se aleut carth
+eugos timins e agealgeo de vesas. Elh me he
+reanimad menchoon setis dias in gue mee son
+tir tan snal; fus agi kay guimes ome atacion
+coe tut rudiza.? bil gsios, sein Ege
+tom;gmtil a ym bot ome m kech ame
+ehe lier; mil' grais.
+En ates bias, alnt a hrisi canin ao e,
+envini a l renisth nccini ant a Eagagil
+algesmos oe suis versos; y dlis pina gue goit.
+slli peruiti ateegal al peibtisit l cnite
+sid a in eitd cant, al kel soliit ue
+me hieinn de le,-  prone, -Neoy k aovis
+four ste min smpos inn sminon al te Afor
+sun"" in gn fui fulicaie.
+Hay at forint por ou oult,y ane
+ncit, h U an afutimo
+Gal
+Carta de César Vallejo a José María Eguren.","PaddleOCR 3.7.0 (PP-OCRv6_medium_det + PP-OCRv6_medium_rec, lang=es, engine=transformers, CPU, sin orientación ni enderezado)",
