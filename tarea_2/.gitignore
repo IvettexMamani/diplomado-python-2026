@@ -8,6 +8,7 @@ datos/raw/
 *.flac
 *.ogg
 *.opus
+*.aac
 *.mp4
 *.mkv
 *.webm
