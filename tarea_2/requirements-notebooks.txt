@@ -1,10 +1,14 @@
-# Entorno para ejecutar 01_extraccion.ipynb (OCR + ASR). La app usa requirements.txt.
-# Probado el 2026-10-23 en Windows 11, Python 3.12.14, solo CPU.
+# Entorno para ejecutar 01_extraccion.ipynb (OCR + ASR) y 02_evaluacion.ipynb (métricas, modelos
+# alternativos y LLM). La app usa requirements.txt.
+# Probado el 2026-10-23 y el 2026-10-25 en Windows 11, Python 3.12.14, solo CPU.
 #
 # En Windows con un runtime de Visual C++ 14.34 (o anterior), torch>=2.9, ctranslate2>=4.7 y
 # onnxruntime>=1.21 no cargan (WinError 1114 o cierre del kernel): por eso quedan fijados abajo.
 # PaddleOCR corre con engine="transformers" (PyTorch): con PaddlePaddle 3.3.1 + oneDNN el
 # detector falla en CPU (ConvertPirAttribute2RuntimeAttribute).
+
+# Ruedas precompiladas de llama-cpp-python para CPU (en PyPI solo hay código fuente)
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
 
 # OCR
 paddleocr==3.7.0
@@ -31,6 +35,15 @@ soundfile==0.14.0
 spacy==3.8.16
 es_core_news_md @ https://github.com/explosion/spacy-models/releases/download/es_core_news_md-3.8.0/es_core_news_md-3.8.0-py3-none-any.whl
 rapidfuzz==3.14.6
+
+# Evaluación (02_evaluacion.ipynb): métricas, OCR y ASR alternativos y LLM local
+jiwer==4.0.0
+easyocr==1.7.2
+scikit-image==0.26.0
+onnx-asr[hub]==0.12.0
+llama-cpp-python==0.3.2
+huggingface_hub==2.2.0
+psutil==7.2.2
 
 # Datos, gráficos y notebook
 numpy==2.3.5
