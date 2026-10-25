@@ -45,3 +45,30 @@ Capturas de la conversación con Claude Code (Anthropic) durante la Tarea 2. La 
 | `39_hoja_de_revision.png` | 2026-10-24 17:34 | Instrucciones de la hoja de revisión (nombres tapados) | Parte 1 · #8 |
 
 En las capturas 29, 37, 38 y 39 los nombres reales de los niños están tapados con rectángulos negros sólidos. Los originales quedan fuera del repositorio, en `datos/raw/`.
+
+### Parte 1 · #8: capturas agregadas el 2026-10-25
+
+Conversación del 24 de octubre por la tarde: errores del ASR que anotó la estudiante y revisión de la seudonimización. En las capturas 44 a 54, 56 y 57 los nombres reales de los niños están tapados con rectángulos negros sólidos.
+
+| Captura | Fecha | Qué muestra | Parte · issue |
+| :--- | :--- | :--- | :--- |
+| `40_errores_asr_anotados.png` | 2026-10-24 17:35 | Errores del ASR que notó la estudiante (podcast) | Parte 1 · #8 |
+| `41_lista_errores_asr.png` | 2026-10-24 17:35 | Lista de errores del ASR para la Parte 2 | Parte 1 · #8 |
+| `42_transcripcion_a_mano.png` | 2026-10-24 17:35 | Por qué la referencia tiene que transcribirse a mano | Parte 1 · #8 |
+| `43_referencias_en_texto_plano.png` | 2026-10-24 17:35 | Formato de las referencias manuales | Parte 1 · #8 |
+| `44_revision_nombres_01.png` | 2026-10-24 17:35 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `45_revision_nombres_02.png` | 2026-10-24 17:35 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `46_revision_nombres_03.png` | 2026-10-24 17:35 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `47_revision_nombres_04.png` | 2026-10-24 17:35 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `48_revision_nombres_05.png` | 2026-10-24 17:36 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `49_revision_nombres_06.png` | 2026-10-24 17:36 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `50_revision_nombres_07.png` | 2026-10-24 17:36 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `51_revision_nombres_08.png` | 2026-10-24 17:36 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `52_revision_nombres_09.png` | 2026-10-24 17:36 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `53_revision_nombres_10.png` | 2026-10-24 17:36 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `54_revision_nombres_11.png` | 2026-10-24 17:36 | Revisión de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `55_transcripciones_tras_revision.png` | 2026-10-24 17:36 | `transcripciones.csv` después de la revisión | Parte 1 · #8 |
+| `56_revision_confirmada.png` | 2026-10-24 17:36 | Revisión confirmada por la estudiante (nombres tapados) | Parte 1 · #8 |
+| `57_referencia_clip_007.png` | 2026-10-24 17:36 | Referencia manual de clip_007 (nombres tapados) | Parte 1 · #8 |
+| `58_urls_youtube.png` | 2026-10-24 17:37 | URL y licencia de los videos de YouTube | Parte 1 · #8 |
+| `59_pendientes_parte1.png` | 2026-10-24 17:37 | Pendientes de la Parte 1 | Parte 1 · #8 |
