@@ -1,1 +1,5 @@
-# Versiones exactas: se fijan al terminar la tarea (pip freeze) y se prueban en un entorno limpio
+# Dependencias mínimas del dashboard (app.py), probado con Python 3.12.
+# La app solo lee CSV ya calculados: los modelos de OCR, ASR y LLM están en requirements-notebooks.txt.
+streamlit==1.66.0
+pandas==3.0.6
+plotly==7.1.0
