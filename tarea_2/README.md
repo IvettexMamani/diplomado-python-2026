@@ -2,7 +2,7 @@
 
 **Pregunta guía:** ¿pueden convertirse documentos escaneados y entrevistas en audio en un archivo de texto estructurado y buscable?
 
-**App:** _ENLACE_APP_ (Streamlit Community Cloud)
+**App:** <https://diplomado-python-2026-tarea2.streamlit.app/> (Streamlit Community Cloud)
 
 Este trabajo convierte 25 documentos peruanos y 49 minutos de audio en texto con OCR y ASR. Luego mide cuánto se equivocan esos modelos y extrae con un LLM local campos estructurados en JSON. El dashboard permite buscar en los textos y comparar modelos, y no ejecuta modelos en vivo.
 
