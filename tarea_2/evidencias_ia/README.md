@@ -13,3 +13,35 @@ Capturas de la conversación con Claude Code (Anthropic) durante la Tarea 2. La 
 | `07_fuentes_csv_manuscritos.png` | 2026-10-22 12:17 | Filas de los manuscritos en `fuentes.csv` | Parte 1 · #8 |
 | `08_fuentes_csv_listo.png` | 2026-10-22 12:17 | `fuentes.csv` completo | Parte 1 · #8 |
 | `09_manuscritos_commons.png` | 2026-10-22 12:29 | Manuscritos de reemplazo en Wikimedia Commons | Parte 1 · #8 |
+| `10_revision_audios_requisitos.png` | 2026-10-23 23:14 | Revisión de los audios frente a los requisitos del issue #190 | Parte 1 · #8 |
+| `11_audios_faltantes_openslr.png` | 2026-10-23 23:14 | Clips que faltaban y descarga de frases de OpenSLR 73 | Parte 1 · #8 |
+| `12_clips_openslr_agregados.png` | 2026-10-23 23:14 | Los 12 clips de OpenSLR agregados y el problema de licencia de los .mp4 | Parte 1 · #8 |
+| `13_decisiones_audios.png` | 2026-10-23 23:14 | Explicación de cada decisión sobre los audios | Parte 1 · #8 |
+| `14_mp4_y_errores_corregidos.png` | 2026-10-23 23:15 | Licencia de los .mp4 y tres errores corregidos al leer el issue completo | Parte 1 · #8 |
+| `15_entorno_ocr_asr.png` | 2026-10-23 23:15 | Instalación y prueba de PaddleOCR y faster-whisper en la laptop | Parte 1 · #8 |
+| `16_fuentes_csv_fotos.png` | 2026-10-23 23:15 | Filas de las fotos en `fuentes.csv` | Parte 1 · #8 |
+| `17_commits_entorno_notebook.png` | 2026-10-23 23:16 | Commits del entorno y de la primera celda del notebook | Parte 1 · #8 |
+| `18_commit_corpus.png` | 2026-10-23 23:16 | Commit del corpus (25 documentos y 12 clips de OpenSLR) | Parte 1 · #8 |
+| `19_ocr_en_curso.png` | 2026-10-23 23:16 | OCR de los 25 documentos en curso y secciones siguientes escritas | Parte 1 · #8 |
+| `20_ocr_sin_memoria.png` | 2026-10-23 23:16 | El OCR se detiene porque la laptop se queda sin RAM | Parte 1 · #8 |
+| `21_reanudar_ocr.png` | 2026-10-23 23:16 | Estado del trabajo y reanudación del OCR | Parte 1 · #8 |
+| `22_ocr_manuscritos_memoria.png` | 2026-10-23 23:16 | Manuscritos grandes: límite de 3000 px por memoria y commit del OCR | Parte 1 · #8 |
+| `23_asr_en_curso.png` | 2026-10-23 23:16 | ASR en curso, `.gitignore` y revisión de los textos OCR | Parte 1 · #8 |
+| `24_pausa_fin_del_dia.png` | 2026-10-23 23:16 | Pausa del día y estado del ASR | Parte 1 · #8 |
+| `25_comandos_para_retomar.png` | 2026-10-23 23:17 | Comandos para retomar la conversación al día siguiente | Parte 1 · #8 |
+| `26_diarizacion_sobrecuenta.png` | 2026-10-24 17:32 | La diarización cuenta voces de más | Parte 1 · #8 |
+| `27_diarizacion_corregida.png` | 2026-10-24 17:32 | Regla de 15 s de voz y diarización corregida | Parte 1 · #8 |
+| `28_commit_asr.png` | 2026-10-24 17:33 | Commit del ASR y de la exportación | Parte 1 · #8 |
+| `29_seudonimizacion_ajustes.png` | 2026-10-24 17:33 | Ajustes de la seudonimización (nombres tapados) | Parte 1 · #8 |
+| `30_transcripciones_seudonimizadas.png` | 2026-10-24 17:33 | `transcripciones.csv` seudonimizado: podcasts | Parte 1 · #8 |
+| `31_entrevistas_seudonimizadas_1.png` | 2026-10-24 17:33 | `transcripciones.csv` seudonimizado: entrevistas | Parte 1 · #8 |
+| `32_entrevistas_seudonimizadas_2.png` | 2026-10-24 17:33 | `transcripciones.csv` seudonimizado: entrevistas (continuación) | Parte 1 · #8 |
+| `33_transcripciones_openslr.png` | 2026-10-24 17:34 | `transcripciones.csv`: frases de OpenSLR | Parte 1 · #8 |
+| `34_graficos_eda.png` | 2026-10-24 17:34 | Revisión y corrección de los gráficos del EDA | Parte 1 · #8 |
+| `35_grafico_3_y_commits_eda.png` | 2026-10-24 17:34 | Gráfico 3 corregido y commits del EDA | Parte 1 · #8 |
+| `36_validacion_y_cierre.png` | 2026-10-24 17:34 | Validación de extremos y cierre de la Parte 1 | Parte 1 · #8 |
+| `37_resumen_parte1.png` | 2026-10-24 17:34 | Resumen de la Parte 1 y pedido de revisión (nombres tapados) | Parte 1 · #8 |
+| `38_instrucciones_revision.png` | 2026-10-24 17:34 | Cómo corregir `revision.csv` (nombres tapados) | Parte 1 · #8 |
+| `39_hoja_de_revision.png` | 2026-10-24 17:34 | Instrucciones de la hoja de revisión (nombres tapados) | Parte 1 · #8 |
+
+En las capturas 29, 37, 38 y 39 los nombres reales de los niños están tapados con rectángulos negros sólidos. Los originales quedan fuera del repositorio, en `datos/raw/`.
