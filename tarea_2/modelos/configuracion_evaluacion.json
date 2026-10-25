@@ -1,0 +1,86 @@
+{
+ "fecha": "2026-10-25",
+ "modelos": {
+  "PaddleOCR": {
+   "rol": "OCR base",
+   "modelo": "PP-OCRv6_medium_det + PP-OCRv6_medium_rec",
+   "version": "3.7.0",
+   "opciones": {
+    "lang": "es",
+    "engine": "transformers",
+    "device": "cpu",
+    "use_doc_orientation_classify": false,
+    "use_doc_unwarping": false,
+    "use_textline_orientation": false,
+    "text_det_limit_type": "max",
+    "text_det_limit_side_len": 3000
+   },
+   "origen": "salidas de 01_extraccion.ipynb (sección 3)"
+  },
+  "EasyOCR": {
+   "rol": "OCR alternativo",
+   "modelo": "craft_mlt_25k + latin_g2",
+   "version": "1.7.2",
+   "opciones": {
+    "lang_list": [
+     "es"
+    ],
+    "gpu": false,
+    "canvas_size": 1600
+   }
+  },
+  "faster-whisper small": {
+   "rol": "ASR base",
+   "modelo": "Systran/faster-whisper-small",
+   "version": "1.2.1",
+   "opciones": {
+    "device": "cpu",
+    "compute_type": "int8",
+    "language": "es",
+    "beam_size": 5,
+    "vad_filter": true,
+    "vad_parameters": {
+     "min_silence_duration_ms": 300
+    }
+   }
+  },
+  "Parakeet TDT 0.6B v3": {
+   "rol": "ASR alternativo",
+   "modelo": "istupakov/parakeet-tdt-0.6b-v3-onnx",
+   "version": "0.12.0",
+   "opciones": {
+    "quantization": "int8",
+    "vad": "silero (valores por defecto de onnx-asr)"
+   }
+  },
+  "faster-whisper large-v3-turbo": {
+   "rol": "ASR de la Parte 1",
+   "modelo": "mobiuslabsgmbh/faster-whisper-large-v3-turbo",
+   "version": "1.2.1",
+   "opciones": {
+    "device": "cpu",
+    "compute_type": "int8",
+    "language": "es",
+    "beam_size": 5,
+    "vad_filter": true,
+    "vad_parameters": {
+     "min_silence_duration_ms": 300
+    }
+   },
+   "origen": "salidas de 01_extraccion.ipynb (sección 4)"
+  },
+  "Qwen2.5-1.5B-Instruct": {
+   "rol": "LLM de extracción",
+   "modelo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF (q4_k_m)",
+   "version": "0.3.2",
+   "opciones": {
+    "n_ctx": 4096,
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 400,
+    "max_caracteres_entrada": 8000,
+    "salida": "JSON con esquema"
+   }
+  }
+ }
+}
