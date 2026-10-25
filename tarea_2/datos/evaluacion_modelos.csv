@@ -1,0 +1,1164 @@
+id,modalidad,grupo,modelo,rol,metrica,valor,errores,n_ref,segundos,rtf,texto_salida
+impreso1,documento,impreso,PaddleOCR,OCR base,CER,0.0011,2,1804,20.0,,"INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE. – BASES INTEGRADAS
+DEBER DE COLABORACIÓN
+La Entidad y todo proveedor que se someta a las presentes Bases, sea como participante, postor
+y/o contratista, deben conducir su actuación conforme a los principios previstos en la Ley de
+Contrataciones del Estado.
+En este contexto, se encuentran obligados a prestar su colaboración al OSCE y a la Secretaría
+Técnica de la Comisión de Defensa de la Libre Competencia del INDECOPI, en todo momento
+según corresponda a sus competencias, a fin de comunicar presuntos casos de fraude, colusión
+y corrupción por parte de los funcionarios y servidores de la Entidad, así como los proveedores y
+demás actores que participan en el proceso de contratación.
+De igual forma, deben poner en conocimiento del OSCE y a la Secretaría Técnica de la Comisión
+de Defensa de la Libre Competencia del INDECOPI los indicios de conductas anticompetitivas
+que se presenten durante el proceso de contratación, en los términos del Decreto Legislativo N°
+1034, ""Ley de Represión de Conductas Anticompetitivas"", o norma que la sustituya, así como las
+demás normas de la materia.
+La Entidad y todo proveedor que se someta a las presentes Bases, sea como participante, postor
+y/o contratista del proceso de contratación deben permitir al OSCE o a la Secretaría Técnica de
+la Comisión de Defensa de la Libre Competencia del INDECOPI el acceso a la información referida
+a las contrataciones del Estado que sea requerida, prestar testimonio o absolución de posiciones
+que se requieran, entre otras formas de colaboración.
+1"
+impreso2,documento,impreso,PaddleOCR,OCR base,CER,0.0,0,2973,26.3,,"INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE. – BASES INTEGRADAS
+CAPÍTULO I
+ETAPAS DEL PROCEDIMIENTO DE SELECCIÓN
+1-1-
+REFERENCIAS
+Cuando en el presente documento se mencione la palabra Ley, se entiende que se está
+haciendo referencia a la Ley N° 30225, Ley de Contrataciones del Estado, y cuando se
+mencione la palabra Reglamento, se entiende que se está haciendo referencia al Reglamento
+de la Ley de Contrataciones del Estado aprobado por Decreto Supremo N° 344-2018-EF.
+Las referidas normas incluyen sus respectivas modificaciones, de ser el caso.
+1.2.
+CONVOCATORIA
+Se realiza a través de su publicación en el SEACE de conformidad con lo señalado en el artículo
+54 del Reglamento, en la fecha señalada en el calendario del procedimiento de selección,
+debiendo adjuntar las bases y resumen ejecutivo.
+1.3.REGISTRO DE PARTICIPANTES
+El registro de participantes se realiza conforme al artículo 55 del Reglamento. En el caso de un
+consorcio, basta que se registre uno (1) de sus integrantes.
+Importante
+2. Para registrarse como participante en un procedimiento de selección convocado por las
+Entidades del Estado Peruano, es necesario que los proveedores cuenten con inscripción
+vigente y estar habilitados ante el Registro Nacional de Proveedores (RNP) que administra el
+Organismo Supervisor de las Contrataciones del Estado (OSCE). Para obtener mayor
+información, se puede ingresar a la siguiente dirección electrónica: www.rnp.gob.pe.
+3. Los proveedores que deseen registrar su participación deben ingresar al SEACE utilizando su
+Certificado SEACE (usuario y contraseña). Asimismo, deben observar las instrucciones
+señaladas en el documento de orientación “Guía para el registro de participantes electrónico”
+publicado en https://www2.seace.gob.pe/.
+4. En caso los proveedores no cuenten con inscripción vigente en el RNP y/o se encuentren
+inhabilitados o suspendidos para ser participantes, postores y/o contratistas, el SEACE
+restringirá su registro, quedando a potestad de estos intentar nuevamente registrar su
+participación en el procedimiento de selección en cualquier otro momento, dentro del plazo
+establecido para dicha etapa, siempre que haya obtenido la vigencia de su inscripción o
+quedado sin efecto la sanción que le impuso el Tribunal de Contrataciones del Estado.
+1.4. FORMULACIÓN DE CONSULTAS Y OBSERVACIONES A LAS BASES
+La formulación de consultas y observaciones a las bases se efectúa de conformidad con lo
+establecido en los numerales 72.1 y 72.2 del artículo 72 del Reglamento, así como el literal a)
+del artículo 89 del Reglamento.
+Importante
+No pueden formularse consultas ni observaciones respecto del contenido de una ficha de
+homologación aprobada. Las consultas y observaciones que se formulen sobre el particular, se
+tienen como no presentadas."
+impreso6,documento,impreso,PaddleOCR,OCR base,CER,0.0969,235,2424,24.5,,"INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N° 013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC PARA LA EXTRACCIÓN, PROCESAMIENTO Y ANÁLISIS DE INFORMACIÓN O
+EQUIVALENTE. – BASES INTEGRADAS
+TÉRMINOS DE REFERENCIA
+En atención a lo señalado la Dirección requiere renovar el servicio de soporte y
+mantenimiento del software Open Text EnCase Forensic, tanto para la extracción en el
+momento de la supervisión como para el procesamiento de la evidencia en el laboratorio
+forense.
+OBJETIVOS DE LA CONTRATACIÓN
+4.1. OBJETIVO GENERAL
+Fortalecer la capacidad operativa de la Dirección Nacional de Investigación y
+Promoción de la Libre Competencia para llevar a cabo investigaciones efectivas sobre
+conductas anticompetitivas en el mercado, mediante el uso de herramientas forenses
+especializadas para la extracción, procesamiento y análisis forense de evidencia digital
+recabadas durante visitas de inspección.
+4.2.
+OBJETIVO ESPECÍFICO
+Fortalecer la capacidad operativa de la Dirección Nacional de Investigación y
+Promoción de la Libre Competencia.
+Llevar a cabo investigaciones efectivas sobre conductas anticompetitivas en el
+mercado.
+Usar herramientas forenses especializadas para la extracción, procesamiento y
+análisis de evidencia digital.
+5. ALCANCES Y DESCRIPCIÓN DEL SERVICIO A CONTRATAR
+5.1. ACTIVIDADES
+El proveedor coordinara con la Dirección Nacional de Investigación y Promoción de la
+Libre Competencia - DLC solicitando los números de serie de las licencias para realizar
+la activación, al correo activosinformaticos@indecopi.gob.pe y st-clc@indecopi.gob.pe
+al día hábil siguiente de suscrito el contrato.
+5.2. CARACTERÍSTICAS Y CONDICIONES
+Servicio
+Periodo de vigencia del
+Cantidad
+servicio
+SERVICIO
+DE
+SOPORTE
+MANTENIMIENTO DE SOFTWARE
+El periodo del servicio es por
+OPEN TEXT ENCASE FORENSIC
+trecientos sesenta y cinco (365)
+2
+PARA
+LA
+EXTRACCIÓN,
+días calendario, contados a partir
+PROCESAMIENTO Y ANÁLISIS DE
+de la renovación de las licencias.
+INFORMACIÓN O EQUIVALENTE
+Condiciones: Durante el periodo contratado, el Indecopi tendrá derecho a lo siguiente
+(sin costo adicional).
+Actualizaciones del software (updates o fixes), nuevas versiones del software
+(upgrades), versiones previas (downgrades), las cuales podrán ser descargadas
+desde el portal del fabricante o contratista.
+Soporte vía telefónica o correo electrónico.
+Página 2 de 9
+22"
+foto2,documento,foto,PaddleOCR,OCR base,CER,0.005,11,2196,16.3,,"DIRECTIVA EJECUTIVA REGIONAL
+Nro. 00 2024-GR/GOB.REG.TACNA
+Fecha: Tacna, 2 4 ABR 2024
+DISPOSICIONES Y PROCEDIMIENTOS PARA LA ENTREGA -
+RECEPCIÓN DEL CARGO EN EL GOBIERNO REGIONAL DE TACNA
+OBJETIVO
+1. Establecer normas y procedimientos para una adecuada Entrega-Recepción del cargo de los
+servidores y funcionarios que laboran en el Gobierno Regional de Tacna,
+independientemente del vínculo laboral o contractual que se mantenga.
+2. Constituirse en un instrumento orientador para el personal que labora en el Gobierno
+Regional de Tacna, cualquiera sea su nivel jerárquico, respecto de las acciones que deben
+realizar en la entrega-recepción del cargo.
+11
+FINALIDAD
+Garantizar que el proceso de entrega y recepción de cargo se desarrolle de manera ordenada,
+eficiente y documentada, permitiendo la continuidad y el normal funcionamiento de las
+diferentes dependencias (Unidades Orgánicas, Unidades de Organización, Unidades Ejecutoras)
+del Pliego 460 Gobierno Regional de Tacna, para así salvaguardar la logística asignada, el acervo
+documentario y demás bienes asignados al personal saliente de la entidad.
+III. ALCANCE
+Las disposiciones contenidas en la presente Directiva, son de aplicación y cumplimiento
+obligatorio del personal sea Funcionario, Empleado de Confianza y demás servidores públicos
+(profesional, técnico y auxiliar) en condición de nombrados o contratados en planilla. Este
+último alcance incluye al personal que presta servicios bajo el Régimen de Contratación
+Administrativa de Servicios (CAS) y con cargo los Proyectos de Inversión Pública, que labora o
+presta servicios en la Sede Regional, Unidades de Organización y Unidades Ejecutoras que
+dependen funcionalmente del Gobierno Regional de Tacna. La presente Directiva no resulta
+aplicable en el Proyecto Especial Tacna, quién deberá elaborar su normativa interna que rija el
+accionar de la entrega-recepción del cargo.
+IV.
+BASE LEGAL
+Decreto Supremo N° 004-2019-JUS; Decreto Supremo que aprueba el Texto único Ordenado
+de la Ley N° 27444- Ley del Procedimiento Administrativo General.
+Ley N° 28175; Ley Marco del Empleo Público
+Ley N° 29849; Ley que establece la eliminación progresiva del Régimen Especial del Decreto
+legislativo N° 1057y otorga derechos laborales."
+foto5,documento,foto,PaddleOCR,OCR base,CER,0.0114,32,2816,19.2,,"efectuarán las acciones necesarias con el fin de garantizar una adecuada asunción del
+cargo vacante por parte del personal reemplazante.
+6.3.
+A la culminación de la gestión o al cesar en sus cargos los funcionarios que desempeñan
+funciones en el Gobierno Regional de Tacna y que se el Artículo 2° de la Ley N° 30161 -
+Ley que regula la presentación de declaración jurada de ingresos, bienes y rentas de los
+funcionarios y servidores públicos del Estado; así como, todo el personal que administran
+o manejan fondos, quedan obligados a presentar una copia de la Declaración Jurada de
+Ingresos y de Bienes y Rentas, la misma que se adicionará al documento de ""Acta de
+Entrega - Recepción de Cargo"", en cumplimiento de lo dispuesto en la referida Ley N°
+30161 y sus modificatorias.
+GERENTE
+REGIONAL
+DISPOSICIONES ESPECÍFICAS
+7.1. El personal saliente deberá formular el Acta de Entrega - Recepción del Cargo, conforme
+a los Formatos y Anexo que adjuntos forman parte de la presente Directiva:
+Formato N° 01: Registro de No Adeudo de Rendición de Viáticos/Encargos
+Formato N° 02: Registro de No Adeudo de Rendición del Fondo de Caja Chica
+Formato N° 03: Registro de No Adeudo de Bienes
+Anexo N° 01: Informe de Gestión
+7.2.
+En el caso, que por fuerza mayor no fuera posible suscribir el Acta de Entrega - Recepción
+del Cargo por parte del personal saliente, el Jefe Inmediato en el término de la distancia
+designará a un servidor para que conjuntamente con la Sub Gerencia de Control
+Patrimonial o quién haga sus veces, procedan a efectuar la toma del respectivo
+Inventario de los bienes y equipos a su cargo, asimismo se formule la relación del acervo
+documentario, archivos y material de oficina asignado, entre otros. Concluido este acto
+se hará alcance del mismo al personal entrante.
+7.3.
+El personal saliente hará entrega de cargo a su Jefe Inmediato, Jefe Inmediato Superior
+o personal entrante según corresponda, en un plazo máximo de tres (03) días contados
+a partir de la efectivización de los casos previstos en el Numeral 6.1 de la presente
+directiva, solicitando la conformidad de las Sub Gerencias de Contabilidad y Tesorería y
+de Control Patrimonial o quiénes hagan sus veces, en los formatos señalados en el
+numeral7.1.
+7.4. Las Sub Gerencias de Contabilidad, Tesorería y de Control Patrimonial o quiénes hagan sus
+veces, luego de verificado el estado situacional de la Información de su competencia,
+otorgarán la conformidad en el Formato correspondiente, hasta en un plazo de (48) horas
+y bajo responsabilidad.
+7.5. La Sub Gerencia de Recursos Humanos o quién haga sus veces, es responsable de
+mantener un archivo ordenado alfabéticamente (en relación a su apellido paterno) de
+las Actas de Entrega - Recepción del Cargo. Asimismo, debe cumplirse con insertar copia
+del Acta en el Legajo Personal de cada funcionario o servidor saliente, con el objetivo de
+organizar y actualizar el Escalafón.
+4"
+foto7,documento,foto,PaddleOCR,OCR base,CER,0.0042,12,2869,18.9,,"Si los tuviere, el servidor saliente involucrado debe cumplir con regularizar dichas
+deudas pendientes de rendición.
+Si no los tuviere, el Sub Gerente de Tesorería o quién haga sus veces, otorga la
+conformidad (V°B°) respectiva en el Registro de No Adeudos de Rendición del Fondo
+de Caja Chica (FORMATO N° 02).
+8.7.
+La Sub Gerencia de Control Patrimonial o quién haga sus veces, bajo responsabilidad y en el
+plazo no mayora (48) horas, verificará y cotejará in situ los bienes asignados, contratando la
+información con el Inventario físico Individual del personal saliente; en este caso, se
+puede presentar las siguientes situaciones:
+Si detecta que tiene bienes pendientes de entrega, el interesado debe cumplir con
+regularizar tal situación, en el plazo de (48) horas, previo requerimiento de la Sub
+Gerencia de Control Patrimonial
+8
+En caso de que el personal no regularice la situación del bien en condición de
+faltante por pérdida, sustracción o deterioro, se aplicará la normativa vigente al
+respecto, para de esta manera efectivizar la devolución o reposición del bien o en su
+defecto la responsabilidad pecuniaria para proceder al descuento en planilla (de ser
+el caso), luego de lo cual se podrá otorgar la conformidad.
+Si lo encuentra conforme, otorga la conformidad (V°B°) en el Registro de No
+Adeudos de Bienes Patrimoniales (FORMATO N° 03).
+La Sub Gerencia de Control Patrimonial o quién haga sus veces, luego de formalizada la
+entrega de cargo, deberá en el término de la distancia, procesar un nuevo inventario
+físico individual de bienes a ser asignados al personal entrante, para que asuma la
+responsabilidad y custodia de los bienes a su cargo.
+8.8.
+El Jefe inmediato o el servidor que éste designe, verificará la situación actual de los
+trabajos pendientes y de la documentación en trámite, dando conformidad u
+observándola según sea el caso. Efectuada la verificación colocará V°B° al Acta de Entrega
+- Recepción y dispondrá que el personal saliente proceda a efectuar ña entrega de cargo
+al personal entrante o servidor designado para el caso, procediéndose a suscribir el Acta
+de Entrega - Recepción del cargo en (04) ejemplares, con la siguiente distribución:
+a) Jefe Inmediato / Inmediato Superior del órgano al que perteneció el personal
+saliente.
+b) Personal saliente que efectúa la entrega de cargo.
+c) Personal entrante que recepciona la entrega de cargo.
+d) Sub Gerencia de Recursos Humanos o quién haga sus veces.
+El Jefe inmediato o el servidor que éste designe, procederá a suscribir el Acta de Entrega -
+Recepción y/o observarla, hasta un plazo máximo de 03 días, de recibida la misma. bajo
+responsabilidad.
+De ser ei caso haya observaciones, el jefe inmediato deberá comunicar al servidor saliente
+que realice las subsanaciones correspondientes, otorgándole en el plazo de (03) días, de
+no realizada las subsanaciones correspondientes, comunicará a la Sub Gerencia de
+Recursos Humanos para las acciones correspondientes.
+6"
+manuscrito2,documento,manuscrito,PaddleOCR,OCR base,CER,0.7012,852,1215,38.4,,"4
+Consep
+Adios!.
+Cristiae y caallere, tu coran a
+(Enela ua viagea cuana)
+perdoneu at que agravio
+Adios; oh peregrina. que ves comer las horas
+cobarde te infirio.
+comiendo infatigable de ma quimera en pos!
+Mas olvidar la ofeusa, borrar el torpe insulto
+Iue en In camino no halles eepinas pungavoras,
+de la memoria...hagalo el sinvergüenza estutto.
+que nubes en In cielo Jamas consienta Din
+el hombre digno, no!
+7
+Curiosidad
+1
+(álbum)
+ANatalia
+No por forma de estricta galanteria
+(Calbin)
+de troimbre cortes
+Rien me ligeron mis cleaj de mis paisanas-
+Te dye, ha pocas tardes: — Senora mia,
+sabe usted que son lindas las bogotanas?
+besé sus pies.-
+te vi y me dije: Vamos! pues no era broma!
+que te ls vi, al desenido, cierta manana
+Ja ertu beldai, Natalia, para mi axioma,
+sin la botina,
+Ti otro Jipiter fuera Capitoling,
+y de deeir a gritos me entri una gana-
+arbitro imeusable de tu destino
+;Cosa divina!-
+Desde entouces, Curiose, pues Dis lo guise
+(aungue un Vate, mi ainige, suspire y gima)
+por Carcel sempiterna te daba hima.
+descubrir quiero
+Si Tienes algun angel del Paraiso
+y por Cadena
+un espos y....de chiers media docena.
+por zapatero
+Deftnicion
+Q
+It crimen es, seed, (decia un Juer)
+() La independenisa de Cuta
+un cambio a retaguardia de la hvnradez."
+manuscrito3,documento,manuscrito,PaddleOCR,OCR base,CER,0.5187,292,563,35.8,,"Pih D Jamingo Fristan
+PrayuaOnaro 2de1822
+Mi mfon Amiga inlyoa an
+ig 
+aaaelyl ofal lomanJomales
+nte cone as ventaaao
+à perer i paralicamor mstaa movimientor
+do un momento g viter tantr inidentun
+Vena martro otecton con nr delibexa
+Gone aon la inantancia   pedeor un ma
+a tan cocelente g? poca vee  prerent tal.
+ves lo penderomo p? ciemppxe.
+Aio mi anigo,Digamev. ia
+aliviad dla teniana y male t. arm beaino
+CAMo
+Goomarraf
+Mchar oas ami Vicaris y Ecenig"
+manuscrito6,documento,manuscrito,PaddleOCR,OCR base,CER,0.1939,70,361,46.6,,"$30
+Sr I. M. Rodriguer R.
+Pambayeque
+Prefecto del Dept?3
+Mi querido Fr Irefecto:
+El Ir Pedro Adolfo Espinoga,
+despues de conversar conmigo, regresa a Mbotu-
+pe lugar de su pesidencia para ocuparse de sus a-
+suntos particulares.
+Recomiindolo mii especialmente a su
+distingnida comsidevacion i a la de sus auto.
+pidades suballernas.
+ectuosamente rgye
+lverola"
+manuscrito7,documento,manuscrito,PaddleOCR,OCR base,CER,0.4971,172,346,2.9,,"apitulo 4. delor aburor acerca dellugar
+SiendsLstemplaadeDi doneLon
+n conuna mag.yalcançn Sobernme
+econlantar ora gxandeabur geno
+demar solemmda enguduulamomar enplen
+enld adt
+vamdadecoaxiamelandealguna"
+impreso1,documento,impreso,EasyOCR,OCR alternativo,CER,0.0233,42,1804,21.14,,"INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA
+Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N
+013-2024-INDECOPI-1: SERVICIO DE SOPORTE YMANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC
+PARA
+LA EXTRACCIÓN,
+PROCESAMIENTO
+ANÁLISIS DE INFORMACIÓN
+EQUIVALENTE
+BASES INTEGRADAS
+DEBER DE COLABORACIÓN
+La Entidad y todo proveedor que se someta a las presentes Bases
+sea como participante; postor
+ylo contratista; deben conducir
+su
+actuación conforme a los principios previstos
+en la
+de
+Contrataciones del Estado_
+En este contexto
+se encuentran obligados a prestar su colaboración al OSCE y a la Secretaría
+Técnica de la Comisión de Defensa de la Libre Competencia del INDECOPI
+en todo momento
+según corresponda a sus competencias
+a fin de comunicar presuntos casos de fraude, colusión
+y corrupción por parte de
+funcionarios y servidores de la Entidad, así como
+proveedores y
+demás actores que participan en el proceso de contratación.
+De igual forma, deben poner en conocimiento del OSCE y a la Secretaría Técnica de la Comisión
+de Defensa de la Libre Competencia del INDECOPI los indicios de conductas anticompetitivas
+que se presenten durante el proceso de contratación; en los términos del Decreto Legislativo N'
+1034
+de Represión de Conductas Anticompetitivas""
+0 norma que la
+sustituya; así como las
+demás normas de la materia
+La Entidad y todo proveedor que se someta a las presentes Bases
+sea como participante; postor
+ylo contratista del proceso de contratación deben permitir al OSCE
+0 a la Secretaría Técnica de
+la Comisión de Defensa de la Libre Competencia del INDECOPI el acceso a la información referida
+a las contrataciones del Estado que sea requerida; prestar testimonio 0 absolución de posiciones
+que se requieran; entre otras formas de colaboración.
+Ley
+los
+los
+""Ley"
+impreso2,documento,impreso,EasyOCR,OCR alternativo,CER,0.0192,57,2973,18.05,,"INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA
+Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N
+013-2024-INDECOPI-1: SERVICIO DE SOPORTE Y MANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC
+PARA
+LA
+EXTRACCIÓN,
+PROCESAMIENTO
+ANÁLISIS DE INFORMACIÓN
+EQUIVALENTE
+BASES INTEGRADAS
+CAPITULO
+ETAPAS DEL PROCEDIMIENTO DE SELECCIÓN
+1.1.
+REFERENCIAS
+Cuando en el presente documento se mencione la palabra Ley,
+se entiende que
+se está
+haciendo referencia
+a la
+N  30225, Ley de
+Contrataciones del Estado; y cuando
+se
+mencione la palabra Reglamento; se entiende que se está haciendo referencia al Reglamento
+de la
+de Contrataciones del Estado aprobado por Decreto Supremo N' 344-2018-EF_
+Las referidas normas incluyen sus respectivas modificaciones; de ser el caso.
+1.2
+CONVOCATORIA
+Se realiza a través de su publicación en el SEACE de conformidad con lo señalado en el artículo
+54 del Reglamento;
+en la fecha señalada
+en
+el calendario del procedimiento de selección,
+debiendo adjuntar las bases y resumen ejecutivo.
+1.3.
+REGISTRO DE PARTICIPANTES
+El registro de participantes se realiza conforme al artículo 55 del Reglamento. En el caso de un
+consorcio; basta que se registre uno (1) de sus integrantes_
+Importante
+2. Para registrarse
+como participante
+en
+un
+procedimiento de selección convocado por las
+Entidades del Estado Peruano;
+es necesario que los proveedores cuenten con inscripción
+vigente y estar habilitados ante el Registro Nacional de Proveedores (RNP) que administra el
+Organismo Supervisor de
+las   Contrataciones   del Estado (OSCE).
+Para
+obtener   mayor
+información; se puede ingresar a la siguiente dirección electrónica: www.rnp.
+pe_
+3. Los proveedores
+deseen registrar su participación deben ingresar al SEACE utilizando su
+Certificado SEACE
+(usuario y contraseña)
+Asimismo; deben observar
+las instrucciones
+señaladas en el documento de orientación ""Guía para el registro de participantes electrónico
+publicado en https://www2.seace_
+pel.
+En caso los proveedores no cuenten
+con inscripción vigente en el RNP ylo se encuentren
+inhabilitados
+suspendidos para
+ser   participantes; postores ylo contratistas; el SEACE
+restringirá
+su
+registro;   quedando
+potestad de
+estos intentar nuevamente registrar su
+participación en el procedimiento de selección en cualquier otro momento; dentro del plazo
+establecido para dicha etapa; siempre que haya obtenido la vigencia
+de su inscripción
+quedado sin efecto la sanción que le impuso el Tribunal de Contrataciones del Estado.
+1.4.
+FORMULACIÓN DE CONSULTAS Y OBSERVACIONES
+A LAS BASES
+La formulación de consultas y observaciones a las bases se efectúa de conformidad con lo
+establecido en los numerales 72.1 y 72.2 del artículo 72 del Reglamento; así como el literal a)
+del artículo 89 del Reglamento
+Importante
+No pueden formularse
+consultas
+ni observaciones respecto del contenido
+de
+una ficha
+de
+homologación aprobada. Las consultas y observaciones que se formulen sobre el particular, se
+tienen como no presentadas.
+Ley
+Ley
+gob.
+que
+gob."
+impreso6,documento,impreso,EasyOCR,OCR alternativo,CER,0.1271,308,2424,18.66,,"INSTITUTO NACIONAL DE DEFENSA DE LA COMPETENCIA
+Y DE LA PROTECCIÓN DE LA PROPIEDAD
+INTELECTUAL- INDECOPI
+ADJUDICACIÓN SIMPLIFICADA N
+013-2024-INDECOPI-1: SERVICIO DE SOPORTE YMANTENIMIENTO DE SOFTWARE
+OPEN TEXT ENCASE FORENSIC
+PARA
+LA EXTRACCIÓN,
+PROCESAMIENTO
+ANÁLISIS DE INFORMACIÓN
+EQUIVALENTE
+BASES INTEGRADAS
+TÉRMINOS DE REFERENCIA
+En
+atención
+señalado
+Dirección
+requiere
+renovar
+servicio
+de
+soporte
+mantenimiento del software Open Text EnCase Forensic
+tanto para la extracción en el
+momento de la supervisión como para
+procesamiento de la evidencia en el
+aboratorio
+forense
+OBJETIVOS DE LA CONTRATACIÓN
+4.1.
+OBJETIVO GENERAL
+Fortalecer
+capacidad   operativa
+de la
+Dirección
+Nacional
+Investigación
+Promoción de la Libre Competencia para llevar
+cabo investigaciones efectivas sobre
+conductas anticompetitivas en
+mercado; mediante
+uso de herramientas forenses
+especializadas para la extracción, procesamiento y análisis forense de evidencia digital
+recabadas durante visitas de inspección.
+4.2.
+OBJETIVO ESPECÉFICO
+Fortalecer la capacidad operativa de
+la Dirección Nacional de Investigación
+Promoción de la Libre Competencia
+Llevar
+cabo investigaciones efectivas
+sobre
+conductas anticompetitivas en
+mercado
+Usar herramientas forenses especializadas para
+extracción
+procesamiento y
+análisis de evidencia digital.
+ALCANCES Y DESCRIPCIÓN DEL SERVICIO A CONTRATAR
+5.1 .
+ACTIVIDADES
+El proveedor coordinara con la Dirección Nacional de Investigación
+Promoción de la
+Libre Competencia
+DLC solicitando los números de serie de las licencias para realizar
+la activación
+al correo activosinformaticos @indecopi gob pe
+st-clc@indecopi gob pe
+al día hábil siguiente de suscrito el contrato_
+5.2
+CARACTERISTICAS Y CONDICIONES
+Periodo de vigencia del
+Cantidad
+Servicio
+servicio
+SERVICIO
+DE
+SOPORTE
+MANTENIMIENTO
+DE
+SOFTWARE
+periodo
+del   servicio
+es
+por
+OPEN
+TEXT
+ENCASE FORENSIC
+treclentos
+sesenta
+cinco
+(365)
+PARA
+LA
+EXTRACCION,
+días calendario;, contados
+partir
+PROCESAMIENTO Y ANÁLISIS DE
+de la renovación de las licencias
+INFORMACION 0 EQUIVALENTE
+Condiciones: Durante el periodo contratado
+Indecopi tendrá derecho a lo siguiente
+(sin costo adicional).
+Actualizaciones del software (updates
+fixes) , nuevas versiones del software
+(upgrades); versiones previas (downgrades),
+las cuales podran ser descargadas
+desde el portal del fabricante
+contratista
+Soporte vla telefónica
+correo electrónico
+Página 2 de 9
+22"
+foto2,documento,foto,EasyOCR,OCR alternativo,CER,0.0396,87,2196,11.74,,"DIRECTIVA EJECUTIVA REGIONAL
+Nro.
+00 22024-GR/GOB.REG.TACNA
+Fecha: Tacna,
+2 4 ABR  2024
+DISPOSICIONES Y PROCEDIMIENTOS PARA LA ENTREGA
+RECEPCIÓN DEL CARGO EN EL GOBIERNO REGIONAL DE TACNA
+OBJETIVO
+Establecer normas
+procedimientos para una adecuada Entrega-Recepción del cargo de los
+servidores
+funcionarios
+que
+laboran
+Gobierno
+Regional
+Tacna
+independientemente del vínculo laboral 0 contractual que se mantenga
+Constituirse
+un instrumento orientador para
+el personal que labora en el Gobierno
+Regional de Tacna
+cualquiera sea su nivel jerárquico
+respecto de las acciones que deben
+realizar en la entrega-recepción del cargo.
+FINALIDAD
+Garantizar que el proceso de entrega Y recepción de cargo se desarrolle de manera ordenada
+eficiente
+documentada
+permitiendo
+la continuidad
+Y el normal funcionamiento de las
+diferentes dependencias (Unidades Orgánicas, Unidades de Organización, Unidades Ejecutoras)
+del Pliego 460 Gobierno Regional de Tacna, para así salvaguardar la logistica asignada,
+elacervo
+documentario Y demás bienes asignados al personal saliente de la entidad_
+ALCANCE
+Las   disposiciones contenidas
+en la
+presente Directiva
+son
+de aplicación
+cumplimiento
+obligatorio del personal sea Funcionario,
+Empleado de Confianza
+demás servidores públicos
+(profesional, técnico
+auxiliar)
+en condición de nombrados
+contratados
+planilla
+Este
+último alcance incluye
+al personal que
+presta
+servicios bajo
+Régimen
+de
+Contratación
+REs
+Administrativa de Servicios (CAS) y
+con cargo los Proyectos de Inversión
+ Pública, que labora
+presta servicios
+en la Sede Regional, Unidades de Organización
+Unidades Ejecutoras
+que
+dependen funcionalmente del Gobierno Regional de Tacna
+La presente
+Directiva no resulta
+aplicable en el Proyecto Especial Tacna, quién deberá elaborar su normativa interna que rija el
+accionar de la entrega-recepción del cargo.
+IV.
+BASE LEGAL
+Decreto Supremo N"" 004-2019-JUS; Decreto Supremo que aprueba el Texto único Ordenado
+de la Ley N' 27444
+Ley del Procedimiento Administrativo General.
+N"" 28175; Ley Marco del Empleo Público
+Ley N"" 29849; Ley que establece la eliminación progresiva del Régimen Especial del
+legislativo N' 1057 Y otorga derechos laborales.
+Decreto
+06a
+Ley /"
+foto5,documento,foto,EasyOCR,OCR alternativo,CER,0.038,107,2816,14.3,,"efectuarán las acciones necesarias con el fin de garantizar una adecuada asunción del
+cargo vacante por parte del personal reemplazante.
+6.3.
+A la culminación de la gestión 0 al cesar en sus cargos los funcionarios
+desempeñan
+funciones en el Gobierno Regional de Tacna Y que se el Artículo 2"" de la
+N' 30161
+Ley que regula la presentación de declaración jurada de ingresos, bienes y rentas de los
+funcionarios y servidores públicos del Estado; así como; todo el personal que administran
+manejan fondos, quedan obligados
+presentar una copia de la Declaración Jurada de
+Ingresos Y de Bienes
+Rentas
+la misma que se adicionará al documento de ""Acta de
+Entrega
+Recepción de Cargo
+en cumplimiento de lo dispuesto en la referida Ley N'
+Y2
+30161
+sus modificatorias
+4684
+52g
+DISPOSICIONES ESPECIFICAS
+7.1
+El personal saliente deberá formular el Acta de Entrega
+Recepción del Cargo, conforme
+los Formatos y Anexo que adjuntos forman parte de la presente Directiva:
+Formato N
+01: Registro de No Adeudo de Rendición de Viáticos/Encargos
+Formato N? 02: Registro de No Adeudo de Rendición del Fondo de Caja Chica
+Formato N' 03: Registro de No Adeudo de Bienes
+Anexo N' 01: Informe de Gestión
+7.2
+En el caso que por fuerza mayor no fuera posible suscribir el Acta de Entrega
+Recepción
+del
+ICargo
+parte del personal saliente
+el Jefe Inmediato en el término de la distancia
+designará
+un
+servidor
+para
+que
+conjuntamente
+con la Sub
+Gerencia
+de
+Control
+Patrimonial
+quién
+SUS   veces
+procedan
+efectuar
+toma
+del
+respectivo
+Inventario de los bienes y equipos a su cargo_
+asimismo se formule la relación del acervo
+documentario
+archivos y material de oficina asignado, entre otros. Concluido este acto
+se hará alcance del mismo al personal entrante
+7.3
+El personal saliente hará entrega de cargo
+Jefe Inmediato, Jefe Inmediato Superior
+personal entrante según corresponda
+en un plazo máximo de tres (03) días contados
+partir de la efectivización de los casos previstos
+en el Numeral 6.1 de la presente
+directiva, solicitando la conformidad de las Sub Gerencias de Contabilidad
+Tesorería
+de Control Patrimonial
+quiénes hagan sus veces,
+en los formatos señalados en el
+numeral 7.1.
+7.4.
+Las Sub Gerenciasde Contabilidad, Tesorería y de Control Patrimonial 0 quiénes hagan sus
+veces, luego de verificado el estado situacional de la Información de su competencia,
+otorgarán la conformidad en el Formato correspondiente, hasta en un plazo de (48) horas
+Y bajo responsabilidad.
+7.5.
+La Sub Gerencia de
+Recursos Humanos
+quién haga
+suS veces,
+es responsable de
+mantener un archivo ordenado alfabéticamente (en relación a su apellido paterno) de
+las Actas de Entrega
+Recepción del Cargo. Asimismo; debe cumplirse con insertar copia
+del Acta en el
+Legajo Personal de cada funcionario 0 servidor saliente, con el objetivo de
+organizar Y actualizar el Escalafón.
+que
+Ley
+Qeaser
+por
+haga"
+foto7,documento,foto,EasyOCR,OCR alternativo,CER,0.167,479,2869,15.69,,"involucrado debe cumplir con
+dichas
+Si los tuviere
+el servidor saliente
+deudas
+pendientes de rendición.
+otorga la
+Si no los tuviere
+el Sub Gerente de Tesorería
+quién haga
+veces,
+Fondo
+conformidad (V'B"") respectiva en el Registro de No Adeudos de
+Rendición del
+de Caja Chica (FORMATO N"" 02).
+Patrimonial 0 quién haga sus veces, bajo
+ responsabilidad y en el
+8.7.
+La Sub Gerencia de Control
+contratando la
+no mayor a (48) horas; verificará y cotejará in situ los bienes asignados,
+físico Individual del personal saliente;
+en este caso,
+información
+con
+el Inventario
+puede presentar las siguientes situaciones:
+tiene bienes pendientes de entrega
+el interesado debe cumplir con
+Si detecta
+de (48) horas,
+previo requerimiento de la Sub
+regularizar tal situación,
+el plazo
+Gerencia de Control Patrimonial
+Ye?
+En caso de que el personal no regularice la situación del bien en condición de
+faltante por
+pérdida, sustracción 0 deterioro,
+aplicará la normativa vigente al
+para de esta manera efectivizar la devolución 0 reposición del bien 0 en su
+respecto,
+bilidad pecuniaria para proceder al descuento en planilla (de ser
+RES_
+defecto la responsa
+el caso) , luego de lo cual se podrá otorgar la conformidad
+Si lo encuentra conforme, otorga la conformidad (V'B') en el Registro de No
+Adeudos de Bienes Patrimoniales (FORMATO N' 03)
+La Sub Gerencia de Control Patrimonial 0 quién haga sus veces, luego de formalizada la
+entrega
+de cargo, deberá en el término de la distancia-
+procesar un nuevo inventario
+físico individual de bienes
+ser
+asignados al personal entrante
+para
+asuma
+responsabilidad
+custodia de los bienes
+su cargo
+El Jefe inmediato 0 el servidor que
+éste designe
+verificará la situación actual de los
+trabajos   pendientes
+de
+documentación
+trámite,  dando
+conformidad
+observándola según sea el caso. Efectuada la verificación colocará V'B? al Acta de Entrega
+Recepción Y dispondrá
+el personal saliente proceda a efectuar ña entrega de cargo
+al personal entrante 0 servidor designado para el caso, procediéndose a suscribir el Acta
+de Entrega
+Recepción del cargo en (04) ejemplares, con la siguiente distribución:
+Jefe Inmediato
+Inmediato
+Superior del órgano
+al que perteneció
+el personal
+saliente.
+Personal saliente que efectúa la entrega de cargo.
+Personal entrante que recepciona la entrega de cargo.
+d)
+Sub Gerencia de Recursos Humanos 0 quién haga sus veces.
+El Jefe inmediato 0 el servidor que éste designe, procederá a suscribir el Acta de Entrega
+Recepción y/o observarla, hasta un plazo máximo de 03 días, de recibida la misma. bajo
+responsabilidad.
+De ser ei caso haya observaciones, el jefe inmediato deberá comunicar al servidor saliente
+que realice las subsanaciones correspondientes, otorgándole en el plazo de (03) días, de
+no realizada las subsanaciones correspondientes,
+comunicará
+la Sub Gerencia de
+Recursos Humanos
+las acciones correspondientes.
+regularizar
+sus
+plazo ,
+que
+69
+que
+que
+para"
+manuscrito2,documento,manuscrito,EasyOCR,OCR alternativo,CER,0.7416,901,1215,16.66,,"Hctsz!
+6noléc+ 1 Caballš 
+75 00+9}P+ & Zao;
+{eladue
+Jna vzaqen
+Casbcna)
+cl Jaxe
+Cseavz
+Ade  j%4 /neseftia
+Jee
+ev
+C077 81
+2ay
+Cofarde te
+02/e7z
+Corrieudo vfalipasce <
+2leza
+Zunene&u &ov!
+hhca evidan la efuda, bora
+4eles
+?ue
+enbucammc
+o
+áacles
+/vn-9""~ )
+dc la Inemera .
+boalo el
+denvegiensceslulls
+ufev
+Ca
+72264452
+Curelenla
+95187
+e hozbedzo
+725,
+Jne
+(Guicuidad
+Zilll 7
+Qalzla
+Jc /"" Derne
+G
+d_eabzcta
+ZalanTerea
+de-tarbze
+€o7 &
+Cficu me
+618tcn/n144
+cl2s'd
+Ined /ucqava
+le dre ,
+Zazde
+Bezora
+Jak unlen 9ec
+edg lg bvzac""s !
+80zó
+~u /nley.
+tev
+In12
+Vavez! Jues
+/20 ena
+6zrza !
+9e E2lo %,aldeceui do
+@eerta
+Ylaucaace
+ey
+kldcê , Clataliv) ,
+/72
+Qx{o722
+Juz
+la
+84 vhe Qilez }huze
+22
+lo 
+de decvv
+à ful
+me eutv
+lna
+Gaece _
+ail ""ce Jabue detu
+dealine
+Cvza dlivia
+(aa""91 .
+{
+Val) )c a;n)9 shcepce
+Jeade eloucea @urinzo /uuea 02 lo
+fer Cazcel Jenf {ern <
+le daba
+2)
+deiecbr
+Oaeiz
+fer Cadese
+ch lícue) algun
+dl
+las cifes
+de chiee s
+medladocena
+472
+'a/aZev
+Detinuciin
+{{ cunnen 2) denore tleln
+Ln
+Juez
+JmcMausy
+à
+Jemguasdlia de_la' hwin5ez
+(4) Za idejendeuena dlCuta
+Qou]
+herclomec
+horv
+eiorfe
+F7
+ha /wca4
+mua)
+Jvv
+dje:
+kotína)
+{se,
+7uczze"
+manuscrito3,documento,manuscrito,EasyOCR,OCR alternativo,CER,0.7798,439,563,13.98,,"Jons9f Un;t2
+Qco {qaa Cncaree 2e/8*22
+Oo
+4Z
+2
+Y2uez
+3a%
+sa2
+74
+be4f
+2/ esa; )e/ e,*22.&
+(zza& +
+7
+en8xa
+Comf e4x
+ca/
+7282
+ef
+vazox
+7
+à yenez
+7
+paxalramer Mtees-*4c 7 10v8444/222 2,
+226
+2e1
+77102en8
+5ui84
+4.x7 +dezed
+01
+~""eaza 7124/7
+40
+226
+7780 
+2, )elcexc
+4 /iAcesunaa
+2/ %e)emaz
+7
+cu
+&n cacelng
+5toca
+7ee
+7
+Pxe*Z
+44
+77
+beezomo )a;empxc
++D)io
+74
+Qne70
+Hpess
+U
+Del
+fzvanca
+~a)e `
+0/4
+Zr)dco
+47*144
+Vla cha
+Lu7eLy
+ay}
+1 , 2a722
+2<1271 ?
+52422
+Origo
+c van
+iclau""
+cxdi7ls
+2 1
+Deddec
+4 Me
+lta
+Cx?
+4>
+Con
+Gane4
+Cun
+748<
+4e1
+e
+4972 Za
+adiviaèe
+lvia'"
+manuscrito6,documento,manuscrito,EasyOCR,OCR alternativo,CER,0.6759,244,361,13.16,,"87c2-/0 % 189)
+@ 09n.
+9 .
+@Irefecto
+del 2e/l' 3
+Obs
+0
+eZechs:
+2 @ cedao &/d // 6+6+79
+deefues de
+eovvenla
+2cnni70,4e7veja% cdbof_
+lsgav de eAeesdncca]ava ccuskaue d @u2d € _
+duiv
+Ja Kahculane
+Dlcomiée
+2aRcellekíø
+da @ edlevaci e 4 % 4e Ld Zcl
+Jdade_ehalssvvas
+Cefcchas & amen6 evye
+9 oduquev
+~fomlayequ)
+Zuevcd
+72
+~121u2
+dietinq"
+manuscrito7,documento,manuscrito,EasyOCR,OCR alternativo,CER,0.5925,205,346,4.2,,"'aptulo 4 del alu acerca dellgax
+fiends 107 templa
+de Q1 domn) 1i
+9
+CLa
+conuJume mmaà,
+lcamncen Jo beranar mex
+&
+cedu
+cm Jwicia/ oract
+oufo
+Uqu< @m lazacx
+doma /
+fo
+emm
+'44) enquc Juuíamoz mat ens[anms
+Om laonu duuna sÉagun Jn tau Jeoxacecn #écataz
+ôa wamdaJu 9 cocaaaanal mlitlamdae ulqumal
+cefê,
+felumys
+Jya
+29*a9184 _"
+clip_004,audio,"entrevista (habla espontánea de niños, celular, aula)",faster-whisper small,ASR base,WER,0.2706,59,218,37.54,0.303,"¿Cómo te sientes tú cuando vienes al colegio? Bien. ¿Por qué te sientes bien? Porque estudio. ¿Qué más? Porque juego en los sectores. Ah, los sectores. ¿Y qué son los sectores? Los sectores es construcción o cocinito o setor pintura. ¿Y qué haces allá? Pues hay juego o pintura o leo un cuento. ¿Un cuento? ¿Con quién, sola? Algunas veces con la [PERSONA_09] o algunas veces con el [PERSONA_08] o la [PERSONA_13] o algunas veces con el [PERSONA_14]. ¿Y tú venías musabas contando las asesiones lectoras? Sí. ¿Y qué hacían en las asesiones lectoras? Leemos un cuento, la señaló sola, dile toda la luz, leo un cuento. ¿Para qué les leo un cuento? Para que sabemos este leer o aprender. ¿Y después de leer qué hacían ustedes? Después les leé, dibujamos. ¿En qué dibujaban? Eso es lo que lo han leído la prueba sola. ¿Entonces te gusta a ti venir al jardín? Sí. ¿Por qué te gusta? Porque estudio y hago juego con mis amigos. ¿Y las profesoras son buenas, te quieren mucho o cómo son las profesoras? Tú me caes bien, pero las otras profesoras no, pero las profesoras las hacen igual. Me caí bien. Muy bien, gracias."
+clip_007,audio,"entrevista (habla espontánea de niños, celular, aula)",faster-whisper small,ASR base,WER,0.2371,46,194,32.71,0.38,"ya. Hola soy [PERSONA_10]. Hola [PERSONA_10]. ¿Qué es la experiencia? ¿Cuál ha sido la experiencia? Que no te ha gustado en tu jardín. Este que la [PERSONA_09] en este, no. Que yo le pudo. Que yo le, que yo no le he hecho nada. Que ella dijo que tú le habías hecho algo pero tú no le hiciste nada. No, yo solo le dije, le estaba en la lindelita y ella no me quería darle y luego empezó a llorar. Ah, ella empezó a llorar. ¿Y tú cómo te sentiste? Mi mamá. ¿Mán? ¿Por qué te sientes mal? Porque yo, o sea, pienso que yo, o sea, este, este, pienso que mi mamá, su mamá de la [PERSONA_09] le va a quedar a mi mamá polera. Ah, entonces que la mamá de [PERSONA_09] le va a gritar a tu mamá para que luego te grite a ti. Sí. No te gusta entonces cuando los niños te echan la culpa a ti. ¿Por qué tú no haces nada? Sí. Algunas veces te algo a loco y algunas veces no. ¿Y cómo te sientes? ¿Tú lloras o gritas o solamente te vas a un rincón y no juegas con nadie? ¿Qué haces en ese momento? Me siento en un rincón y juego con unos juguetes. ¿Tienes una gasola? Muy bien, de ella."
+clip_008,audio,"entrevista (habla espontánea de niños, celular, aula)",faster-whisper small,ASR base,WER,0.1151,29,252,46.74,0.377,"¿Y en qué momento el [PERSONA_17], tú le has pasado mal en el jardín? Cuando mis compañeras están enojados. ¿Cuándo están enojados sus compañeros? ¿Todos sus compañeras se enojan? No, algunos. ¿Y por qué se enojan? Porque... porque no... ellos no... no comparten. ¿No comparten? ¿Y se enojan ellos o te enojas tú? No, se enojan ellos. ¿Y has tenido alguna pelea con alguno de tus compañeros? No. ¿No has tenido peleas con tu profesora tal vez cuando ella... ¿Y ella te grita? No. ¿No? ¿Entonces tú no te enojas con tu profesora ni con tus compañeros? Sí. ¿No? ¿Y cuéntame, en qué momento también has sentido mucha tristeza? ¿Capás cuando no ha venido tu mamá recogerte? ¿O cuando se cayó algún compañero? ¿O cuando tú te caíste? ¿O cuando no te dejaron salir al recreo? No, no me dejaron salir al recreo. ¿Por qué no te dejaron salir al recreo? Porque no me comporte bien. ¿Y qué hiciste pues? Me hice nada. Sí sé. ¿Qué hiciste? ¿La profesora se enojo así de la nada? ¿O era porque tú no habías hecho la tarea? ¿Por qué no habías hecho caso? Sí, hice caso. ¿Sí hiciste caso? Sí. ¿Sí? O sea, ¿en la profesora te delitó porque habías hecho caso? No. ¿No? ¿Cómo te sentiste cuando no te dejó salir al recreo? Triste. Triste. ¿Por qué ya no ibas a jugar? Sí. ¿Te gustaría otra vez que ella te castigue así? No. No. Muy bien, Díaz. Gracias."
+clip_009,audio,"entrevista (habla espontánea de niños, celular, aula)",faster-whisper small,ASR base,WER,0.1412,24,170,31.26,0.268,"Hola [PERSONA_17], ¿cómo estás? Bien. Bien? ¿Cómo te sientes cuando vienes al jardín? Bien. Bien. ¿Por qué te sientes bien? Porque puedo con mis amigos. ¿Qué más? Porque el profesor es buena. ¿Qué más juegas, el profesor es buena? ¿Qué más asisten del jardín? Estudio. Estudias. Y aprendo algunas cosas. Ah, aprende muchas cosas. ¿Y cuál ha sido el mejor momento que tú te has sentido feliz, donde tú has estado contento, te acuerdas en alguna situación en el jardín donde hayas estado tranquilo, tal vez cuando has bailado con tus compañeros o cuando se han ido de paseo o cuando juegas en los sectores, ¿en qué momento tú te sientes más feliz en el jardín? Cuando vas a los sectores. ¿Cuándo vas a los sectores? ¿Por qué? Porque acá juegas. ¿Y los sectores juegas? ¿Y qué sectores tienes tú en tu salón? Construcción, cuentos, cocina. ¿Y ahí tienen muchos juguetes o son poquitos? Artos. ¿Y quiénes compran esos juguetes? Los profesoras. ¿Las profesoras? Muy bien."
+clip_010,audio,"entrevista (habla espontánea de niños, celular, aula)",faster-whisper small,ASR base,WER,0.1818,14,77,12.92,0.303,"Hola, [PERSONA_18], ¿cómo estás? ¿Me puedes comentar una experiencia agradable y una experiencia desagradable que hayas pasado en tu institución educativa? Ya, que estas que me molestan en el colegio y... ¿en qué escribo? Esa es una experiencia desagradable, que te molestan en el colegio. Sí, es una experiencia agradable. Que ella se disculpe, yo me trato bien. Otras que tengas, quizá, que nos puedas comentar. Eso más. ¿De qué colegio? Más [INSTITUCION]. Listo, muchas gracias, [PERSONA_18]. Ya."
+clip_012,audio,"lectura (adulto, micrófono, silencio)",faster-whisper small,ASR base,WER,0.0,0,21,3.56,0.509,Ya vi las fotos que subiste ayer a la red. Te ves muy bien. Te queda muy bien el color rojo.
+clip_013,audio,"lectura (adulto, micrófono, silencio)",faster-whisper small,ASR base,WER,0.0,0,17,3.55,0.37,La película de King Kong ha tenido varias versiones. La primera se filmó en el año 1938.
+clip_018,audio,"lectura (adulto, micrófono, silencio)",faster-whisper small,ASR base,WER,0.0526,1,19,3.56,0.451,Con la aguja y el hilo quirúrgico va a tratar de coserle herida para que pare de sangrar.
+clip_020,audio,"lectura (adulto, micrófono, silencio)",faster-whisper small,ASR base,WER,0.0,0,20,3.71,0.382,"El periódico escribe una larga nota diciendo, por cuarta vez la selección de Colombia vuelve a golear a la Argentina."
+clip_021,audio,"lectura (adulto, micrófono, silencio)",faster-whisper small,ASR base,WER,0.0,0,19,3.48,0.441,El día de mañana hay un concierto de pop a las 11 de la noche en la sala Caracol.
+clip_004,audio,"entrevista (habla espontánea de niños, celular, aula)",Parakeet TDT 0.6B v3,ASR alternativo,WER,0.3578,78,218,35.48,0.287," Oh, that's Hola, soy [PERSONA_10]. Hola [PERSONA_10]. ¿Cómo te sientes tú cuando vienes al colegio?  Porque estudio Que más. Porque juego en los etones. Ah, los sectores.¿Y qué son los sectores? Los sectores es construcción, cocinito, sector pintura.¿Y qué haces ahí? Pues hay juego o pinto. Oh Oh. O leo un cuento. Leen un cuento con quién? Hola. algunas veces con la [PERSONA_09], o algunas veces con el matrimonio o algunas con la [PERSONA_13] o algunas veces con el [PERSONA_14]. Oye, y tú venías me estabas contando las estaciones lectoras,¿no? ¿Y qué hacen las decisiones electoras? I think leímos un cuento así  para que sabemos este And Léelo a aprender. Y después de leer,¿qué hacían ustedes? Nice. Este dibujamos. Ah, dibujaban, que dibujaban. Este eso lo que lo has leí lo han leído la plusa. Entonces te gusta a ti venir el jardín. Sí.¿Por qué te gusta? Porque es que yo juego con mis amigos. Y las profesoras son buenas. Te quieren mucho, o cómo son las profesoras. Mm.  Yeah. There's go. Tú me caes siempre, pero las otras próximas no, pero la brózolina la saligual. Yeah. Muy bien, gracias."
+clip_007,audio,"entrevista (habla espontánea de niños, celular, aula)",Parakeet TDT 0.6B v3,ASR alternativo,WER,0.3041,59,194,27.74,0.322,"Yeah. Hola, soy [PERSONA_10]. Hola [PERSONA_10],¿qué es la experiencia o cuál ha sido la experiencia que no te ha gustado? Y en tu jardín. Este que la luz de They're the bottom. Que yo le que yo no le echo nada. que ella dijo que tu le habías hecho algo pero tu no le hiciste nada. No yo solo le dije, le estaba la lindalita y ella no me quería dar y luego empezó a llorar. Ah, ya empezó a llorar.¿Y tu cómo te sentiste? Mal, mal, porque te sientes mal. For the girls. Beautiful girl. Este, este bien que mi mamá, tu mamá le la visionan le va a mi mamá por Ah, dices que la mamá de [PERSONA_09] le va a gritar a tu mamá. para que luego te gritue a ti. Sí, no te gusta entonces cuando los niños te echan la culpa a ti. Yeah. Porque tú no haces nada? Algunas veces algo a lo otro, algunas veces. Mm, y cómo te sientes, tu lloras, o gritas, o solamente te vas a un rincón, y no juegas con nadie,¿qué haces en ese momento? Mm siento en un licón y juego con unos juguetes. Juega solo. Mm. Muy bien, [PERSONA_10]."
+clip_008,audio,"entrevista (habla espontánea de niños, celular, aula)",Parakeet TDT 0.6B v3,ASR alternativo,WER,0.2262,57,252,33.4,0.269,"Y en qué momento el tiempo le has pasado mal en el jardín. And the house. cuando están enojados sus compañeros. Todos sus compañeros enojan.  Uh And woman. Mm.¿Y por qué se enojan? What Porque no Ellos no. Comparte. No comparten. ¿Y se enojan ellos o se o te enojas tú? No sh. Ah, y has tenido alguna pelea con alguno de tus compañeros, Oh no, no has tenido peleas. Con tu profesora, tal vez, cuando ella... Ella te gritan. Mm. Entonces tu no te enojas con tu profesora ni con tus compañeros.  No? No. Ay, ya, oye, y cuéntame,¿en qué momento también? has sentido mucha tristeza, capaz cuando no ha venido tu mamá a recogerte, o cuando se cayó algún compañero, o cuando tu te caíste, o cuando no te dejaron salir al recreo. Ah, no, me dejaron salir los dos. ¿Por qué no te dejaron salir al recreo? Porque no me comporté bien. Ah, y qué hiciste pues. Nature not. Mm. Cheese shake. ¿Qué hiciste?¿La profesora se enojó así de la nada?¿O era porque tu no habías hecho la tarea, porque no habías hecho caso? See? O sea, la profesora te gritó. Porque habías hecho caso. No  ¿Cómo te sentiste cuando no te dejó salir al recreo? Three. triste, porque ya no ibas a jugar. Mm. Te gustaría otra vez que ella te castigue así. No. Yeah. Muy bien, Día."
+clip_009,audio,"entrevista (habla espontánea de niños, celular, aula)",Parakeet TDT 0.6B v3,ASR alternativo,WER,0.3,51,170,30.78,0.264,"Hola [PERSONA_17],¿cómo estás? Bien. Yeah. ¿Cómo te sientes cuando vienes a Arby? Bien. Bien, porque te sientes bien. Porque juego con mis amigos.¿Qué más? Oh.  Okay.   Que más pueda, su profesora es buena. ¿Qué más haces en el jardín? Oh, yeah. El estudio. Yeah. Historience. Y aprendo hard cosas. Aprendo muchas cosas.¿Y cuál ha sido el mejor momento que tú te has sentido feliz y donde... Tú has estado contento. te acuerdas en alguna situación en el jardín donde Ahí has estado tranquilo, tal vez cuando has bailado con tus compañeros, o cuando se han ido de paseo. O cuando juegas en los sectores, en qué momento tú te sientes más feliz en los maravillosos.  Cuando dos sectores,¿por qué? Porque uh Porque acá fue. Ah, y qué sectores tienes tu en tu salón. Oh. Construcción  Yeah. Mm-hmm. No. Y ahí tienen muchos juguetes o son poquitos, hartos. Artos.¿Y quiénes compran esos juguetes? Las profesoras. Las profesoras. Oh yeah."
+clip_010,audio,"entrevista (habla espontánea de niños, celular, aula)",Parakeet TDT 0.6B v3,ASR alternativo,WER,0.2468,19,77,9.59,0.225,"Hola [PERSONA_18],¿cómo estás? Me puedes comentar una experiencia agradable. Y una experiencia desagradable que hayas pasado en tu institución educativa. Yeah. Uh Mm. Que tal que me molestan en el colegio y... ¿Qué escribimos? Esa es una experiencia desagradable que te molestan en el colegio. Yeah. Y una experiencia agradable. Uh Que ya se disculpa, ella me trata bien. otras que tengas quizá que nos puedas comentar Enzo! ¿Qué colegio? Uh [INSTITUCION]. Listo, muchas gracias [PERSONA_18]. Ya."
+clip_012,audio,"lectura (adulto, micrófono, silencio)",Parakeet TDT 0.6B v3,ASR alternativo,WER,0.0,0,21,1.48,0.211,Ya vi las fotos que subiste ayer a la red Te ves muy bien. Te queda muy bien el color rojo.
+clip_013,audio,"lectura (adulto, micrófono, silencio)",Parakeet TDT 0.6B v3,ASR alternativo,WER,0.2941,5,17,2.71,0.282,La película de King Kong ha tenido varias versiones. La primera se filmó en el año mil novecientos treinta y ocho.
+clip_018,audio,"lectura (adulto, micrófono, silencio)",Parakeet TDT 0.6B v3,ASR alternativo,WER,0.0,0,19,3.03,0.384,con la aguja y el hilo quirúrgico va a tratar de coserle la herida para que pare de sangrar.
+clip_020,audio,"lectura (adulto, micrófono, silencio)",Parakeet TDT 0.6B v3,ASR alternativo,WER,0.0,0,20,3.17,0.327,El periódico escribe una larga nota diciendo por cuarta vez la selección de Colombia vuelve a golear a la Argentina.
+clip_021,audio,"lectura (adulto, micrófono, silencio)",Parakeet TDT 0.6B v3,ASR alternativo,WER,0.0526,1,19,2.46,0.311,El día de mañana hay un concierto de pop a las once de la noche en la sala Caracol.
+clip_004,audio,"entrevista (habla espontánea de niños, celular, aula)",faster-whisper large-v3-turbo,ASR de la Parte 1,WER,0.0872,19,218,89.3,0.721,"Hola, soy [PERSONA_10]. Hola, soy [PERSONA_10]. Hola, [PERSONA_10]. ¿Cómo te sientes tú cuando vienes al colegio? Bien. ¿Por qué te sientes bien? Porque estudio. ¿Qué más? Porque juego en los sectores. Ah, en los sectores. ¿Y qué son los sectores? Los sectores es construcción o cocinito o sector pintura. ¿Y qué haces ahí? Pues ahí juego o pinto o leo un cuento. ¿Leo un cuento con quién? ¿Sola? Algunas veces con la [PERSONA_09] o algunas veces con el [PERSONA_08] o algunas veces con la [PERSONA_13] o algunas veces con el [PERSONA_14]. Oye, ¿y tú venías, me estabas, contando las estaciones lectoras, no? Sí. ¿Y qué hacían en las estaciones lectoras? Este, leímos un cuento. La profesora directora les lee un cuento. ¿Para qué les lee un cuento? Para que sabemos leer o aprender. ¿Y después de leer qué hacían? No sé. Este, después de leer este, este, dibujamos. Ah, dibujaban. ¿Qué dibujaban? Este, eso lo que lo has leído, lo han leído la profesora. Sí. Entonces, ¿te gusta a ti venir al jardín? Sí. ¿Por qué te gusta? Porque este estudio y luego juego con mis amigos. Sí. ¿Y las profesoras son buenas? ¿Te quieren mucho? ¿Cómo son las profesoras? Esto me cae bien, pero las otras profesoras no. Pero las profesoras de la [PERSONA_15] igual. Me cae bien. Muy bien, gracias."
+clip_007,audio,"entrevista (habla espontánea de niños, celular, aula)",faster-whisper large-v3-turbo,ASR de la Parte 1,WER,0.0309,6,194,74.2,0.862,"Hola, soy [PERSONA_10]. Hola, [PERSONA_10]. ¿Cuál ha sido la experiencia que no te ha gustado en tu jardín? Que la [PERSONA_09] no esté, no, que yo le he hecho nada. Que ella dijo que tú le habías hecho algo, pero tú no le hiciste nada. No, yo solo le dije, préstame la lindelita y ella no me quería dar y luego empezó a llorar. Ah, ella empezó a llorar. ¿Y tú cómo te sentiste? Mal. Mal. ¿Por qué te sientes mal? Porque, o sea, pienso que mi mamá, su mamá de [PERSONA_09] le va a gritar a mi mamá por eso. Ah, ¿crees que la mamá de [PERSONA_09] le va a gritar a tu mamá para que luego te grite a ti? ¿Sí? ¿No te gusta entonces cuando los niños te echan la culpa a ti? Ajá. ¿Porque tú no haces nada? Sí. Algunas veces sí algo, pero algunas veces no. ¿Y cómo te sientes? ¿Tú lloras o gritas? ¿O solamente te vas a un rincón y no juegas con nadie? ¿Qué haces en ese momento? Me siento en un rincón y juego con unos juguetes. ¿Juegas sola? Ajá. Muy bien, [PERSONA_10]."
+clip_008,audio,"entrevista (habla espontánea de niños, celular, aula)",faster-whisper large-v3-turbo,ASR de la Parte 1,WER,0.0317,8,252,94.4,0.761,"¿Y en qué momento, [PERSONA_17], tú le has pasado mal en el jardín? Cuando mis compañeros están enojados. ¿Cuándo están enojados sus compañeros? ¿Todos sus compañeros se enojan? No, algunos. ¿Algunos? ¿Y por qué se enojan? Porque ellos no comparten. ¿No comparten? ¿Y se enojan ellos o te enojas tú? No, se enojan ellos. ¿Ellos? ¿Y has tenido alguna pelea con alguno de tus compañeros? Ni uno. ¿No? ¿No has tenido peleas? ¿Con tu profesora, tal vez, cuando ella... ¿Ella te grita? No. ¿No? Entonces tú no te enojas con tu profesora ni con tus compañeros. Sí. ¿No? Ay, ya. Oye, y cuéntame, ¿en qué momento también has sentido mucha tristeza? ¿Capaz cuando no ha venido tu mamá a recogerte? ¿O cuando se cayó algún compañero? ¿O cuando tú te caíste? ¿O cuando no te dejaron salir al recreo? No, no me dejaron salir al recreo. ¿Por qué no te dejaron salir al recreo? Porque no me comporté bien. Ah, ¿y qué hiciste, pues? No hice nada. ¿Eh? Sí, sé. ¿Qué hiciste? ¿La profesora se enojó así de la nada? ¿O era porque tú no habías hecho la tarea? ¿O porque no habías hecho caso? Sí, hice caso. ¿Sí hiciste caso? Sí. ¿Sí? O sea, ¿la profesora te delictó porque habías hecho caso? No. ¿No? ¿Y cómo te sentiste cuando no te dejó salir al recreo? Triste. ¿Triste? ¿Porque ya no ibas a jugar? Sí. ¿Te gustaría otra vez que ella te castigue así? No. No. Muy bien, [PERSONA_17]. Gracias."
+clip_009,audio,"entrevista (habla espontánea de niños, celular, aula)",faster-whisper large-v3-turbo,ASR de la Parte 1,WER,0.0471,8,170,99.7,0.855,"Hola [PERSONA_17], ¿cómo estás? Bien. Bien. ¿Cómo te sientes cuando vienes al jardín? Bien. Bien. ¿Por qué te sientes bien? Porque juego con mis amigos. ¿Qué más? Porque un profesor es bueno. ¿Qué más juegas? ¿Un profesor es buena? ¿Qué más haces en el jardín? Voy a... Estudio. ¿Estudias? Y aprendo hartas cosas. Ah, aprendes muchas cosas. ¿Y cuál ha sido el mejor momento que tú te has sentido feliz? ¿Dónde tú has estado contento? ¿Te acuerdas en alguna situación en el jardín donde hayas estado tranquilo? Tal vez cuando has bailado con tus compañeros, o cuando se han ido de paseo, o cuando juegas en los sectores. ¿En qué momento tú te sientes más feliz en el jardín? Cuando voy en sectores. ¿Cuándo vas a los sectores? ¿Por qué? Porque acá juego. ¿En los sectores juegas? Ah, ¿y qué sectores tienes tú en tu salón? Construcción, cuentos, cocina. ¿Y ahí tienen muchos juguetes o son poquitos? Hartos. Hartos. ¿Y quiénes compran esos juguetes? Las profesoras. ¿Las profesoras? Mmm, muy bien."
+clip_010,audio,"entrevista (habla espontánea de niños, celular, aula)",faster-whisper large-v3-turbo,ASR de la Parte 1,WER,0.039,3,77,41.3,0.967,"Hola [PERSONA_18], ¿cómo estás? ¿Me puedes comentar una experiencia agradable y una experiencia desagradable que hayas pasado en tu institución educativa? Ya, que está que me molestan en mi colegio y... ¿en qué escribo? ¿Esa es una experiencia desagradable, que te molestan en el colegio? ¿Y una experiencia agradable? Que ya se disculpo, ya me trato bien ¿Otras que tengas quizá, que nos puedas comentar? Esos más ¿De qué colegio? Listo, muchas gracias [PERSONA_18]"
+clip_012,audio,"lectura (adulto, micrófono, silencio)",faster-whisper large-v3-turbo,ASR de la Parte 1,WER,0.0,0,21,25.1,3.586,"Ya vi las fotos que subiste ayer a la red, te ves muy bien, te queda muy bien el color rojo."
+clip_013,audio,"lectura (adulto, micrófono, silencio)",faster-whisper large-v3-turbo,ASR de la Parte 1,WER,0.0,0,17,25.2,2.625,"La película de King Kong ha tenido varias versiones, la primera se filmó en el año 1938"
+clip_018,audio,"lectura (adulto, micrófono, silencio)",faster-whisper large-v3-turbo,ASR de la Parte 1,WER,0.0,0,19,26.4,3.342,Con la aguja y el hilo quirúrgico va a tratar de coserle la herida para que pare de sangrar
+clip_020,audio,"lectura (adulto, micrófono, silencio)",faster-whisper large-v3-turbo,ASR de la Parte 1,WER,0.0,0,20,25.3,2.608,El periódico escribe una larga nota diciendo por cuarta vez la selección de Colombia vuelve a golear a la Argentina
+clip_021,audio,"lectura (adulto, micrófono, silencio)",faster-whisper large-v3-turbo,ASR de la Parte 1,WER,0.0526,1,19,25.4,3.215,El día de mañana hay un concierto de pop a las once de la noche en la sala caracol
