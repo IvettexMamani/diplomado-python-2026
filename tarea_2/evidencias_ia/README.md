@@ -72,3 +72,28 @@ Conversación del 24 de octubre por la tarde: errores del ASR que anotó la estu
 | `57_referencia_clip_007.png` | 2026-10-24 17:36 | Referencia manual de clip_007 (nombres tapados) | Parte 1 · #8 |
 | `58_urls_youtube.png` | 2026-10-24 17:37 | URL y licencia de los videos de YouTube | Parte 1 · #8 |
 | `59_pendientes_parte1.png` | 2026-10-24 17:37 | Pendientes de la Parte 1 | Parte 1 · #8 |
+
+### Parte 2 · #9: capturas agregadas el 2026-10-25
+
+Conversación del 25 de octubre: modelos, métricas, correcciones de privacidad, auditoría del LLM y bitácora. En las capturas 64, 87 y 88 están tapados el nombre de una profesora, el de un colegio y variantes de nombres de niños.
+
+| Captura | Fecha | Qué muestra | Parte · issue |
+| :--- | :--- | :--- | :--- |
+| `60_inicio_modelos_parte2.png` | 2026-10-25 15:32 | Descarga de los modelos alternativos (Parakeet y EasyOCR) | Parte 2 · #9 |
+| `61_documentos_csv_referencias.png` | 2026-10-25 15:32 | `documentos.csv` con `texto_referencia` | Parte 2 · #9 |
+| `62_documentos_csv_referencias_2.png` | 2026-10-25 15:33 | `documentos.csv` con `texto_referencia` (continuación) | Parte 2 · #9 |
+| `63_configuracion_modelos.png` | 2026-10-25 15:33 | Configuración de los modelos fijada antes de las métricas | Parte 2 · #9 |
+| `64_primeros_resultados.png` | 2026-10-25 15:33 | Primeros resultados de la línea base (nombre tapado) | Parte 2 · #9 |
+| `65_privacidad_y_requirements.png` | 2026-10-25 15:33 | Corrección de la seudonimización y dependencias | Parte 2 · #9 |
+| `66_requirements_notebooks.png` | 2026-10-25 15:33 | `requirements-notebooks.txt` de la Parte 2 | Parte 2 · #9 |
+| `67_requirements_notebooks_2.png` | 2026-10-25 15:34 | `requirements-notebooks.txt` (continuación) | Parte 2 · #9 |
+| `77_resultados_ocr_asr.png` | 2026-10-25 15:36 | Primeros resultados de OCR y ASR en la muestra | Parte 2 · #9 |
+| `87_correcciones_referencias.png` | 2026-10-25 15:38 | Correcciones en las referencias y preguntas a la estudiante (nombres tapados) | Parte 2 · #9 |
+| `88_colegio_y_variantes.png` | 2026-10-25 15:38 | Reemplazo del colegio y de variantes de nombres (nombres tapados) | Parte 2 · #9 |
+| `89_formulario_auditoria.png` | 2026-10-25 15:38 | Pasos siguientes y formulario de auditoría | Parte 2 · #9 |
+| `90_criterios_auditoria.png` | 2026-10-25 15:39 | Criterios para auditar las extracciones del LLM | Parte 2 · #9 |
+| `91_revision_auditoria.png` | 2026-10-25 15:39 | Revisión de la auditoría frente a los criterios | Parte 2 · #9 |
+| `92_auditoria_campos.png` | 2026-10-25 15:40 | Campos de la auditoría | Parte 2 · #9 |
+| `93_auditoria_aplicada.png` | 2026-10-25 15:40 | Auditoría aplicada: 71/90 campos correctos | Parte 2 · #9 |
+| `94_ajustes_graficos.png` | 2026-10-25 15:40 | Ajustes finales de tablas y gráficos | Parte 2 · #9 |
+| `100_bitacora_issue_9.png` | 2026-10-25 15:41 | Bitácora del issue #9 | Parte 2 · #9 |
