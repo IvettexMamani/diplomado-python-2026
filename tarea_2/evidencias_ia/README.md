@@ -97,3 +97,34 @@ Conversación del 25 de octubre: modelos, métricas, correcciones de privacidad,
 | `93_auditoria_aplicada.png` | 2026-10-25 15:40 | Auditoría aplicada: 71/90 campos correctos | Parte 2 · #9 |
 | `94_ajustes_graficos.png` | 2026-10-25 15:40 | Ajustes finales de tablas y gráficos | Parte 2 · #9 |
 | `100_bitacora_issue_9.png` | 2026-10-25 15:41 | Bitácora del issue #9 | Parte 2 · #9 |
+
+### Parte 3 · #10: capturas agregadas el 2026-10-25
+
+Conversación del 25 de octubre: código del dashboard, muestra publicable, README, prueba local, despliegue y bitácora. Ninguna muestra datos personales.
+
+| Captura | Fecha | Qué muestra | Parte · issue |
+| :--- | :--- | :--- | :--- |
+| `68_app_py_01.png` | 2026-10-25 15:34 | Código del dashboard `app.py` | Parte 3 · #10 |
+| `69_app_py_02.png` | 2026-10-25 15:34 | Código del dashboard `app.py` | Parte 3 · #10 |
+| `70_app_py_03.png` | 2026-10-25 15:34 | Código del dashboard `app.py` | Parte 3 · #10 |
+| `71_app_py_04.png` | 2026-10-25 15:34 | Código del dashboard `app.py`: filtros | Parte 3 · #10 |
+| `72_app_py_05.png` | 2026-10-25 15:35 | Código del dashboard `app.py`: indicadores | Parte 3 · #10 |
+| `73_app_py_06.png` | 2026-10-25 15:35 | Código del dashboard `app.py`: gráficos | Parte 3 · #10 |
+| `74_app_py_07.png` | 2026-10-25 15:35 | Código del dashboard `app.py`: explorador de documentos | Parte 3 · #10 |
+| `75_app_py_08.png` | 2026-10-25 15:36 | Código del dashboard `app.py`: explorador de audios | Parte 3 · #10 |
+| `76_muestra_publicable.png` | 2026-10-25 15:36 | Muestra publicable en `datos/ejemplos/` | Parte 3 · #10 |
+| `78_readme_01.png` | 2026-10-25 15:36 | README de la tarea | Parte 3 · #10 |
+| `79_readme_02.png` | 2026-10-25 15:36 | README de la tarea | Parte 3 · #10 |
+| `80_readme_03.png` | 2026-10-25 15:37 | README de la tarea | Parte 3 · #10 |
+| `81_readme_04.png` | 2026-10-25 15:37 | README de la tarea | Parte 3 · #10 |
+| `82_readme_05.png` | 2026-10-25 15:37 | README de la tarea | Parte 3 · #10 |
+| `83_readme_06.png` | 2026-10-25 15:37 | README de la tarea | Parte 3 · #10 |
+| `84_readme_07.png` | 2026-10-25 15:37 | README de la tarea | Parte 3 · #10 |
+| `85_readme_08.png` | 2026-10-25 15:38 | README de la tarea | Parte 3 · #10 |
+| `86_readme_09.png` | 2026-10-25 15:38 | README de la tarea | Parte 3 · #10 |
+| `95_readme_hallazgos.png` | 2026-10-25 15:40 | Hallazgos del README | Parte 3 · #10 |
+| `96_prueba_dashboard.png` | 2026-10-25 15:40 | Prueba del dashboard | Parte 3 · #10 |
+| `97_despliegue_streamlit.png` | 2026-10-25 15:41 | Pasos para desplegar en Streamlit Community Cloud | Parte 3 · #10 |
+| `98_readme_enlace.png` | 2026-10-25 15:41 | README antes del enlace a la app | Parte 3 · #10 |
+| `99_readme_metodo_resultados.png` | 2026-10-25 15:41 | README: método y resultados | Parte 3 · #10 |
+| `101_bitacora_issue_10.png` | 2026-10-25 15:42 | Bitácora del issue #10 | Parte 3 · #10 |
