@@ -66,14 +66,22 @@ La primera vez baja unos 2,5 GB (voz 0.6B y torch para CPU); Whisper large-v3-tu
 **Antes, libera espacio:** al 1 de noviembre quedaban 5 GB libres en C:. Si falta espacio, borra
 `tarea_3/datos/originales/*-Modulo*` (2,5 GB de microdatos), que se pueden volver a bajar con `scripts/obtener_datos.py`.
 
-```bash
-cd tarea_3/reel
-uv venv .venv-reel --python 3.12
-uv pip install --system-certs --python .venv-reel/Scripts/python.exe torch --index-url https://download.pytorch.org/whl/cpu
-uv pip install --system-certs --python .venv-reel/Scripts/python.exe qwen-tts faster-whisper pillow imageio-ffmpeg soundfile jiwer num2words
+En Windows, el entorno va en una ruta corta (por ejemplo `%TEMP%\t3r`), porque las rutas de torch superan
+el límite de 260 caracteres si se crea dentro de la carpeta del curso:
 
-.venv-reel/Scripts/python generar_musica.py          # solo si no existe recursos/musica/musica_generada.mp3
-.venv-reel/Scripts/python hacer_reel.py --voz voz/mi_voz.m4a
+```bash
+cd %TEMP%                                   # en Git Bash: cd /c/Users/USUARIO/AppData/Local/Temp
+uv venv t3r --python 3.12
+uv pip install --system-certs --python t3r/Scripts/python.exe torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+uv pip install --system-certs --python t3r/Scripts/python.exe qwen-tts faster-whisper pillow imageio-ffmpeg soundfile jiwer num2words truststore msvc-runtime
+# torch 2.15 necesita el runtime de Visual C++ 14.4x; si Windows tiene uno más viejo, sale
+# «WinError 126 ... shm.dll». Arreglo sin permisos de administrador: copiar junto a torch
+# las DLL que trae msvc-runtime
+cp -n t3r/*.dll t3r/Lib/site-packages/torch/lib/
+
+cd <ruta>/tarea_3/reel
+<ruta-del-entorno>/python generar_musica.py          # solo si no existe recursos/musica/musica_generada.mp3
+<ruta-del-entorno>/python hacer_reel.py --voz voz/mi_voz.m4a
 ```
 
 Queda en `salidas/`: `reel.mp4`, `reel.srt`, `portada.png`, `posts.md` y `guion.json` con el WER de cada escena.
@@ -98,7 +106,7 @@ el texto de la tabla y los subtítulos de borrador, y mantén el aviso «Voz gen
 ## 4. Publicación en LinkedIn
 
 El texto está en `guion.json` → `posts.linkedin` (y en `salidas/posts.md`). Reemplaza `[ENLACE AL DASHBOARD]`
-por https://ivettexmamani.github.io/diplomado-python-2026/ y adjunta:
+por https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN y adjunta:
 
 - el reel (`reel.mp4`);
 - al menos 2 capturas del dashboard: `../imagenes/dashboard_resumen.png` y `../imagenes/dashboard_mapa_cambio.png`.

@@ -18,6 +18,12 @@ import shutil
 import time
 from pathlib import Path
 
+try:  # certificados del sistema: necesario si un antivirus o proxy inspecciona HTTPS (Avast)
+    import truststore
+    truststore.inject_into_ssl()
+except ImportError:
+    pass
+
 import reel
 
 AQUI = Path(__file__).parent
