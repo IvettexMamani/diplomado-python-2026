@@ -5,7 +5,6 @@
 | | |
 |---|---|
 | **Dashboard público** | https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN (Claude Artifact) |
-| **Publicación de LinkedIn** | _ENLACE_LINKEDIN_ |
 | **Reel** | [`reel/reel.mp4`](reel/reel.mp4) · guion en [`reel/GUION.md`](reel/GUION.md) |
 
 ## 1. Tema y pregunta de investigación
@@ -104,7 +103,7 @@ La serie de Lima sale directo del archivo del INEI y cuadra con sus notas de pre
 ## 6. Enlaces
 
 - Dashboard (Claude Artifact): https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN · código en [`web/`](web/)
-- LinkedIn: _ENLACE_LINKEDIN_
+- Repositorio: https://github.com/IvettexMamani/diplomado-python-2026/tree/main/tarea_3
 
 ## 7. Cómo reproducir
 
@@ -127,7 +126,13 @@ cd web && python -m http.server 8000      # http://localhost:8000
 ```
 
 El paso 1 se puede saltar: `datos/procesados/pea_2019_2025.parquet` ya está en el repositorio, y desde ahí
-corren `analizar_datos.py` y el dashboard. El reel se genera con [`reel/GUION.md`](reel/GUION.md). El
+corren `analizar_datos.py` y el dashboard.
+
+**Reel.** Va en un entorno aparte con las versiones de [`reel/requirements-reel.txt`](reel/requirements-reel.txt).
+Los pasos completos están en [`reel/GUION.md`](reel/GUION.md): grabar 15 a 25 s de voz propia en `reel/voz/` y
+correr `python hacer_reel.py --voz voz/mi_voz.m4a`. Para otra persona u otro tema basta con editar
+`reel/guion.json` (`autor`, `fuente`, escenas y créditos). `python hacer_reel.py --vista-previa` muestra el
+diseño sin generar la voz. El
 dashboard se publica como **Claude Artifact**: se sube `web/index.html` con `assets/app.js`, `data/datos.js`,
 `data/peru_departamentos.js` y `data/world_110m.json`, tal como están en `web/`.
 
@@ -137,7 +142,8 @@ tarea_3/
 ├── scripts/      obtener_datos.py · procesar_datos.py · analizar_datos.py · graficos_reel.py
 ├── datos/        originales/ (EPE Lima y límites; la ENAHO se baja) · procesados/ (base, CSV, validación)
 ├── web/          index.html · assets/app.js · data/ (datos.js, GeoJSON, mapa base)
-├── reel/         GUION.md · guion.json · hacer_reel.py · reel.py · generar_musica.py · recursos/ · vista_previa/
+├── reel/         GUION.md · guion.json · hacer_reel.py · reel.py · generar_musica.py · requirements-reel.txt
+│                 recursos/ (imágenes y música) · vista_previa/ · reel.mp4 · subtitulos.srt
 └── imagenes/     capturas del dashboard y storyboard del reel
 ```
 

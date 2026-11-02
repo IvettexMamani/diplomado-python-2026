@@ -431,16 +431,6 @@ def portada(guion, narracion, ruta, fuente_datos, autor, escena=1):
     return ruta
 
 
-def posts(guion, ruta):
-    h = " ".join("#" + x.lstrip("#") for x in guion.get("hashtags", []))
-    p = guion["posts"]
-    Path(ruta).write_text(
-        f"# {guion['titulo']}\n\n## LinkedIn\n\n{p['linkedin']}\n\n{h}\n\n"
-        f"## X ({len(p['x'])} caracteres)\n\n{p['x']}\n\n## Facebook\n\n{p['facebook']}\n\n{h}\n",
-        encoding="utf-8")
-    return ruta
-
-
 # Vista previa sin voz ------------------------------------------------------
 
 def narracion_estimada(guion, palabras_por_segundo=2.5, sr=16000):

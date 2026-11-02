@@ -41,7 +41,8 @@ dicen.
 
 ## 1. Graba tu voz de referencia (15 a 25 segundos)
 
-Lee este texto con calma, con el mismo tono que quieres en el reel. Dura unos 20 segundos:
+Lee este texto con calma, con el mismo tono que quieres en el reel (cambia el nombre por el tuyo).
+Dura unos 20 segundos:
 
 > Hola, soy Ivette Mamani. Estudio ciencia de datos y me interesa entender cómo trabajan y cuánto ganan
 > las personas en el Perú. En este video les cuento lo que encontré en las encuestas del INEI sobre el
@@ -62,29 +63,27 @@ python hacer_reel.py --vista-previa      # cuadros en vista_previa/ y subtítulo
 ## 3. Genera el reel
 
 Va en un entorno propio, como en la sesión 15, porque `qwen-tts` fija su versión de `transformers`.
-La primera vez baja unos 2,5 GB (voz 0.6B y torch para CPU); Whisper large-v3-turbo ya está en tu caché de la Tarea 2.
-**Antes, libera espacio:** al 1 de noviembre quedaban 5 GB libres en C:. Si falta espacio, borra
-`tarea_3/datos/originales/*-Modulo*` (2,5 GB de microdatos), que se pueden volver a bajar con `scripts/obtener_datos.py`.
-
-En Windows, el entorno va en una ruta corta (por ejemplo `%TEMP%\t3r`), porque las rutas de torch superan
-el límite de 260 caracteres si se crea dentro de la carpeta del curso:
+Las versiones exactas están en `requirements-reel.txt`. La primera vez baja unos 4 GB: torch para CPU,
+la voz Qwen3-TTS 0.6B (2,4 GB) y Whisper large-v3-turbo (1,6 GB). Deja al menos 6 GB libres en el disco y
+cierra programas pesados: con 8 GB de RAM, la voz tarda unos 20 minutos en CPU.
 
 ```bash
-cd %TEMP%                                   # en Git Bash: cd /c/Users/USUARIO/AppData/Local/Temp
-uv venv t3r --python 3.12
-uv pip install --system-certs --python t3r/Scripts/python.exe torch torchaudio --index-url https://download.pytorch.org/whl/cpu
-uv pip install --system-certs --python t3r/Scripts/python.exe qwen-tts faster-whisper pillow imageio-ffmpeg soundfile jiwer num2words truststore msvc-runtime
-# torch 2.15 necesita el runtime de Visual C++ 14.4x; si Windows tiene uno más viejo, sale
-# «WinError 126 ... shm.dll». Arreglo sin permisos de administrador: copiar junto a torch
-# las DLL que trae msvc-runtime
-cp -n t3r/*.dll t3r/Lib/site-packages/torch/lib/
+# En Windows, crea el entorno en una ruta corta (p. ej. C:\venvs\reel): las rutas de torch superan
+# el límite de 260 caracteres dentro de carpetas con nombres largos
+uv venv <entorno> --python 3.12
+uv pip install --python <entorno> torch==2.15.0 torchaudio==2.11.1 --index-url https://download.pytorch.org/whl/cpu
+uv pip install --python <entorno> -r requirements-reel.txt      # con antivirus que inspecciona HTTPS: --system-certs
 
-cd <ruta>/tarea_3/reel
-<ruta-del-entorno>/python generar_musica.py          # solo si no existe recursos/musica/musica_generada.mp3
-<ruta-del-entorno>/python hacer_reel.py --voz voz/mi_voz.m4a
+# Solo Windows, si al importar torch sale «WinError 126 ... shm.dll» (runtime de Visual C++ antiguo):
+# copiar junto a torch las DLL que trae msvc-runtime, sin permisos de administrador
+cp -n <entorno>/*.dll <entorno>/Lib/site-packages/torch/lib/
+
+cd tarea_3/reel
+<entorno>/python generar_musica.py          # solo si no existe recursos/musica/musica_generada.mp3
+<entorno>/python hacer_reel.py --voz voz/mi_voz.m4a
 ```
 
-Queda en `salidas/`: `reel.mp4`, `reel.srt`, `portada.png`, `posts.md` y `guion.json` con el WER de cada escena.
+Queda en `salidas/`: `reel.mp4`, `reel.srt`, `portada.png` y `guion.json` con el WER de cada escena.
 En la laptop (CPU) debería tardar entre 5 y 15 minutos.
 
 **Revisa antes de publicar:**
@@ -103,13 +102,14 @@ En la laptop (CPU) debería tardar entre 5 y 15 minutos.
 propia voz y montar el video en un editor (CapCut, Canva). En ese caso, usa las imágenes de `recursos/`,
 el texto de la tabla y los subtítulos de borrador, y mantén el aviso «Voz generada con IA».
 
-## 4. Publicación en LinkedIn
+## 4. Replicarlo con otra voz, otra autora u otro tema
 
-El texto está en `guion.json` → `posts.linkedin` (y en `salidas/posts.md`). Reemplaza `[ENLACE AL DASHBOARD]`
-por https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN y adjunta:
-
-- el reel (`reel.mp4`);
-- al menos 2 capturas del dashboard: `../imagenes/dashboard_resumen.png` y `../imagenes/dashboard_mapa_cambio.png`.
+1. Edita `guion.json`: `autor`, `fuente`, el `titulo` y, para otro tema, cada escena (frase con los números
+   en palabras, cifra, etiqueta, imagen y de dónde sale la cifra) y los `creditos`.
+2. Si cambian los datos, regenera las imágenes con `python ../scripts/graficos_reel.py` o pon las tuyas
+   en `recursos/` (900 × 570 px).
+3. Revisa el diseño con `python hacer_reel.py --vista-previa`.
+4. Graba tu voz (paso 1) y genera el reel (paso 3). Solo se clona la voz propia o una con autorización expresa.
 
 ## Checklist del reel (rúbrica de la Parte 3)
 
@@ -121,7 +121,6 @@ por https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN y adjunta:
 - [x] Voz de referencia grabada por la autora (22,4 s)
 - [x] Narración con Qwen3-TTS 0.6B en CPU y video generado: **64,7 s**, WER por escena de 0,00 a 0,07
 - [x] `reel.mp4` (3,4 MB), `subtitulos.srt` y `portada.png` copiados a esta carpeta
-- [ ] Publicarlo en LinkedIn (Parte 4) — **la autora**
 
 ## Resultado de la generación (1 de noviembre de 2026)
 

@@ -11,8 +11,9 @@ Adaptado de sessions/15-texto-a-reel/hacer_reel.py del curso (licencia MIT). Uso
     # 2. Rehacer solo subtítulos y video con el audio ya generado (tras corregir guion.json)
     python hacer_reel.py --rehacer-video
 
-Guarda en salidas/: reel.mp4, reel.wav, reel.srt, portada.png, posts.md y guion.json con el WER
-por escena. Con --vista-previa guarda en vista_previa/: un PNG por escena, storyboard.png y
+Guarda en salidas/: reel.mp4, reel.wav, reel.srt, portada.png y guion.json con el WER por escena.
+El título, la autora y la fuente se leen de guion.json (campos «titulo», «autor» y «fuente»):
+para replicar el reel con otro tema o con otra persona, basta con editar ese archivo. Con --vista-previa guarda en vista_previa/: un PNG por escena, storyboard.png y
 subtitulos_borrador.srt (tiempos estimados).
 """
 import argparse
@@ -31,13 +32,11 @@ import reel
 
 AQUI = Path(__file__).parent
 MUSICA = AQUI / "recursos" / "musica" / "musica_generada.mp3"
-FUENTE = "INEI: ENAHO 2019-2025 y EPE Lima Metropolitana (jul-set 2026)"
-AUTORA = "Ivette Carolina Mamani Flores"
 
 p = argparse.ArgumentParser()
 p.add_argument("--voz", help="15 a 25 s de tu voz: wav, m4a, ogg o mp3 (no se sube a GitHub)")
-p.add_argument("--autor", default=AUTORA)
-p.add_argument("--fuente", default=FUENTE, help="fuente de los datos, aparece en todo el video")
+p.add_argument("--autor", help="por defecto, el campo «autor» de guion.json")
+p.add_argument("--fuente", help="fuente de los datos; por defecto, el campo «fuente» de guion.json")
 p.add_argument("--musica", default=str(MUSICA), help="pista de fondo con licencia de uso; 'ninguna' para omitirla")
 p.add_argument("--device", default="cpu", help="cpu, mps (Mac) o cuda")
 p.add_argument("--motor", default="qwen", choices=["qwen", "voxcpm"], help="voxcpm acepta estilo de locutor por escena")
@@ -54,6 +53,8 @@ p.add_argument("--intentos", type=int, default=3, help="con --rehacer-escena: ve
 a = p.parse_args()
 
 guion = json.loads((AQUI / "guion.json").read_text(encoding="utf-8"))
+a.autor = a.autor or guion.get("autor", "")
+a.fuente = a.fuente or guion.get("fuente", "")
 palabras = sum(len(e["frase"].split()) for e in guion["escenas"])
 print(f"Guion: {len(guion['escenas'])} escenas, {palabras} palabras "
       f"(~{palabras / 2.5:.0f} s a 2,5 palabras/s, más pausas)")
@@ -126,7 +127,6 @@ if a.rehacer_video:
     musica = None if a.musica.lower() == "ninguna" else Path(a.musica)
     reel.portada(guion, narracion, salidas / "portada.png", a.fuente, a.autor)
     reel.video(guion, narracion, salidas / "reel.mp4", a.fuente, a.autor, musica=musica)
-    reel.posts(guion, salidas / "posts.md")
     reel._reloj(f"listo: {salidas / 'reel.mp4'} ({narracion.duracion:.1f} s)", t0)
     raise SystemExit(0)
 
@@ -160,5 +160,4 @@ reel._reloj(f"subtítulos: {len(narracion.palabras)} palabras", t0)
 
 reel.portada(guion, narracion, salidas / "portada.png", a.fuente, a.autor)
 reel.video(guion, narracion, salidas / "reel.mp4", a.fuente, a.autor, musica=musica)
-reel.posts(guion, salidas / "posts.md")
 reel._reloj(f"listo: {salidas / 'reel.mp4'}", t0)
