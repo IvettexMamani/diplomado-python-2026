@@ -118,6 +118,24 @@ por https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN y adjunta:
 - [x] Gráficos, mapa y captura del dashboard en cada escena
 - [x] Música de fondo con licencia (pista propia, dominio público) por debajo de la voz
 - [x] Aviso «Voz generada con IA», fuente de los datos y créditos
-- [ ] Grabar la voz de referencia (15 a 25 s) — **la autora**
-- [ ] Generar la narración y el video, y revisarlos con audio — **la autora**
-- [ ] Copiar `reel.mp4` y `subtitulos.srt` a esta carpeta y publicarlos — **la autora**
+- [x] Voz de referencia grabada por la autora (22,4 s)
+- [x] Narración con Qwen3-TTS 0.6B en CPU y video generado: **65,6 s**, WER por escena de 0,03 a 0,11
+- [x] `reel.mp4` (3,4 MB), `subtitulos.srt` y `portada.png` copiados a esta carpeta
+- [ ] Publicarlo en LinkedIn (Parte 4) — **la autora**
+
+## Resultado de la generación (1 de noviembre de 2026)
+
+| | |
+|---|---|
+| Duración | 65,6 s (la tarea pide de 45 a 75 s) |
+| Formato | 1080 × 1920, 30 fps, H.264 + AAC estéreo de 48 kHz, 3,4 MB |
+| Volumen | −15,2 LUFS integrado: la voz a −14 LUFS y la música a −32 LUFS, por debajo |
+| WER por escena | 0,03 · 0,05 · 0,03 · 0,07 · 0,05 · 0,11 (Whisper entiende casi todas las palabras) |
+| Tiempo en la laptop | unos 22 minutos (voz 19 min, subtítulos 1 min, video 1 min) |
+
+**Corrección de subtítulos.** En la escena 6, Whisper no reconoció la sigla «INEI» y escribió «los datos de el
+enlace». En `guion.json` → `correcciones_subtitulos` se reemplaza ese tramo por el texto del guion, y
+`python hacer_reel.py --rehacer-video` vuelve a hacer los subtítulos y el video con el mismo audio
+(`salidas/reel.wav`), sin generar otra vez la voz. **Escucha el final (segundo 57 aproximadamente) para
+confirmar que la voz pronuncia bien «INEI».** Si no, cambia la frase (por ejemplo, «del Instituto Nacional de
+Estadística») y genera la voz de nuevo.

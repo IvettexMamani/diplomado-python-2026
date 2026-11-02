@@ -50,6 +50,9 @@
       "fuente_cifra": "La ENAHO anual de 2026 se publica a mediados de 2027 (la de 2025 salió en 2026)."
     }
   ],
+  "correcciones_subtitulos": {
+    "de el enlace": "del INEI: el enlace"
+  },
   "creditos": "Créditos · Datos: INEI (ENAHO 2019-2025 y EPE Lima Metropolitana) · Gráficos y mapa: elaboración propia · Voz: clon de la voz de la autora con Qwen3-TTS · Música: pista generada por la autora con Python (dominio público)",
   "hashtags": [
     "#Subempleo",

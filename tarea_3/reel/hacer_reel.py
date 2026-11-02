@@ -8,6 +8,9 @@ Adaptado de sessions/15-texto-a-reel/hacer_reel.py del curso (licencia MIT). Uso
     # 1. Reel completo con tu voz de referencia (15 a 25 s) y la música
     python hacer_reel.py --voz voz/mi_voz.m4a --tts Qwen/Qwen3-TTS-12Hz-0.6B-Base
 
+    # 2. Rehacer solo subtítulos y video con el audio ya generado (tras corregir guion.json)
+    python hacer_reel.py --rehacer-video
+
 Guarda en salidas/: reel.mp4, reel.wav, reel.srt, portada.png, posts.md y guion.json con el WER
 por escena. Con --vista-previa guarda en vista_previa/: un PNG por escena, storyboard.png y
 subtitulos_borrador.srt (tiempos estimados).
@@ -43,6 +46,8 @@ p.add_argument("--sin-estilo", action="store_true", help="con --motor voxcpm: cl
 p.add_argument("--velocidad", type=float, default=1.0, help="1.08 = 8 %% más rápido, sin cambiar el tono")
 p.add_argument("--salidas", default=str(AQUI / "salidas"))
 p.add_argument("--vista-previa", action="store_true", help="solo cuadros de prueba, sin voz")
+p.add_argument("--rehacer-video", action="store_true",
+               help="reutiliza salidas/reel.wav (sin TTS): subtítulos con correcciones y video")
 a = p.parse_args()
 
 guion = json.loads((AQUI / "guion.json").read_text(encoding="utf-8"))
@@ -55,6 +60,25 @@ for e in guion["escenas"]:
 if a.vista_previa:
     dur = reel.vista_previa(guion, AQUI / "vista_previa", a.fuente, a.autor)
     print(f"Vista previa lista en vista_previa/ (duración estimada: {dur:.0f} s)")
+    raise SystemExit(0)
+
+if a.rehacer_video:
+    import soundfile as sf
+    import torch  # noqa: F401  (en Windows, cargar torch antes que faster-whisper evita un segfault de DLL)
+
+    t0 = time.time()
+    salidas = Path(a.salidas)
+    audio, sr = sf.read(salidas / "reel.wav", dtype="float32")
+    narracion = reel.Narracion(audio, sr, [])
+    reel.subtitulos(narracion, guion)
+    narracion.escenas = reel.escenas_por_palabras(narracion.palabras, guion, narracion.duracion)
+    reel._reloj("escenas: " + ", ".join(f"{i:.1f}-{f:.1f}" for i, f in narracion.escenas), t0)
+    reel.a_srt(narracion, salidas / "reel.srt")
+    musica = None if a.musica.lower() == "ninguna" else Path(a.musica)
+    reel.portada(guion, narracion, salidas / "portada.png", a.fuente, a.autor)
+    reel.video(guion, narracion, salidas / "reel.mp4", a.fuente, a.autor, musica=musica)
+    reel.posts(guion, salidas / "posts.md")
+    reel._reloj(f"listo: {salidas / 'reel.mp4'} ({narracion.duracion:.1f} s)", t0)
     raise SystemExit(0)
 
 if not a.voz:

@@ -195,8 +195,50 @@ def subtitulos(narracion, guion):
             palabras.append((ini, w.end, prev + w.word.strip()))
         else:
             palabras.append((w.start, w.end, w.word.strip()))
+    palabras = corregir(palabras, guion.get("correcciones_subtitulos", {}))
     narracion.palabras = palabras
     return palabras
+
+
+def _clave(w):
+    return re.sub(r"[^\w]", "", unicodedata.normalize("NFD", w.lower()).encode("ascii", "ignore").decode())
+
+
+def corregir(palabras, correcciones):
+    """Reemplaza en los subtítulos lo que Whisper oyó mal (p. ej. siglas) por el texto del guion.
+
+    correcciones = {"de el enlace": "del INEI: el enlace"}; el tramo conserva sus tiempos y las
+    palabras nuevas se reparten en partes iguales.
+    """
+    for mal, bien in correcciones.items():
+        objetivo = [_clave(w) for w in mal.split()]
+        n = len(objetivo)
+        i = 0
+        while i + n <= len(palabras):
+            if [_clave(p[2]) for p in palabras[i:i + n]] == objetivo:
+                ini, fin = palabras[i][0], palabras[i + n - 1][1]
+                nuevas = bien.split()
+                paso = (fin - ini) / len(nuevas)
+                palabras[i:i + n] = [(ini + k * paso, ini + (k + 1) * paso, w) for k, w in enumerate(nuevas)]
+                i += len(nuevas)
+            else:
+                i += 1
+    return palabras
+
+
+def escenas_por_palabras(palabras, guion, duracion):
+    """Inicio y fin de cada escena buscando sus dos primeras palabras en lo que transcribió Whisper."""
+    claves = [_clave(p[2]) for p in palabras]
+    inicios, desde = [], 0
+    for e in guion["escenas"]:
+        primeras = [_clave(w) for w in e["frase"].split()[:2]]
+        k = next((j for j in range(desde, len(claves) - 1) if claves[j:j + 2] == primeras), None)
+        if k is None:
+            raise ValueError(f"no encuentro el inicio de la escena «{e['frase'][:40]}…» en la transcripción")
+        inicios.append(max(palabras[k][0] - 0.1, 0.0))
+        desde = k + 1
+    finales = [ini - PAUSA for ini in inicios[1:]] + [min(palabras[-1][1] + 0.2, duracion)]
+    return list(zip(inicios, finales))
 
 
 def _bloques(palabras, max_palabras=4, max_letras=24):
