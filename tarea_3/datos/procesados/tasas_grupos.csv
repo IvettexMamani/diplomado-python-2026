@@ -1,0 +1,197 @@
+variable,grupo,anio,tasa,se,base,encuestados
+sexo,Hombre,2019,27.46,0.41,PEA,35227
+sexo,Mujer,2019,49.75,0.53,PEA,30764
+sexo,Hombre,2020,45.54,0.51,PEA,32612
+sexo,Mujer,2020,61.97,0.56,PEA,26402
+sexo,Hombre,2021,35.79,0.45,PEA,32969
+sexo,Mujer,2021,58.26,0.53,PEA,28820
+sexo,Hombre,2022,32.42,0.44,PEA,33074
+sexo,Mujer,2022,55.8,0.52,PEA,29293
+sexo,Hombre,2023,31.7,0.42,PEA,32314
+sexo,Mujer,2023,53.51,0.52,PEA,28548
+sexo,Hombre,2024,31.66,0.44,PEA,31751
+sexo,Mujer,2024,50.66,0.52,PEA,28063
+sexo,Hombre,2025,27.96,0.42,PEA,31015
+sexo,Mujer,2025,47.5,0.54,PEA,27854
+area,Rural,2019,62.21,0.54,PEA,25244
+area,Urbana,2019,30.66,0.39,PEA,40747
+area,Rural,2020,72.81,0.58,PEA,24531
+area,Urbana,2020,46.28,0.51,PEA,34483
+area,Rural,2021,64.19,0.57,PEA,23261
+area,Urbana,2021,40.58,0.44,PEA,38528
+area,Rural,2022,60.87,0.56,PEA,22586
+area,Urbana,2022,38.15,0.44,PEA,39781
+area,Rural,2023,59.19,0.59,PEA,21461
+area,Urbana,2023,37.03,0.4,PEA,39401
+area,Rural,2024,58.5,0.59,PEA,21102
+area,Urbana,2024,35.61,0.43,PEA,38712
+area,Rural,2025,56.01,0.61,PEA,20955
+area,Urbana,2025,32.01,0.4,PEA,37914
+grupo_edad,14-24,2019,49.22,0.75,PEA,10656
+grupo_edad,25-44,2019,29.61,0.46,PEA,25225
+grupo_edad,45-64,2019,36.58,0.53,PEA,22412
+grupo_edad,65+,2019,65.48,0.93,PEA,7698
+grupo_edad,14-24,2020,60.74,0.78,PEA,10260
+grupo_edad,25-44,2020,47.5,0.57,PEA,22731
+grupo_edad,45-64,2020,50.99,0.64,PEA,20215
+grupo_edad,65+,2020,73.48,0.92,PEA,5808
+grupo_edad,14-24,2021,56.11,0.76,PEA,10974
+grupo_edad,25-44,2021,38.3,0.52,PEA,23769
+grupo_edad,45-64,2021,45.15,0.57,PEA,20553
+grupo_edad,65+,2021,72.71,0.89,PEA,6493
+grupo_edad,14-24,2022,53.15,0.79,PEA,10188
+grupo_edad,25-44,2022,35.45,0.5,PEA,24122
+grupo_edad,45-64,2022,41.91,0.58,PEA,21067
+grupo_edad,65+,2022,70.6,0.91,PEA,6990
+grupo_edad,14-24,2023,52.65,0.75,PEA,9510
+grupo_edad,25-44,2023,33.45,0.49,PEA,23538
+grupo_edad,45-64,2023,41.42,0.54,PEA,20767
+grupo_edad,65+,2023,67.42,0.92,PEA,7047
+grupo_edad,14-24,2024,50.52,0.78,PEA,8904
+grupo_edad,25-44,2024,32.58,0.54,PEA,22812
+grupo_edad,45-64,2024,39.93,0.57,PEA,20889
+grupo_edad,65+,2024,65.6,0.96,PEA,7209
+grupo_edad,14-24,2025,48.36,0.81,PEA,8338
+grupo_edad,25-44,2025,28.95,0.49,PEA,21996
+grupo_edad,45-64,2025,36.7,0.54,PEA,20843
+grupo_edad,65+,2025,61.7,0.93,PEA,7692
+educacion,Primaria o menos,2019,61.8,0.55,PEA,21743
+educacion,Secundaria,2019,38.5,0.48,PEA,25329
+educacion,Superior no universitaria,2019,22.55,0.64,PEA,8610
+educacion,Universitaria,2019,15.73,0.49,PEA,10302
+educacion,Primaria o menos,2020,73.55,0.57,PEA,18441
+educacion,Secundaria,2020,56.64,0.56,PEA,23671
+educacion,Superior no universitaria,2020,38.58,0.86,PEA,7719
+educacion,Universitaria,2020,26.16,0.74,PEA,9166
+educacion,Primaria o menos,2021,65.01,0.56,PEA,18922
+educacion,Secundaria,2021,48.21,0.5,PEA,25312
+educacion,Superior no universitaria,2021,32.85,0.79,PEA,8091
+educacion,Universitaria,2021,23.65,0.71,PEA,9457
+educacion,Primaria o menos,2022,63.79,0.53,PEA,18685
+educacion,Secundaria,2022,44.69,0.5,PEA,25480
+educacion,Superior no universitaria,2022,28.9,0.77,PEA,8454
+educacion,Universitaria,2022,23.18,0.73,PEA,9732
+educacion,Primaria o menos,2023,62.95,0.57,PEA,17798
+educacion,Secundaria,2023,43.87,0.48,PEA,24904
+educacion,Superior no universitaria,2023,28.44,0.7,PEA,8517
+educacion,Universitaria,2023,20.62,0.65,PEA,9623
+educacion,Primaria o menos,2024,61.22,0.6,PEA,17199
+educacion,Secundaria,2024,43.16,0.51,PEA,24171
+educacion,Superior no universitaria,2024,29.16,0.73,PEA,8604
+educacion,Universitaria,2024,19.29,0.65,PEA,9821
+educacion,Primaria o menos,2025,59.01,0.61,PEA,16888
+educacion,Secundaria,2025,38.51,0.48,PEA,23895
+educacion,Superior no universitaria,2025,25.28,0.73,PEA,8342
+educacion,Universitaria,2025,18.53,0.63,PEA,9722
+dominio,Costa centro,2019,29.13,0.78,PEA,6112
+dominio,Costa norte,2019,35.02,0.73,PEA,9555
+dominio,Costa sur,2019,28.6,1.02,PEA,3881
+dominio,Lima Metropolitana,2019,25.19,0.67,PEA,7801
+dominio,Selva,2019,48.11,0.87,PEA,13639
+dominio,Sierra centro,2019,50.64,0.87,PEA,11424
+dominio,Sierra norte,2019,58.49,1.44,PEA,4377
+dominio,Sierra sur,2019,43.33,1.07,PEA,9202
+dominio,Costa centro,2020,40.72,1.14,PEA,4740
+dominio,Costa norte,2020,46.41,0.92,PEA,8206
+dominio,Costa sur,2020,40.46,1.33,PEA,3336
+dominio,Lima Metropolitana,2020,46.37,0.9,PEA,6351
+dominio,Selva,2020,58.05,0.97,PEA,12844
+dominio,Sierra centro,2020,63.63,1.05,PEA,10876
+dominio,Sierra norte,2020,67.37,1.66,PEA,4133
+dominio,Sierra sur,2020,56.36,1.3,PEA,8528
+dominio,Costa centro,2021,34.62,0.97,PEA,5412
+dominio,Costa norte,2021,40.93,0.77,PEA,8807
+dominio,Costa sur,2021,31.97,1.17,PEA,3845
+dominio,Lima Metropolitana,2021,40.66,0.79,PEA,6782
+dominio,Selva,2021,50.98,0.85,PEA,13738
+dominio,Sierra centro,2021,56.67,0.94,PEA,10628
+dominio,Sierra norte,2021,58.01,1.68,PEA,3966
+dominio,Sierra sur,2021,48.73,1.11,PEA,8611
+dominio,Costa centro,2022,31.81,0.85,PEA,5729
+dominio,Costa norte,2022,39.47,0.71,PEA,9153
+dominio,Costa sur,2022,30.06,1.05,PEA,3963
+dominio,Lima Metropolitana,2022,38.18,0.87,PEA,7221
+dominio,Selva,2022,48.51,0.79,PEA,13691
+dominio,Sierra centro,2022,51.99,0.91,PEA,10385
+dominio,Sierra norte,2022,55.81,1.58,PEA,3763
+dominio,Sierra sur,2022,45.36,0.97,PEA,8462
+dominio,Costa centro,2023,31.89,0.81,PEA,5803
+dominio,Costa norte,2023,39.62,0.76,PEA,8937
+dominio,Costa sur,2023,28.12,1.14,PEA,3909
+dominio,Lima Metropolitana,2023,35.85,0.76,PEA,7226
+dominio,Selva,2023,49.09,0.78,PEA,13195
+dominio,Sierra centro,2023,50.56,0.91,PEA,10163
+dominio,Sierra norte,2023,54.09,1.68,PEA,3577
+dominio,Sierra sur,2023,42.45,0.98,PEA,8052
+dominio,Costa centro,2024,31.02,0.83,PEA,5914
+dominio,Costa norte,2024,37.32,0.74,PEA,8493
+dominio,Costa sur,2024,28.44,0.99,PEA,3658
+dominio,Lima Metropolitana,2024,35.44,0.86,PEA,7065
+dominio,Selva,2024,46.9,0.75,PEA,13219
+dominio,Sierra centro,2024,49.49,0.88,PEA,9929
+dominio,Sierra norte,2024,53.18,1.69,PEA,3527
+dominio,Sierra sur,2024,40.11,1.02,PEA,8009
+dominio,Costa centro,2025,28.82,0.84,PEA,5713
+dominio,Costa norte,2025,36.67,0.73,PEA,8521
+dominio,Costa sur,2025,25.03,1.09,PEA,3596
+dominio,Lima Metropolitana,2025,29.89,0.74,PEA,7007
+dominio,Selva,2025,42.43,0.75,PEA,13178
+dominio,Sierra centro,2025,45.83,0.92,PEA,9537
+dominio,Sierra norte,2025,53.72,1.71,PEA,3568
+dominio,Sierra sur,2025,37.64,1.12,PEA,7749
+sector,Agropecuario y pesca,2019,64.72,0.57,ocupados,23643
+sector,Comercio,2019,46.95,0.73,ocupados,10612
+sector,Construcción,2019,16.12,0.91,ocupados,3046
+sector,Manufactura,2019,31.61,1.03,ocupados,4300
+sector,Minería,2019,11.29,2.5,ocupados,753
+sector,Otros servicios,2019,19.85,0.52,ocupados,13760
+sector,Restaurantes y hoteles,2019,49.69,1.13,ocupados,4424
+sector,Transporte,2019,21.05,0.93,ocupados,3700
+sector,Agropecuario y pesca,2020,77.25,0.54,ocupados,25124
+sector,Comercio,2020,65.21,0.84,ocupados,8181
+sector,Construcción,2020,35.24,1.44,ocupados,2445
+sector,Manufactura,2020,51.41,1.29,ocupados,3364
+sector,Minería,2020,14.84,3.11,ocupados,506
+sector,Otros servicios,2020,30.13,0.77,ocupados,10782
+sector,Restaurantes y hoteles,2020,65.38,1.37,ocupados,2789
+sector,Transporte,2020,48.23,1.39,ocupados,2799
+sector,Agropecuario y pesca,2021,67.72,0.57,ocupados,23267
+sector,Comercio,2021,59.24,0.76,ocupados,10115
+sector,Construcción,2021,21.86,1.11,ocupados,3352
+sector,Manufactura,2021,43.15,1.28,ocupados,3699
+sector,Minería,2021,14.21,3.02,ocupados,601
+sector,Otros servicios,2021,28.6,0.75,ocupados,11435
+sector,Restaurantes y hoteles,2021,57.99,1.29,ocupados,3525
+sector,Transporte,2021,34.21,1.29,ocupados,3330
+sector,Agropecuario y pesca,2022,63.78,0.58,ocupados,21885
+sector,Comercio,2022,56.24,0.74,ocupados,10313
+sector,Construcción,2022,21.07,1.0,ocupados,3384
+sector,Manufactura,2022,38.82,1.23,ocupados,4063
+sector,Minería,2022,11.24,2.91,ocupados,645
+sector,Otros servicios,2022,27.62,0.7,ocupados,12478
+sector,Restaurantes y hoteles,2022,56.14,1.13,ocupados,4184
+sector,Transporte,2022,29.14,1.13,ocupados,3488
+sector,Agropecuario y pesca,2023,63.91,0.56,ocupados,20880
+sector,Comercio,2023,52.04,0.76,ocupados,10106
+sector,Construcción,2023,19.48,0.99,ocupados,3053
+sector,Manufactura,2023,38.96,1.18,ocupados,3890
+sector,Minería,2023,7.01,1.91,ocupados,628
+sector,Otros servicios,2023,26.58,0.66,ocupados,12421
+sector,Restaurantes y hoteles,2023,56.13,1.12,ocupados,4091
+sector,Transporte,2023,29.57,1.16,ocupados,3584
+sector,Agropecuario y pesca,2024,61.8,0.58,ocupados,20109
+sector,Comercio,2024,52.43,0.77,ocupados,9767
+sector,Construcción,2024,21.63,1.07,ocupados,3028
+sector,Manufactura,2024,36.41,1.15,ocupados,3856
+sector,Minería,2024,7.49,1.54,ocupados,670
+sector,Otros servicios,2024,25.2,0.71,ocupados,12533
+sector,Restaurantes y hoteles,2024,53.45,1.12,ocupados,4306
+sector,Transporte,2024,31.09,1.11,ocupados,3415
+sector,Agropecuario y pesca,2025,59.47,0.62,ocupados,20099
+sector,Comercio,2025,49.26,0.77,ocupados,9351
+sector,Construcción,2025,15.91,0.98,ocupados,2957
+sector,Manufactura,2025,32.23,1.13,ocupados,3780
+sector,Minería,2025,5.33,1.25,ocupados,683
+sector,Otros servicios,2025,21.0,0.63,ocupados,12480
+sector,Restaurantes y hoteles,2025,48.34,1.16,ocupados,4156
+sector,Transporte,2025,29.22,1.17,ocupados,3408

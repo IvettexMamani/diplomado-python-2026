@@ -1,0 +1,7 @@
+1. Perú 2024->2025: 40.0% -> 36.6% de la PEA (-3.4 pp, z = -6.3); 7.53 -> 6.98 millones.
+   Pico 2020: 52.5%; 2019: 37.4%.
+   Sensibilidad: solo ocupación principal 42.6 -> 39.1; con especie 36.0 -> 33.0.
+2. Departamentos que subieron: Tumbes (+8.8 pp, z=3.2), La Libertad (+2.8 pp, z=1.4), Apurímac (+0.8 pp, z=0.2); bajaron 22 de 25 (6 con cambio significativo).
+   Mayor tasa 2025: Huancavelica (56.8%); menor: Arequipa (20.0%).
+3. Brecha 2025: mujeres 47.5% frente a hombres 28.0%; rural 56.0% frente a urbano 32.0%; universitaria 18.5% frente a primaria o menos 59.0%.
+4. Lima Metropolitana (EPE) Jul-Ago-Set 2026: 1,730.5 mil subempleados por ingresos (27.5% de la PEA), +10.9% interanual (+170.7 mil).
