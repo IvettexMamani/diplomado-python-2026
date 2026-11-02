@@ -1,0 +1,19 @@
+# Microdatos de la ENAHO (3 GB): se bajan con scripts/obtener_datos.py y no se suben.
+# Sí se suben la serie de la EPE (2 MB) y los límites departamentales.
+datos/originales/*
+!datos/originales/inei_epe_lima/
+!datos/originales/peru_departamental_simple.geojson
+
+# Voz propia, audios y videos pesados del reel (la voz de referencia es personal)
+reel/voz/
+reel/salidas*/
+*.wav
+*.m4a
+*.opus
+*.ogg
+*.mp3
+!reel/recursos/musica/*.mp3
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
