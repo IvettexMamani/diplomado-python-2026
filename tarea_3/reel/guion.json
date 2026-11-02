@@ -42,16 +42,18 @@
       "fuente_cifra": "datos/procesados/tasas_grupos.csv, 2025: Mujer 47,46; Hombre 28,00; Rural 56,00."
     },
     {
-      "frase": "El dato nacional de dos mil veintiséis saldrá recién el próximo año. Mientras tanto, explora el tablero con los datos del INEI: el enlace está en la publicación.",
+      "frase": "El dato nacional de dos mil veintiséis saldrá recién el próximo año. Mientras tanto, explora el tablero con los datos del Instituto Nacional de Estadística e Informática: el enlace está en la publicación.",
       "cifra": "",
       "etiqueta": "Explora el dashboard: enlace en la publicación",
       "imagen": "recursos/escena6_dashboard.png",
       "cifra_en_texto": true,
-      "fuente_cifra": "La ENAHO anual de 2026 se publica a mediados de 2027 (la de 2025 salió en 2026)."
+      "fuente_cifra": "La ENAHO anual de 2026 se publica a mediados de 2027 (la de 2025 salió en 2026).",
+      "revisado_a_mano": "La voz leía la sigla «INEI» letra por letra y repetía «iii» al final; se usa el nombre completo del instituto (pedido de la autora tras escuchar el reel)."
     }
   ],
   "correcciones_subtitulos": {
-    "de el enlace": "del INEI: el enlace"
+    "de el enlace": "del INEI: el enlace",
+    "Estadística y E informática": "Estadística e Informática."
   },
   "creditos": "Créditos · Datos: INEI (ENAHO 2019-2025 y EPE Lima Metropolitana) · Gráficos y mapa: elaboración propia · Voz: clon de la voz de la autora con Qwen3-TTS · Música: pista generada por la autora con Python (dominio público)",
   "hashtags": [

@@ -26,7 +26,7 @@ video final dura lo que dure la voz generada; el programa avisa si queda fuera d
 | 3 · El contraste | 22-35 s | «En todo el país, en cambio, el último dato anual mostraba una mejora: en dos mil veinticinco el subempleo por ingresos bajó de cuarenta a treinta y seis coma seis por ciento.» | **36,6 %** · Perú 2025 · bajó desde 40,0 % en 2024 | Línea nacional 2019-2025, con el pico de la pandemia | ENAHO: 40,02 % → 36,64 % (z = −6,3) |
 | 4 · El mapa | 35-41 s | «Bajó en veintidós de veinticinco departamentos. La excepción fue Tumbes: subió ocho coma ocho puntos.» | **Tumbes +8,8 pp** · de 34,5 % a 43,3 % · único aumento significativo | Mapa del cambio 2024-2025 (azul bajó, rojo subió) | ENAHO: Tumbes 34,50 → 43,31 (z = 3,2) |
 | 5 · La brecha | 41-50 s | «Y golpea más a las mujeres: cuarenta y siete coma cinco por ciento, frente a veintiocho por ciento de los hombres.» | **47,5 % vs 28,0 %** · mujeres vs hombres · Perú 2025 · área rural: 56,0 % | Barras por sexo y por área | ENAHO 2025: 47,46 % y 28,00 % |
-| 6 · Cierre | 50-61 s | «El dato nacional de dos mil veintiséis saldrá recién el próximo año. Mientras tanto, explora el tablero con los datos del INEI: el enlace está en la publicación.» | Explora el dashboard: enlace en la publicación · **créditos** | Captura del dashboard | — |
+| 6 · Cierre | 50-61 s | «El dato nacional de dos mil veintiséis saldrá recién el próximo año. Mientras tanto, explora el tablero con los datos del Instituto Nacional de Estadística e Informática: el enlace está en la publicación.» | Explora el dashboard: enlace en la publicación · **créditos** | Captura del dashboard | — |
 
 En todo el video aparecen el título, el aviso **«VOZ GENERADA CON IA»**, la barra de avance y el pie
 «Ivette Carolina Mamani Flores · Fuente: INEI: ENAHO 2019-2025 y EPE Lima Metropolitana (jul-set 2026)».
@@ -119,7 +119,7 @@ por https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN y adjunta:
 - [x] Música de fondo con licencia (pista propia, dominio público) por debajo de la voz
 - [x] Aviso «Voz generada con IA», fuente de los datos y créditos
 - [x] Voz de referencia grabada por la autora (22,4 s)
-- [x] Narración con Qwen3-TTS 0.6B en CPU y video generado: **65,6 s**, WER por escena de 0,03 a 0,11
+- [x] Narración con Qwen3-TTS 0.6B en CPU y video generado: **64,7 s**, WER por escena de 0,00 a 0,07
 - [x] `reel.mp4` (3,4 MB), `subtitulos.srt` y `portada.png` copiados a esta carpeta
 - [ ] Publicarlo en LinkedIn (Parte 4) — **la autora**
 
@@ -127,15 +127,21 @@ por https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN y adjunta:
 
 | | |
 |---|---|
-| Duración | 65,6 s (la tarea pide de 45 a 75 s) |
+| Duración | 64,7 s (la tarea pide de 45 a 75 s) |
 | Formato | 1080 × 1920, 30 fps, H.264 + AAC estéreo de 48 kHz, 3,4 MB |
-| Volumen | −15,2 LUFS integrado: la voz a −14 LUFS y la música a −32 LUFS, por debajo |
-| WER por escena | 0,03 · 0,05 · 0,03 · 0,07 · 0,05 · 0,11 (Whisper entiende casi todas las palabras) |
-| Tiempo en la laptop | unos 22 minutos (voz 19 min, subtítulos 1 min, video 1 min) |
+| Volumen | −15,8 LUFS integrado: la voz a −14 LUFS y la música a −32 LUFS, por debajo |
+| WER por escena | 0,03 · 0,05 · 0,03 · 0,07 · 0,05 · 0,00 (escena 6 rehecha; Whisper entiende casi todas las palabras) |
+| Tiempo en la laptop | unos 22 minutos el reel completo; 13 minutos para rehacer solo la escena 6 |
 
-**Corrección de subtítulos.** En la escena 6, Whisper no reconoció la sigla «INEI» y escribió «los datos de el
-enlace». En `guion.json` → `correcciones_subtitulos` se reemplaza ese tramo por el texto del guion, y
-`python hacer_reel.py --rehacer-video` vuelve a hacer los subtítulos y el video con el mismo audio
-(`salidas/reel.wav`), sin generar otra vez la voz. **Escucha el final (segundo 57 aproximadamente) para
-confirmar que la voz pronuncia bien «INEI».** Si no, cambia la frase (por ejemplo, «del Instituto Nacional de
-Estadística») y genera la voz de nuevo.
+**Corrección de la escena 6.** Al escuchar el reel, la autora notó que la voz leía la sigla «INEI» letra por
+letra y repetía «iii» al final. La frase pasó a decir el nombre completo, «del Instituto Nacional de
+Estadística e Informática», y solo esa escena se volvió a narrar:
+
+```bash
+python hacer_reel.py --voz voz/mi_voz.m4a --rehacer-escena 6 --intentos 3
+```
+
+Ese comando genera 3 versiones de la escena y se queda con la que Whisper entiende mejor, que delata
+repeticiones como el «iii». Después la pega en `salidas/reel.wav` (la versión anterior queda en
+`reel_anterior.wav`) y rehace los subtítulos y el video. Para corregir solo un subtítulo, sin tocar la voz,
+existen `correcciones_subtitulos` en `guion.json` y `python hacer_reel.py --rehacer-video`.

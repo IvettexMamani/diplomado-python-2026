@@ -48,6 +48,9 @@ p.add_argument("--salidas", default=str(AQUI / "salidas"))
 p.add_argument("--vista-previa", action="store_true", help="solo cuadros de prueba, sin voz")
 p.add_argument("--rehacer-video", action="store_true",
                help="reutiliza salidas/reel.wav (sin TTS): subtítulos con correcciones y video")
+p.add_argument("--rehacer-escena", type=int, metavar="N",
+               help="con --voz: vuelve a narrar solo la escena N, la pega en salidas/reel.wav y rehace el video")
+p.add_argument("--intentos", type=int, default=3, help="con --rehacer-escena: versiones a generar; queda la de menor WER")
 a = p.parse_args()
 
 guion = json.loads((AQUI / "guion.json").read_text(encoding="utf-8"))
@@ -61,6 +64,52 @@ if a.vista_previa:
     dur = reel.vista_previa(guion, AQUI / "vista_previa", a.fuente, a.autor)
     print(f"Vista previa lista en vista_previa/ (duración estimada: {dur:.0f} s)")
     raise SystemExit(0)
+
+if a.rehacer_escena:
+    # Vuelve a narrar una sola escena (por ejemplo, si la voz pronunció mal una sigla) y la pega
+    # en el audio ya generado, en lugar de narrar otra vez todo el reel.
+    if not a.voz:
+        p.error("--rehacer-escena necesita --voz")
+    import gc
+
+    import jiwer
+    import numpy as np
+    import soundfile as sf
+    import torch  # noqa: F401  (antes que faster-whisper, por las DLL en Windows)
+
+    t0 = time.time()
+    salidas = Path(a.salidas)
+    audio, sr = sf.read(salidas / "reel.wav", dtype="float32")
+    previa = reel.Narracion(audio, sr, [])
+    reel.subtitulos(previa, guion)
+    escenas = reel.escenas_por_palabras(previa.palabras, guion, previa.duracion)
+    i = a.rehacer_escena - 1
+    frase = guion["escenas"][i]["frase"]
+    voz = reel.Voz(a.voz, modelo=a.tts, device=a.device)
+    mejor = None
+    for k in range(a.intentos):
+        w = np.asarray(voz.decir([frase])[0], np.float32)
+        if voz.sr != sr:   # la frecuencia de la voz se conoce recién al generar
+            raise SystemExit(f"el audio guardado está a {sr} Hz y la voz a {voz.sr} Hz: genera el reel completo")
+        if a.velocidad != 1:
+            w = reel._acelerar(w, sr, a.velocidad)
+        oido = " ".join(s.text.strip() for s in reel._whisper().transcribe(reel._a16k(w, sr), language="es")[0])
+        wer = jiwer.wer(reel._normalizar(frase), reel._normalizar(oido)) if reel._normalizar(oido) else 1.0
+        reel._reloj(f"intento {k + 1}: WER {wer:.2f}, {len(w) / sr:.1f} s · oído: «{oido}»", t0)
+        if mejor is None or (wer, len(w)) < (mejor[0], len(mejor[1])):
+            mejor = (wer, w)
+    wer, w = mejor
+    ini = int(escenas[i][0] * sr)
+    if i + 1 < len(escenas):
+        cola = [np.zeros(int(reel.PAUSA * sr), np.float32), audio[int(escenas[i + 1][0] * sr):]]
+    else:
+        cola = [np.zeros(int(reel.FINAL * sr), np.float32)]
+    shutil.copy(salidas / "reel.wav", salidas / "reel_anterior.wav")
+    sf.write(salidas / "reel.wav", np.concatenate([audio[:ini], w, *cola]), sr)
+    reel._reloj(f"escena {a.rehacer_escena} reemplazada (WER {wer:.2f}); copia del audio anterior en reel_anterior.wav", t0)
+    del voz
+    gc.collect()
+    a.rehacer_video = True
 
 if a.rehacer_video:
     import soundfile as sf
