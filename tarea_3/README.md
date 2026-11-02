@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Dashboard público** | https://ivettexmamani.github.io/diplomado-python-2026/ |
+| **Dashboard público** | https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN (Claude Artifact) |
 | **Publicación de LinkedIn** | _ENLACE_LINKEDIN_ |
 | **Reel** | [`reel/reel.mp4`](reel/reel.mp4) · guion en [`reel/GUION.md`](reel/GUION.md) |
 
@@ -103,7 +103,7 @@ La serie de Lima sale directo del archivo del INEI y cuadra con sus notas de pre
 
 ## 6. Enlaces
 
-- Dashboard: https://ivettexmamani.github.io/diplomado-python-2026/ (código en [`web/`](web/))
+- Dashboard (Claude Artifact): https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN · código en [`web/`](web/)
 - LinkedIn: _ENLACE_LINKEDIN_
 
 ## 7. Cómo reproducir
@@ -128,7 +128,8 @@ cd web && python -m http.server 8000      # http://localhost:8000
 
 El paso 1 se puede saltar: `datos/procesados/pea_2019_2025.parquet` ya está en el repositorio, y desde ahí
 corren `analizar_datos.py` y el dashboard. El reel se genera con [`reel/GUION.md`](reel/GUION.md). El
-dashboard se publica en GitHub Pages con `.github/workflows/pages.yml` en cada push que toque `tarea_3/web/`.
+dashboard se publica como **Claude Artifact**: se sube `web/index.html` con `assets/app.js`, `data/datos.js`,
+`data/peru_departamentos.js` y `data/world_110m.json`, tal como están en `web/`.
 
 ```text
 tarea_3/
