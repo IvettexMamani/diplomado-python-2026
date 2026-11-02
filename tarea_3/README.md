@@ -5,6 +5,7 @@
 | | |
 |---|---|
 | **Dashboard público** | https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN (Claude Artifact) |
+| **Publicación de LinkedIn** | https://www.linkedin.com/feed/update/urn:li:activity:7522865446153240577/ |
 | **Reel** | [`reel/reel.mp4`](reel/reel.mp4) · guion en [`reel/GUION.md`](reel/GUION.md) |
 
 ## 1. Tema y pregunta de investigación
@@ -104,6 +105,7 @@ La serie de Lima sale directo del archivo del INEI y cuadra con sus notas de pre
 
 - Dashboard (Claude Artifact): https://claude.ai/artifact/TfZyyHoNAi8hAm4M7kDpiN · código en [`web/`](web/)
 - Repositorio: https://github.com/IvettexMamani/diplomado-python-2026/tree/main/tarea_3
+- Publicación de LinkedIn: https://www.linkedin.com/feed/update/urn:li:activity:7522865446153240577/
 
 ## 7. Cómo reproducir
 
