@@ -288,7 +288,9 @@
     const nacPrev = celda(anio - 1, "00");
     const ref = cambio ? (nac && nacPrev ? nac[ind] - nacPrev[ind] : null) : (nac ? nac[ind] : null);
     const L = baseLayout({ margin: { l: 112, r: 48, t: 4, b: 34 }, bargap: 0.28,
-      xaxis: Object.assign(baseLayout().xaxis, { ticksuffix: cambio ? " pp" : " %", zeroline: true }),
+      xaxis: Object.assign(baseLayout().xaxis, { ticksuffix: cambio ? " pp" : " %", zeroline: true,
+        // margen para que las etiquetas de los extremos no choquen con el eje
+        range: [Math.min(0, ...xv) * 1.22 - (cambio ? 0.6 : 0), Math.max(0, ...xv) * 1.15 + (cambio ? 0.6 : 0)] }),
       yaxis: Object.assign(baseLayout().yaxis, { automargin: true, tickfont: { color: css("--text-secondary"), size: 12 } }),
       shapes: ref === null ? [] : [{ type: "line", x0: ref, x1: ref, y0: -0.5, y1: vals.length - 0.5, line: { color: css("--text-muted"), width: 1.5 } }],
       annotations: ref === null ? [] : [{ x: ref, y: vals.length - 0.5, yanchor: "bottom", text: `Perú ${cambio ? pp(ref) : pct(ref)}`, showarrow: false, font: { size: 11, color: css("--text-muted") } }] });
