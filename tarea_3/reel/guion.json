@@ -1,0 +1,68 @@
+{
+  "titulo": "Trabajar y no alcanzar",
+  "escenas": [
+    {
+      "frase": "¿Trabajas y aun así no te alcanza? En Lima, un millón setecientas treinta mil personas están en esa situación: ganan menos de lo que les toca aportar para la canasta mínima familiar.",
+      "cifra": "1,73 millones",
+      "etiqueta": "subempleados por ingresos en Lima Metropolitana · jul-set 2026",
+      "imagen": "recursos/escena1_pictograma.png",
+      "cifra_en_texto": true,
+      "fuente_cifra": "datos/procesados/serie_lima_epe.csv, fila 2026-09: 1 730,45 mil (27,5 % de la PEA). INEI, EPE."
+    },
+    {
+      "frase": "Y van en aumento: en el último año crecieron diez coma nueve por ciento, más de ciento setenta mil personas.",
+      "cifra": "+10,9 %",
+      "etiqueta": "jul-set 2026 frente a jul-set 2025 · +170 700 personas",
+      "imagen": "recursos/escena2_lima_variacion.png",
+      "cifra_en_texto": true,
+      "fuente_cifra": "serie_lima_epe.csv, 2026-09: var_interanual_pct = 10,95; var_interanual_miles = 170,73. Cuadra con la nota de prensa del INEI de may-jul 2026 (+9,2 %)."
+    },
+    {
+      "frase": "En todo el país, en cambio, el último dato anual mostraba una mejora: en dos mil veinticinco el subempleo por ingresos bajó de cuarenta a treinta y seis coma seis por ciento.",
+      "cifra": "36,6 %",
+      "etiqueta": "Perú 2025 · bajó desde 40,0 % en 2024 · % de la fuerza laboral (ENAHO)",
+      "imagen": "recursos/escena3_peru_tendencia.png",
+      "cifra_en_texto": true,
+      "fuente_cifra": "datos/procesados/serie_nacional.csv: tasa_sub_ingresos 40,02 (2024) y 36,64 (2025); z = -6,3."
+    },
+    {
+      "frase": "Bajó en veintidós de veinticinco departamentos. La excepción fue Tumbes: subió ocho coma ocho puntos.",
+      "cifra": "Tumbes +8,8 pp",
+      "etiqueta": "de 34,5 % a 43,3 % · único aumento significativo",
+      "imagen": "recursos/escena4_mapa_cambio.png",
+      "cifra_en_texto": true,
+      "fuente_cifra": "datos/procesados/cambio_departamento_2024_2025.csv: Tumbes 34,50 → 43,31 (z = 3,2); 22 departamentos con cambio negativo."
+    },
+    {
+      "frase": "Y golpea más a las mujeres: cuarenta y siete coma cinco por ciento, frente a veintiocho por ciento de los hombres.",
+      "cifra": "47,5 % vs 28,0 %",
+      "etiqueta": "mujeres vs hombres · Perú 2025 · área rural: 56,0 %",
+      "imagen": "recursos/escena5_brecha.png",
+      "cifra_en_texto": true,
+      "fuente_cifra": "datos/procesados/tasas_grupos.csv, 2025: Mujer 47,46; Hombre 28,00; Rural 56,00."
+    },
+    {
+      "frase": "El dato nacional de dos mil veintiséis saldrá recién el próximo año. Mientras tanto, explora el tablero con los datos del INEI: el enlace está en la publicación.",
+      "cifra": "",
+      "etiqueta": "Explora el dashboard: enlace en la publicación",
+      "imagen": "recursos/escena6_dashboard.png",
+      "cifra_en_texto": true,
+      "fuente_cifra": "La ENAHO anual de 2026 se publica a mediados de 2027 (la de 2025 salió en 2026)."
+    }
+  ],
+  "creditos": "Créditos · Datos: INEI (ENAHO 2019-2025 y EPE Lima Metropolitana) · Gráficos y mapa: elaboración propia · Voz: clon de la voz de la autora con Qwen3-TTS · Música: pista generada por la autora con Python (dominio público)",
+  "hashtags": [
+    "#Subempleo",
+    "#MercadoLaboral",
+    "#Perú",
+    "#CienciaDeDatos",
+    "#DatosAbiertos",
+    "#INEI"
+  ],
+  "posts": {
+    "linkedin": "¿Trabajar y que no te alcance? Analicé el subempleo por ingresos en el Perú con los microdatos de la ENAHO 2019-2025 y la serie de empleo de Lima Metropolitana del INEI.\n\nTres hallazgos:\n1. En Lima Metropolitana, los subempleados por ingresos llegaron a 1,73 millones en julio-setiembre de 2026: +10,9 % frente al mismo trimestre de 2025 (+170 700 personas).\n2. A nivel nacional, el último dato anual (2025) mostraba lo contrario: la tasa bajó de 40,0 % a 36,6 % de la fuerza laboral, y solo Tumbes subió de forma significativa (+8,8 puntos).\n3. La brecha de género es grande: 47,5 % de las mujeres frente a 28,0 % de los hombres.\n\nDashboard interactivo (mapa, filtros por departamento, sexo y área, y datos descargables): [ENLACE AL DASHBOARD]\nCódigo y datos: https://github.com/IvettexMamani/diplomado-python-2026/tree/main/tarea_3\n\nLa voz del video fue generada con IA a partir de mi propia voz. Las cifras son estimaciones propias con la definición del INEI (validadas contra su cifra oficial de 2017) y no reemplazan las cifras oficiales.",
+    "x": "Lima: 1,73 millones de subempleados por ingresos en jul-set 2026, +10,9 % en un año. En el Perú, en cambio, la tasa bajó de 40,0 % a 36,6 % en 2025 (ENAHO). Dashboard: [ENLACE] (Voz generada con IA a partir de mi voz)",
+    "facebook": "¿Trabajas y no te alcanza? En Lima, 1,73 millones de personas ganan menos de lo que les toca aportar para la canasta mínima familiar, y la cifra creció 10,9 % en el último año. Explora los datos del INEI en mi dashboard: [ENLACE]. (Voz generada con IA a partir de mi voz)"
+  },
+  "cifras_dudosas_en_posts": []
+}
