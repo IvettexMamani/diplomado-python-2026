@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "bcrp": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "--quiet", "mcp/server.py"],
+      "env": {}
+    }
+  }
+}
