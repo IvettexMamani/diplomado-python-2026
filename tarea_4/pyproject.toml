@@ -1,0 +1,20 @@
+[project]
+name = "tarea-4-agente-socioeconomico"
+version = "0.1.0"
+description = "Agente de investigación socioeconómica del Perú: MCP del BCRP y Skills de la ENAHO"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=4,<5",
+    "httpx",
+    "pandas",
+    "truststore",   # usa los certificados del sistema: funciona detrás de antivirus o proxies que inspeccionan HTTPS
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["mcp"]
