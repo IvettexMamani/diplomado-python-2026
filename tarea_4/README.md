@@ -352,15 +352,16 @@ uv run mcp/demo_claude.py "Haz un mapa de la pobreza monetaria por departamento 
 | Demostración | Pedido | Skills activadas | Scripts, en orden | Resultado |
 |---|---|---|---|---|
 | [`demo_coordinacion_mapa`](evidencias_ia/skills/demo_coordinacion_mapa.md) | *Haz un mapa de la pobreza monetaria por departamento con ENAHO 2024.* (sin base) | `mapeando-enaho` → `limpiando-enaho` | `limpiar.py` → `mapear.py` | Mapa con 25 de 25 unidades, Cajamarca 45,0 % e Ica 6,0 % |
-| [`demo_coordinacion_grafico`](evidencias_ia/skills/demo_coordinacion_grafico.md) | *Grafica la pobreza por grupos de edad con la ENAHO 2024.* (sin base) | `graficando-enaho` → `limpiando-enaho` | `limpiar.py` → `graficar.py` | Gráfico por edad; 0-14 años, 37,5 % |
+| [`demo_coordinacion_grafico`](evidencias_ia/skills/demo_coordinacion_grafico.md) | *Grafica la pobreza por grupos de edad con la ENAHO 2024.* (sin base) | `graficando-enaho` → `limpiando-enaho` | `graficar.py` (se detiene sin base) → `limpiar.py` → `graficar.py` | Gráfico por edad; 0-14 años, 37,5 % |
 | [`demo_natural_cifra`](evidencias_ia/skills/demo_natural_cifra.md) | *¿Cuál fue la pobreza en Cusco en 2024?* | `limpiando-enaho` | `estimar.py` | 18,5 %, igual a la referencia de la sesión |
 | [`demo_natural_grafico`](evidencias_ia/skills/demo_natural_grafico.md) | *Grafica la pobreza urbana y rural.* | `graficando-enaho` | `graficar.py` | 24,8 % y 39,3 % |
-| [`demo_directa_limpieza`](evidencias_ia/skills/demo_directa_limpieza.md) | `/limpiando-enaho 2024` (sin base) | `limpiando-enaho` | `limpiar.py` | 25 comprobaciones aprobadas |
+| [`demo_directa_limpieza`](evidencias_ia/skills/demo_directa_limpieza.md) | `/limpiando-enaho 2024` (sin base) | `limpiando-enaho` | `limpiar.py` → `estimar.py` | 25 comprobaciones aprobadas |
 | [`demo_directa_grafico`](evidencias_ia/skills/demo_directa_grafico.md) | `/graficando-enaho pobreza por sexo en Puno` | `graficando-enaho` | `graficar.py` | 42,9 % y 37,8 % |
 | [`demo_directa_mapa`](evidencias_ia/skills/demo_directa_mapa.md) | `/mapeando-enaho pobreza extrema` | `mapeando-enaho` | `mapear.py` | Mapa de pobreza extrema con 25 unidades; aclara que la referencia de la sesión no cubre ese indicador |
 
-En las dos primeras, Claude abre la Skill que le pidieron, ve que falta la base, carga `limpiando-enaho` y solo entonces
-continúa: la limpieza siempre se ejecuta antes que el gráfico o el mapa.
+En las dos primeras, Claude abre la Skill que le pidieron y carga `limpiando-enaho` porque falta la base. La limpieza
+siempre termina antes de que se genere el gráfico o el mapa. En la del gráfico, Claude intentó graficar primero: el script
+se detuvo con el mensaje que pide limpiar, y siguió desde ahí.
 
 Una [primera corrida del mapa de pobreza extrema](evidencias_ia/skills/primera_corrida_demo_directa_mapa.md) encontró
 problemas reales en `mapear.py`: el título se cortaba, la escala tenía solo dos clases y la validación pisaba la del mapa

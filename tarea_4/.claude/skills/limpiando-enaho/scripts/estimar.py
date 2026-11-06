@@ -138,6 +138,8 @@ def main():
     filtros = separar_filtros(a.solo)
     df, unidad = base_para(a.por, filtros)
     t = tabla(df, a.por, a.indicador, filtrar(df, filtros)).round(2)
+    if a.por is None and filtros:  # sin esto, la fila del total diría «Perú» aunque el dominio sea Cusco
+        t["categoria"] = " · ".join(filtros.values())
     print(f"{INDICADORES[a.indicador]}, % de personas, ENAHO {ANIO}. Base: {nota_metodo(unidad)}.")
     if filtros:
         print("Dominio:", ", ".join(f"{k}={v}" for k, v in filtros.items()))
