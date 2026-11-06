@@ -1,0 +1,27 @@
+{
+ "id": "P07",
+ "modo": "B",
+ "respuesta": {
+  "valores": [
+   37.52
+  ],
+  "texto": "Pobreza monetaria, residentes habituales de 0 a 14 años",
+  "fuente": "INEI, ENAHO 2024 (módulos 34 sumaria y 02 miembros), base personas con facpob07, procesada con la skill limpiando-enaho (validación APROBADA, 25 comprobaciones). Grupo 0-14: 37.52 % (IC 95 %: 36.17–38.86; CV 1.8 %; n = 26,489 personas; población expandida ≈ 7.94 millones). Fuente: salidas/indicadores.csv y estimar.py --por grupo_edad.",
+  "interpretacion": "En 2024, cerca de 37.5 % de los niños y adolescentes de 0 a 14 años estaba en pobreza monetaria, la tasa más alta entre los grupos de edad (los demás van de 21.4 % a 27.9 %). La cifra es precisa, con CV de 1.8 %."
+ },
+ "texto_final": "{\"valores\":[37.52],\"texto\":\"Pobreza monetaria, residentes habituales de 0 a 14 años\",\"fuente\":\"INEI, ENAHO 2024 (módulos 34 sumaria y 02 miembros), base personas con facpob07, procesada con la skill limpiando-enaho (validación APROBADA, 25 comprobaciones). Grupo 0-14: 37.52 % (IC 95 %: 36.17–38.86; CV 1.8 %; n = 26,489 personas; población expandida ≈ 7.94 millones). Fuente: salidas/indicadores.csv y estimar.py --por grupo_edad.\",\"interpretacion\":\"En 2024, cerca de 37.5 % de los niños y adolescentes de 0 a 14 años estaba en pobreza monetaria, la tasa más alta entre los grupos de edad (los demás van de 21.4 % a 27.9 %). La cifra es precisa, con CV de 1.8 %.\"}",
+ "segundos": 25.4,
+ "turnos": 6,
+ "costo_usd": 0.0583913,
+ "error": "",
+ "herramientas": [
+  "Skill",
+  "Bash",
+  "Bash",
+  "StructuredOutput"
+ ],
+ "skills": [
+  "limpiando-enaho"
+ ],
+ "contaminacion": []
+}

@@ -1,0 +1,27 @@
+{
+ "id": "P06",
+ "modo": "B",
+ "respuesta": {
+  "valores": [
+   18.5
+  ],
+  "texto": "Cusco",
+  "fuente": "INEI, ENAHO 2024, módulo 34 (sumaria), hogares ponderados con factor07 × mieperho (método del INEI), procesado con la skill limpiando-enaho. Validación aprobada: 25 comprobaciones aprobadas y 0 fallidas. Cusco: 18.54 %, IC 95 % de 14.7 % a 22.4 %, error estándar 1.95, CV 10.5 %, 1,230 hogares en la muestra y 189 UPM.",
+  "interpretacion": "Según la ENAHO 2024, el 18.5 % de la población de Cusco estaba en pobreza monetaria (IC 95 %: 14.7 %–22.4 %). Es menos que el 27.6 % nacional. El CV es de 10.5 %, por debajo de 15 %, así que la cifra es confiable."
+ },
+ "texto_final": "{\"valores\":[18.5],\"texto\":\"Cusco\",\"fuente\":\"INEI, ENAHO 2024, módulo 34 (sumaria), hogares ponderados con factor07 × mieperho (método del INEI), procesado con la skill limpiando-enaho. Validación aprobada: 25 comprobaciones aprobadas y 0 fallidas. Cusco: 18.54 %, IC 95 % de 14.7 % a 22.4 %, error estándar 1.95, CV 10.5 %, 1,230 hogares en la muestra y 189 UPM.\",\"interpretacion\":\"Según la ENAHO 2024, el 18.5 % de la población de Cusco estaba en pobreza monetaria (IC 95 %: 14.7 %–22.4 %). Es menos que el 27.6 % nacional. El CV es de 10.5 %, por debajo de 15 %, así que la cifra es confiable.\"}",
+ "segundos": 24.6,
+ "turnos": 6,
+ "costo_usd": 0.0556542,
+ "error": "",
+ "herramientas": [
+  "Skill",
+  "Bash",
+  "Bash",
+  "StructuredOutput"
+ ],
+ "skills": [
+  "limpiando-enaho"
+ ],
+ "contaminacion": []
+}

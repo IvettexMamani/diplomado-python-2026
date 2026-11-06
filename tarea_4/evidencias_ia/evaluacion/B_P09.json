@@ -1,0 +1,44 @@
+{
+ "id": "P09",
+ "modo": "B",
+ "respuesta": {
+  "valores": [
+   65.1,
+   30.2
+  ],
+  "texto": "La Libertad",
+  "fuente": "(1) Agroexportaciones, BCRP/Sunat, FOB millones US$: tradicionales agrícolas PM40076BA (2020: 731.1; 2024: 1,229.4) + no tradicionales agropecuarias PM40121BA (2020: 6,735.4; 2024: 11,096.2). Suma 2020 = 7,466.5; 2024 = 12,325.6; crecimiento = 65.1 %. (2) Departamento 2022: BCRP, series departamentales de exportaciones no tradicionales agropecuarias (US$ millones FOB, 2022): La Libertad RD41168BA 1,857.7; Lima RD41202BA 1,633.8; Ica RD41134BA 1,567.8; Piura RD41287BA 1,259.2; Lambayeque RD41185BA 844.1; Ancash RD40981BA 246.0; Arequipa RD41015BA 154.2. No revisé las demás series departamentales (las restantes tienen montos menores) ni hay serie departamental de agrícolas tradicionales en lo que consulté, así que el ranking es solo de no tradicionales agropecuarias. (3) Pobreza monetaria 2024 de La Libertad: INEI, ENAHO 2024, módulo sumaria (base hogares, factor07 × mieperho), 30.19 % (IC 95 %: 26.6 %–33.8 %, CV 6.0 %, n = 1,509 hogares). Validación de la base aprobada (25 comprobaciones; nacional 27.58 %).",
+  "interpretacion": "No: son tres cifras sueltas de años y fuentes distintas (exportaciones 2020-2024 y 2022, pobreza 2024), sin comparar territorios ni medir el efecto de la agroexportación en los hogares. Que el mayor agroexportador tenga 30.2 % de pobreza (cerca del 27.6 % nacional) describe una situación, pero no prueba que la agroexportación aumente la pobreza; tampoco que la reduzca."
+ },
+ "texto_final": "{\"valores\":[65.1,30.2],\"texto\":\"La Libertad\",\"fuente\":\"(1) Agroexportaciones, BCRP/Sunat, FOB millones US$: tradicionales agrícolas PM40076BA (2020: 731.1; 2024: 1,229.4) + no tradicionales agropecuarias PM40121BA (2020: 6,735.4; 2024: 11,096.2). Suma 2020 = 7,466.5; 2024 = 12,325.6; crecimiento = 65.1 %. (2) Departamento 2022: BCRP, series departamentales de exportaciones no tradicionales agropecuarias (US$ millones FOB, 2022): La Libertad RD41168BA 1,857.7; Lima RD41202BA 1,633.8; Ica RD41134BA 1,567.8; Piura RD41287BA 1,259.2; Lambayeque RD41185BA 844.1; Ancash RD40981BA 246.0; Arequipa RD41015BA 154.2. No revisé las demás series departamentales (las restantes tienen montos menores) ni hay serie departamental de agrícolas tradicionales en lo que consulté, así que el ranking es solo de no tradicionales agropecuarias. (3) Pobreza monetaria 2024 de La Libertad: INEI, ENAHO 2024, módulo sumaria (base hogares, factor07 × mieperho), 30.19 % (IC 95 %: 26.6 %–33.8 %, CV 6.0 %, n = 1,509 hogares). Validación de la base aprobada (25 comprobaciones; nacional 27.58 %).\",\"interpretacion\":\"No: son tres cifras sueltas de años y fuentes distintas (exportaciones 2020-2024 y 2022, pobreza 2024), sin comparar territorios ni medir el efecto de la agroexportación en los hogares. Que el mayor agroexportador tenga 30.2 % de pobreza (cerca del 27.6 % nacional) describe una situación, pero no prueba que la agroexportación aumente la pobreza; tampoco que la reduzca.\"}",
+ "segundos": 44.7,
+ "turnos": 22,
+ "costo_usd": 0.13903010000000002,
+ "error": "",
+ "herramientas": [
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__serie",
+  "mcp__bcrp__serie",
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__serie",
+  "mcp__bcrp__serie",
+  "mcp__bcrp__serie",
+  "mcp__bcrp__serie",
+  "mcp__bcrp__serie",
+  "mcp__bcrp__serie",
+  "mcp__bcrp__serie",
+  "Skill",
+  "Bash",
+  "Bash",
+  "StructuredOutput"
+ ],
+ "skills": [
+  "limpiando-enaho"
+ ],
+ "contaminacion": []
+}

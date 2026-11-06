@@ -1,0 +1,24 @@
+{
+ "id": "P02",
+ "modo": "B",
+ "respuesta": {
+  "valores": [
+   3.7553
+  ],
+  "texto": "",
+  "fuente": "BCRP, serie PD04638PD (Tipo de cambio interbancario venta, S/ por US$, diaria), 3-ene-2024 a 30-dic-2024, 246 datos diarios. https://estadisticas.bcrp.gob.pe/estadisticas/series/diarias/resultados/PD04638PD/html/2024-01-03/2024-12-30/",
+  "interpretacion": "El promedio de los datos diarios de 2024 fue de unos S/ 3,755 por dólar (3,7553). El rango fue de S/ 3,667 (13-mar) a S/ 3,884 (13-feb)."
+ },
+ "texto_final": "{\"valores\":[3.7553],\"texto\":\"\",\"fuente\":\"BCRP, serie PD04638PD (Tipo de cambio interbancario venta, S/ por US$, diaria), 3-ene-2024 a 30-dic-2024, 246 datos diarios. https://estadisticas.bcrp.gob.pe/estadisticas/series/diarias/resultados/PD04638PD/html/2024-01-03/2024-12-30/\",\"interpretacion\":\"El promedio de los datos diarios de 2024 fue de unos S/ 3,755 por dólar (3,7553). El rango fue de S/ 3,667 (13-mar) a S/ 3,884 (13-feb).\"}",
+ "segundos": 19.5,
+ "turnos": 4,
+ "costo_usd": 0.042579900000000004,
+ "error": "",
+ "herramientas": [
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__resumen",
+  "StructuredOutput"
+ ],
+ "skills": [],
+ "contaminacion": []
+}

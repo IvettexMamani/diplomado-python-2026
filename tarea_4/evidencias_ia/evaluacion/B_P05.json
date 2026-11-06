@@ -1,0 +1,23 @@
+{
+ "id": "P05",
+ "modo": "B",
+ "respuesta": {
+  "valores": [
+   27.6
+  ],
+  "texto": "",
+  "fuente": "INEI, Encuesta Nacional de Hogares (ENAHO) 2024, informe de pobreza monetaria (nota de prensa del INEI en gob.pe: \"Pobreza monetaria afectó al 27,6% de la población del país en el año 2024\"), confirmada por Canal N y Expreso (mayo 2025). No calculé la cifra con los microdatos de la ENAHO.",
+  "interpretacion": "En 2024, el 27,6 % de la población peruana (unos 9,4 millones de personas) vivía en pobreza monetaria, es decir, con un gasto per cápita por debajo del costo de la canasta básica."
+ },
+ "texto_final": "{\"valores\":[27.6],\"texto\":\"\",\"fuente\":\"INEI, Encuesta Nacional de Hogares (ENAHO) 2024, informe de pobreza monetaria (nota de prensa del INEI en gob.pe: \\\"Pobreza monetaria afectó al 27,6% de la población del país en el año 2024\\\"), confirmada por Canal N y Expreso (mayo 2025). No calculé la cifra con los microdatos de la ENAHO.\",\"interpretacion\":\"En 2024, el 27,6 % de la población peruana (unos 9,4 millones de personas) vivía en pobreza monetaria, es decir, con un gasto per cápita por debajo del costo de la canasta básica.\"}",
+ "segundos": 29.0,
+ "turnos": 3,
+ "costo_usd": 0.0646457,
+ "error": "",
+ "herramientas": [
+  "WebSearch",
+  "StructuredOutput"
+ ],
+ "skills": [],
+ "contaminacion": []
+}

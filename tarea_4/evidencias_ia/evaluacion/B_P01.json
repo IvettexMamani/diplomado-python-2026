@@ -1,0 +1,24 @@
+{
+ "id": "P01",
+ "modo": "B",
+ "respuesta": {
+  "valores": [
+   1.97
+  ],
+  "texto": "",
+  "fuente": "BCRP, serie PN01273PM (Índice de precios Lima Metropolitana, var% 12 meses, IPC; fuente original INEI), diciembre 2024: 1,966303%. https://estadisticas.bcrp.gob.pe/estadisticas/series/mensuales/resultados/PN01273PM/html/2024-12/2024-12/",
+  "interpretacion": "La inflación interanual de Lima Metropolitana en diciembre de 2024 fue de aproximadamente 1,97 %, dentro del rango meta del BCRP (1 % a 3 %)."
+ },
+ "texto_final": "{\"valores\":[1.97],\"texto\":\"\",\"fuente\":\"BCRP, serie PN01273PM (Índice de precios Lima Metropolitana, var% 12 meses, IPC; fuente original INEI), diciembre 2024: 1,966303%. https://estadisticas.bcrp.gob.pe/estadisticas/series/mensuales/resultados/PN01273PM/html/2024-12/2024-12/\",\"interpretacion\":\"La inflación interanual de Lima Metropolitana en diciembre de 2024 fue de aproximadamente 1,97 %, dentro del rango meta del BCRP (1 % a 3 %).\"}",
+ "segundos": 19.9,
+ "turnos": 4,
+ "costo_usd": 0.045521400000000004,
+ "error": "",
+ "herramientas": [
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__serie",
+  "StructuredOutput"
+ ],
+ "skills": [],
+ "contaminacion": []
+}

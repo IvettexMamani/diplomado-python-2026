@@ -1,0 +1,40 @@
+{
+ "id": "P09",
+ "modo": "A",
+ "respuesta": {
+  "valores": [
+   65.1,
+   31.9
+  ],
+  "texto": "La Libertad",
+  "fuente": "1) Crecimiento 2020–2024 (BCRP, series anuales, valor FOB en millones de US$; la API de estadisticas.bcrp.gob.pe devuelve los valores redondeados). Agropecuarios no tradicionales: 6 735 en 2020 y 11 096 en 2024. Agrícolas tradicionales, que sumé yo porque no encontré un total publicado: 2020 = azúcar 58 + café 645 + resto 26 ≈ 729; 2024 = azúcar 34 + café 1 102 + resto 92 ≈ 1 228. Total ≈ 7 464 en 2020 y ≈ 12 324 en 2024, lo que da +65,1 %. Por el redondeo, el resultado puede variar unas décimas. La Memoria 2024 del BCRP da 11 164 para los agropecuarios de 2024, y una nota de prensa da 11 151. Con 11 164 el crecimiento sería de unos 65,6 %, así que la cifra de 65 % es sólida. 2) Departamento con mayor agroexportación en 2022: La Libertad, con unos US$ 1 955 millones según Mincetur, citado por Agraria.pe. Le siguieron Ica (1 594) y Piura (1 283). Una nota de Correo da 1 922 para La Libertad. Ica pasó a ser la primera región agroexportadora en 2023, no en 2022. No pude contrastar la cifra con la fuente primaria de Mincetur/Sunat. 3) Pobreza monetaria de La Libertad en 2024: 31,9 % (ENAHO-INEI). El dato viene de una carpeta georreferencial del Congreso que cita al INEI, pues no pude abrir el informe oficial del INEI «Evolución de la pobreza monetaria 2015-2024». Por eso está sin verificar en origen. Esa fuente da 27,6 % en 2022 y 29,7 % en 2023. Otra carpeta del Congreso da 31,6 % para 2023, lo que muestra que hay discrepancias entre documentos secundarios.",
+  "interpretacion": "No. Estos datos no prueban que la agroexportación aumente la pobreza. Son una comparación de dos cifras y no permiten establecer causalidad. Ica, que es la segunda agroexportadora y pasó a ser la primera en 2023, tiene la pobreza más baja del país (6,0 % en 2024). Además, la pobreza de un departamento depende de muchos otros factores (el empleo, la pobreza rural de sus provincias, la migración y los shocks climáticos o económicos). Para probar un efecto haría falta un análisis con controles y datos a nivel de provincia o distrito."
+ },
+ "texto_final": "{\"valores\":[65.1,31.9],\"texto\":\"La Libertad\",\"fuente\":\"1) Crecimiento 2020–2024 (BCRP, series anuales, valor FOB en millones de US$; la API de estadisticas.bcrp.gob.pe devuelve los valores redondeados). Agropecuarios no tradicionales: 6 735 en 2020 y 11 096 en 2024. Agrícolas tradicionales, que sumé yo porque no encontré un total publicado: 2020 = azúcar 58 + café 645 + resto 26 ≈ 729; 2024 = azúcar 34 + café 1 102 + resto 92 ≈ 1 228. Total ≈ 7 464 en 2020 y ≈ 12 324 en 2024, lo que da +65,1 %. Por el redondeo, el resultado puede variar unas décimas. La Memoria 2024 del BCRP da 11 164 para los agropecuarios de 2024, y una nota de prensa da 11 151. Con 11 164 el crecimiento sería de unos 65,6 %, así que la cifra de 65 % es sólida. 2) Departamento con mayor agroexportación en 2022: La Libertad, con unos US$ 1 955 millones según Mincetur, citado por Agraria.pe. Le siguieron Ica (1 594) y Piura (1 283). Una nota de Correo da 1 922 para La Libertad. Ica pasó a ser la primera región agroexportadora en 2023, no en 2022. No pude contrastar la cifra con la fuente primaria de Mincetur/Sunat. 3) Pobreza monetaria de La Libertad en 2024: 31,9 % (ENAHO-INEI). El dato viene de una carpeta georreferencial del Congreso que cita al INEI, pues no pude abrir el informe oficial del INEI «Evolución de la pobreza monetaria 2015-2024». Por eso está sin verificar en origen. Esa fuente da 27,6 % en 2022 y 29,7 % en 2023. Otra carpeta del Congreso da 31,6 % para 2023, lo que muestra que hay discrepancias entre documentos secundarios.\",\"interpretacion\":\"No. Estos datos no prueban que la agroexportación aumente la pobreza. Son una comparación de dos cifras y no permiten establecer causalidad. Ica, que es la segunda agroexportadora y pasó a ser la primera en 2023, tiene la pobreza más baja del país (6,0 % en 2024). Además, la pobreza de un departamento depende de muchos otros factores (el empleo, la pobreza rural de sus provincias, la migración y los shocks climáticos o económicos). Para probar un efecto haría falta un análisis con controles y datos a nivel de provincia o distrito.\"}",
+ "segundos": 111.3,
+ "turnos": 19,
+ "costo_usd": 0.24012450000000002,
+ "error": "",
+ "herramientas": [
+  "WebSearch",
+  "WebSearch",
+  "WebSearch",
+  "WebFetch",
+  "WebSearch",
+  "WebFetch",
+  "WebSearch",
+  "WebFetch",
+  "WebFetch",
+  "WebSearch",
+  "WebFetch",
+  "WebFetch",
+  "WebFetch",
+  "WebFetch",
+  "WebFetch",
+  "WebFetch",
+  "WebSearch",
+  "StructuredOutput"
+ ],
+ "skills": [],
+ "contaminacion": []
+}

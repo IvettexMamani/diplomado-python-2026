@@ -1,0 +1,25 @@
+{
+ "id": "P03",
+ "modo": "B",
+ "respuesta": {
+  "valores": [
+   9168.97
+  ],
+  "texto": "Exportaciones no tradicionales agropecuarias",
+  "fuente": "BCRP (original: BCRP, Sunat), series anuales PM40121BA y PM40050BA, año 2023: 9 168,97 millones de US$ FOB. Las dos series dan el mismo valor. Tabla: https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/PM40121BA/html/2023/2023/",
+  "interpretacion": "En 2023 las exportaciones no tradicionales agropecuarias del Perú fueron de unos US$ 9 169 millones FOB, según el BCRP."
+ },
+ "texto_final": "{\"valores\":[9168.97],\"texto\":\"Exportaciones no tradicionales agropecuarias\",\"fuente\":\"BCRP (original: BCRP, Sunat), series anuales PM40121BA y PM40050BA, año 2023: 9 168,97 millones de US$ FOB. Las dos series dan el mismo valor. Tabla: https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/PM40121BA/html/2023/2023/\",\"interpretacion\":\"En 2023 las exportaciones no tradicionales agropecuarias del Perú fueron de unos US$ 9 169 millones FOB, según el BCRP.\"}",
+ "segundos": 19.9,
+ "turnos": 5,
+ "costo_usd": 0.0493864,
+ "error": "",
+ "herramientas": [
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__serie",
+  "mcp__bcrp__serie",
+  "StructuredOutput"
+ ],
+ "skills": [],
+ "contaminacion": []
+}

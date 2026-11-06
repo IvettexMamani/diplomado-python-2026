@@ -1,0 +1,28 @@
+{
+ "id": "P08",
+ "modo": "B",
+ "respuesta": {
+  "valores": [
+   42.92,
+   37.81
+  ],
+  "texto": "Puno",
+  "fuente": "INEI, ENAHO 2024 (módulos 34 sumaria y 02), residentes habituales de Puno, ponderado con facpob07. Calculado con estimar.py --por sexo --solo departamento=Puno; validación de la base APROBADA (25 comprobaciones). Mujeres: 42.9 % (IC95 % 38.4–47.4; CV 5.4 %). Hombres: 37.8 % (IC95 % 32.8–42.8; CV 6.7 %).",
+  "interpretacion": "En Puno la pobreza monetaria fue mayor en mujeres (42.9 %) que en hombres (37.8 %), una diferencia de unos 5 puntos. Los intervalos de confianza se cruzan, así que esta comparación no prueba una diferencia real. No calculé el intervalo de la diferencia."
+ },
+ "texto_final": "{\"valores\":[42.92,37.81],\"texto\":\"Puno\",\"fuente\":\"INEI, ENAHO 2024 (módulos 34 sumaria y 02), residentes habituales de Puno, ponderado con facpob07. Calculado con estimar.py --por sexo --solo departamento=Puno; validación de la base APROBADA (25 comprobaciones). Mujeres: 42.9 % (IC95 % 38.4–47.4; CV 5.4 %). Hombres: 37.8 % (IC95 % 32.8–42.8; CV 6.7 %).\",\"interpretacion\":\"En Puno la pobreza monetaria fue mayor en mujeres (42.9 %) que en hombres (37.8 %), una diferencia de unos 5 puntos. Los intervalos de confianza se cruzan, así que esta comparación no prueba una diferencia real. No calculé el intervalo de la diferencia.\"}",
+ "segundos": 24.5,
+ "turnos": 6,
+ "costo_usd": 0.055099,
+ "error": "",
+ "herramientas": [
+  "Skill",
+  "Bash",
+  "Bash",
+  "StructuredOutput"
+ ],
+ "skills": [
+  "limpiando-enaho"
+ ],
+ "contaminacion": []
+}

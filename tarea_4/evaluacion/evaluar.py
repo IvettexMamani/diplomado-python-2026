@@ -177,8 +177,9 @@ def resumir():
             cambio = revision[(revision["id"] == q.id) & (revision["modo"] == modo)]
             r = s.get("respuesta") or {}
             generada = ", ".join(filter(None, [r.get("texto", ""), *[str(v) for v in r.get("valores", [])]]))
+            cifras = ", ".join("sin dato" if v is None else str(v) for v in r.get("valores", []))
             filas.append({"id": q.id, "tipo": q.tipo, "modo": modo, "pregunta": q.pregunta, "respuesta_esperada": q.respuesta_esperada,
-                          "respuesta_generada": generada, "interpretacion_generada": r.get("interpretacion", ""),
+                          "respuesta_generada": generada, "valores_generados": cifras, "interpretacion_generada": r.get("interpretacion", ""),
                           "fuente_utilizada": r.get("fuente", ""), "herramientas_utilizadas": " ".join(sorted(set(s["herramientas"]))) or "ninguna",
                           "skills_utilizadas": " ".join(dict.fromkeys(s["skills"])), "llamadas": len(s["herramientas"]),
                           "resultado": cambio["resultado"].iloc[0] if len(cambio) else automatico,
@@ -191,7 +192,45 @@ def resumir():
     print(t.pivot(index="id", columns="modo", values="resultado").to_string())
     print(t.groupby("modo")["resultado"].value_counts().unstack(fill_value=0).to_string())
     print(t.groupby("modo")[["segundos", "costo_usd"]].agg(["mean", "sum"]).round(3).to_string())
+    if t["modo"].nunique() == 2 and len(t) == 2 * len(preguntas):
+        escribir_comparacion(t)
     return t
+
+
+def lista(ids):
+    return ", ".join(ids) if ids else "ninguna"
+
+
+def escribir_comparacion(t):
+    """Rellena la plantilla con cifras de resultados.csv: el texto de análisis no lleva tablas escritas a mano."""
+    orden = {"error": 0, "sin_respuesta": 1, "incorrecta": 1, "parcial": 2, "correcta": 3}
+    conteo = t.groupby("modo")["resultado"].value_counts().unstack(fill_value=0)
+    media, costo = t.groupby("modo")["segundos"].mean(), t.groupby("modo")["costo_usd"].sum()
+    filas = ["| Modo | Correctas | Parciales | Incorrectas | Sin respuesta | Errores | Tiempo promedio | Costo total |", "|---|---:|---:|---:|---:|---:|---:|---:|"]
+    for m, nombre in (("A", "A, sin MCP ni Skills"), ("B", "B, con MCP y Skills")):
+        n = [int(conteo.loc[m].get(k, 0)) for k in ("correcta", "parcial", "incorrecta", "sin_respuesta", "error")]
+        filas.append(f"| {nombre} | {' | '.join(map(str, n))} | {media[m]:.1f} s | US$ {costo[m]:.2f} |")
+    a, b = t[t["modo"] == "A"].set_index("id"), t[t["modo"] == "B"].set_index("id")
+    mejoraron, empeoraron, iguales = [], [], []
+    detalle = ["| Pregunta | Tipo | Esperada | Modo A | Resultado A | Modo B | Resultado B | Herramientas de B |", "|---|---|---|---|---|---|---|---|"]
+    for i in a.index:
+        x, y = orden[a.loc[i, "resultado"]], orden[b.loc[i, "resultado"]]
+        (mejoraron if y > x else empeoraron if y < x else iguales).append(i)
+        usadas = " ".join(u.replace("mcp__bcrp__", "") for u in b.loc[i, "herramientas_utilizadas"].split() if u != "StructuredOutput")
+        detalle.append(f"| {i} | {a.loc[i, 'tipo']} | {a.loc[i, 'respuesta_esperada']} | {_corto(a.loc[i, 'valores_generados'])} | {a.loc[i, 'resultado']} | "
+                       f"{_corto(b.loc[i, 'valores_generados'])} | {b.loc[i, 'resultado']} | {usadas} |")
+    texto = (AQUI / "comparacion_plantilla.md").read_text(encoding="utf-8")
+    for clave, valor in {"TOTALES": "\n".join(filas), "POR_PREGUNTA": "\n".join(detalle), "MEJORARON": f"{len(mejoraron)}: {lista(mejoraron)}",
+                         "EMPEORARON": f"{len(empeoraron)}: {lista(empeoraron)}", "IGUALES": f"{len(iguales)}: {lista(iguales)}",
+                         "CORRECTAS_A": str(int(conteo.loc['A'].get('correcta', 0))), "CORRECTAS_B": str(int(conteo.loc['B'].get('correcta', 0))),
+                         "MENOS_TIEMPO": f"{(1 - media['B'] / media['A']) * 100:.0f}"}.items():
+        texto = texto.replace("{{" + clave + "}}", valor)
+    (AQUI / "comparacion.md").write_text(texto, encoding="utf-8")
+    print("Escrito evaluacion/comparacion.md")
+
+
+def _corto(texto):
+    return str(texto) if str(texto) else "sin dato"
 
 
 if __name__ == "__main__":

@@ -1,0 +1,23 @@
+{
+ "id": "P02",
+ "modo": "A",
+ "respuesta": {
+  "valores": [
+   3.7553
+  ],
+  "texto": "TC Interbancario (S/ por US$) - Venta, serie diaria PD04638PD",
+  "fuente": "BCRP, API de estadísticas (serie PD04638PD, \"Tipo de cambio - TC Interbancario (S/ por US$) - Venta\"), datos diarios del 1 de enero al 31 de diciembre de 2024. De 262 fechas, 16 figuran \"n.d.\" (feriados o días sin dato) y se excluyeron. El promedio es el de las 246 observaciones numéricas. La suma la hice a mano, sin herramienta de cálculo.",
+  "interpretacion": "El promedio simple de los datos diarios de 2024 fue de unos S/ 3,755 por dólar. El tipo de cambio se movió entre unos S/ 3,67 y S/ 3,88."
+ },
+ "texto_final": "{\"valores\":[3.7553],\"texto\":\"TC Interbancario (S/ por US$) - Venta, serie diaria PD04638PD\",\"fuente\":\"BCRP, API de estadísticas (serie PD04638PD, \\\"Tipo de cambio - TC Interbancario (S/ por US$) - Venta\\\"), datos diarios del 1 de enero al 31 de diciembre de 2024. De 262 fechas, 16 figuran \\\"n.d.\\\" (feriados o días sin dato) y se excluyeron. El promedio es el de las 246 observaciones numéricas. La suma la hice a mano, sin herramienta de cálculo.\",\"interpretacion\":\"El promedio simple de los datos diarios de 2024 fue de unos S/ 3,755 por dólar. El tipo de cambio se movió entre unos S/ 3,67 y S/ 3,88.\"}",
+ "segundos": 79.6,
+ "turnos": 3,
+ "costo_usd": 0.091138,
+ "error": "",
+ "herramientas": [
+  "WebFetch",
+  "StructuredOutput"
+ ],
+ "skills": [],
+ "contaminacion": []
+}

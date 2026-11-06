@@ -1,0 +1,25 @@
+{
+ "id": "P10",
+ "modo": "A",
+ "respuesta": {
+  "valores": [
+   45,
+   65835
+  ],
+  "texto": "Cajamarca",
+  "fuente": "Pobreza monetaria 2024: INEI, ENAHO 2024, Cajamarca 45,0 % (según Canal N y Bloomberg Línea, que citan al INEI; no abrí el informe técnico). Exportaciones totales 2022: BCRP, notas informativas de febrero de 2023, US$ 65.835 millones FOB (las series anuales del BCRP no mostraron el valor, y la cifra puede haber sido revisada después).",
+  "interpretacion": "No se puede concluir: se compara un total nacional de 2022 con la pobreza departamental de 2024, y eso no mide el efecto de exportar sobre la pobreza. Que Cajamarca, con mucha minería, sea la más pobre sugiere que las exportaciones no benefician por igual a todos los territorios, pero no prueba que exportar no reduzca la pobreza."
+ },
+ "texto_final": "{\"valores\":[45,65835],\"texto\":\"Cajamarca\",\"fuente\":\"Pobreza monetaria 2024: INEI, ENAHO 2024, Cajamarca 45,0 % (según Canal N y Bloomberg Línea, que citan al INEI; no abrí el informe técnico). Exportaciones totales 2022: BCRP, notas informativas de febrero de 2023, US$ 65.835 millones FOB (las series anuales del BCRP no mostraron el valor, y la cifra puede haber sido revisada después).\",\"interpretacion\":\"No se puede concluir: se compara un total nacional de 2022 con la pobreza departamental de 2024, y eso no mide el efecto de exportar sobre la pobreza. Que Cajamarca, con mucha minería, sea la más pobre sugiere que las exportaciones no benefician por igual a todos los territorios, pero no prueba que exportar no reduzca la pobreza.\"}",
+ "segundos": 28.3,
+ "turnos": 4,
+ "costo_usd": 0.0607568,
+ "error": "",
+ "herramientas": [
+  "WebSearch",
+  "WebSearch",
+  "StructuredOutput"
+ ],
+ "skills": [],
+ "contaminacion": []
+}

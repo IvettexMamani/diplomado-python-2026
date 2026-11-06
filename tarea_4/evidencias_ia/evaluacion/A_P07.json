@@ -1,0 +1,24 @@
+{
+ "id": "P07",
+ "modo": "A",
+ "respuesta": {
+  "valores": [
+   null
+  ],
+  "texto": "",
+  "fuente": "No pude obtener la cifra. No calculé nada con los microdatos de la ENAHO 2024 (módulos 100 y Sumaria, con el factor de expansión de personas). Lo más cercano que encontré es un dato de UNICEF Perú, basado en INEI: 36.6% de pobreza monetaria en 2024 para niños y adolescentes de 0 a 17 años. No sirve como respuesta porque el grupo de edad es distinto. La pobreza monetaria nacional de 2024 fue 27.6% según INEI. No pude abrir el informe de UNICEF, que pesa demasiado, así que esas cifras vienen solo de los resultados de búsqueda.",
+  "interpretacion": "Sin los microdatos no puedo dar el porcentaje de 0 a 14 años. Como referencia, el grupo de 0 a 17 años tuvo 36.6% en 2024 y el total nacional 27.6%, así que la cifra de 0 a 14 años probablemente supera el promedio nacional. Eso es solo una inferencia, no un dato verificado."
+ },
+ "texto_final": "{\"valores\":[null],\"texto\":\"\",\"fuente\":\"No pude obtener la cifra. No calculé nada con los microdatos de la ENAHO 2024 (módulos 100 y Sumaria, con el factor de expansión de personas). Lo más cercano que encontré es un dato de UNICEF Perú, basado en INEI: 36.6% de pobreza monetaria en 2024 para niños y adolescentes de 0 a 17 años. No sirve como respuesta porque el grupo de edad es distinto. La pobreza monetaria nacional de 2024 fue 27.6% según INEI. No pude abrir el informe de UNICEF, que pesa demasiado, así que esas cifras vienen solo de los resultados de búsqueda.\",\"interpretacion\":\"Sin los microdatos no puedo dar el porcentaje de 0 a 14 años. Como referencia, el grupo de 0 a 17 años tuvo 36.6% en 2024 y el total nacional 27.6%, así que la cifra de 0 a 14 años probablemente supera el promedio nacional. Eso es solo una inferencia, no un dato verificado.\"}",
+ "segundos": 31.7,
+ "turnos": 4,
+ "costo_usd": 0.0410563,
+ "error": "",
+ "herramientas": [
+  "WebSearch",
+  "WebFetch",
+  "StructuredOutput"
+ ],
+ "skills": [],
+ "contaminacion": []
+}

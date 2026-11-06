@@ -1,0 +1,25 @@
+{
+ "id": "P06",
+ "modo": "A",
+ "respuesta": {
+  "valores": [
+   18.5
+  ],
+  "texto": "Cusco",
+  "fuente": "INEI, ENAHO 2024 (año 2024), citado por [IPE](https://ipe.org.pe/cusco-registra-su-menor-tasa-de-pobreza-en-casi-una-decada/) e [Infobae](https://www.infobae.com/peru/2025/05/31/cusco-registra-su-menor-tasa-de-pobreza-en-casi-una-decada/). No pude abrir el informe original del INEI; la cifra viene de estas notas que lo citan. Referencia: el promedio nacional 2024 fue 27,6% (INEI, [gob.pe](https://cdna.www.gob.pe/en/institucion/inei/noticias/1164173-pobreza-monetaria-afecto-al-27-6-de-la-poblacion-del-pais-en-el-ano-2024)).",
+  "interpretacion": "En 2024, el 18,5% de la población de Cusco estaba en pobreza monetaria. Bajó desde 21,7% en 2023 y quedó por debajo del promedio nacional."
+ },
+ "texto_final": "{\"valores\":[18.5],\"texto\":\"Cusco\",\"fuente\":\"INEI, ENAHO 2024 (año 2024), citado por [IPE](https://ipe.org.pe/cusco-registra-su-menor-tasa-de-pobreza-en-casi-una-decada/) e [Infobae](https://www.infobae.com/peru/2025/05/31/cusco-registra-su-menor-tasa-de-pobreza-en-casi-una-decada/). No pude abrir el informe original del INEI; la cifra viene de estas notas que lo citan. Referencia: el promedio nacional 2024 fue 27,6% (INEI, [gob.pe](https://cdna.www.gob.pe/en/institucion/inei/noticias/1164173-pobreza-monetaria-afecto-al-27-6-de-la-poblacion-del-pais-en-el-ano-2024)).\",\"interpretacion\":\"En 2024, el 18,5% de la población de Cusco estaba en pobreza monetaria. Bajó desde 21,7% en 2023 y quedó por debajo del promedio nacional.\"}",
+ "segundos": 42.5,
+ "turnos": 5,
+ "costo_usd": 0.0650869,
+ "error": "",
+ "herramientas": [
+  "WebSearch",
+  "WebFetch",
+  "WebSearch",
+  "StructuredOutput"
+ ],
+ "skills": [],
+ "contaminacion": []
+}

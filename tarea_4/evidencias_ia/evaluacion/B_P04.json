@@ -1,0 +1,26 @@
+{
+ "id": "P04",
+ "modo": "B",
+ "respuesta": {
+  "valores": [
+   0.038
+  ],
+  "texto": "",
+  "fuente": "BCRP (API estadisticas.bcrp.gob.pe). Inflación interanual IPC Lima Metropolitana, var% 12 meses, serie PN01273PM (fuente original INEI). Tipo de cambio interbancario venta, promedio del periodo, serie PN01206PM (S/ por US$). Ambas mensuales, ene-2023 a dic-2024, n=24 pares. Correlación de Pearson calculada con la herramienta de correlación del BCRP: 0.038 (IC 95%: -0.371 a 0.435; p≈0.86). Spearman 0.041.",
+  "interpretacion": "La correlación de Pearson fue de 0.038, prácticamente nula y no significativa. En esos 24 meses la inflación bajó de 8.7% a cerca de 2%, mientras el tipo de cambio fluctuó entre 3.60 y 3.85 sin tendencia, así que no se movieron juntos. Esto describe una asociación y no prueba causalidad."
+ },
+ "texto_final": "{\"valores\":[0.038],\"texto\":\"\",\"fuente\":\"BCRP (API estadisticas.bcrp.gob.pe). Inflación interanual IPC Lima Metropolitana, var% 12 meses, serie PN01273PM (fuente original INEI). Tipo de cambio interbancario venta, promedio del periodo, serie PN01206PM (S/ por US$). Ambas mensuales, ene-2023 a dic-2024, n=24 pares. Correlación de Pearson calculada con la herramienta de correlación del BCRP: 0.038 (IC 95%: -0.371 a 0.435; p≈0.86). Spearman 0.041.\",\"interpretacion\":\"La correlación de Pearson fue de 0.038, prácticamente nula y no significativa. En esos 24 meses la inflación bajó de 8.7% a cerca de 2%, mientras el tipo de cambio fluctuó entre 3.60 y 3.85 sin tendencia, así que no se movieron juntos. Esto describe una asociación y no prueba causalidad.\"}",
+ "segundos": 23.2,
+ "turnos": 6,
+ "costo_usd": 0.0601017,
+ "error": "",
+ "herramientas": [
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__buscar_series",
+  "mcp__bcrp__correlacion",
+  "StructuredOutput"
+ ],
+ "skills": [],
+ "contaminacion": []
+}
