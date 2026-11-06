@@ -32,10 +32,9 @@ casilla después de hacerlo.
 - [ ] **BCRP, 2024.** Abrir [la tabla de no tradicionales agropecuarias](https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/PM40050BA/html/2020/2024/)
   y [la de tradicionales agrícolas](https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/PM40046BA/html/2020/2024/). Las tablas redondean al entero:
   sumar con calculadora 11 096 + 1 229 da 12 325, frente a 12 325,6 millones de US$ del informe.
-- [ ] **BCRP, por departamento.** Abrir [la serie de Ica](https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/RD41134BA/html/2020/2022/) y comprobar
-  que 2022 muestra 1 568 millones de US$, redondeo de 1 567,8. El rango se puede ampliar en la página para ver que la
-  serie no llega a 2023.
-- [ ] **ENAHO e INEI.** Abrir [la nota del INEI](https://cdna.www.gob.pe/en/institucion/inei/noticias/1164173-pobreza-monetaria-afecto-al-27-6-de-la-poblacion-del-pais-en-el-ano-2024)
+- [ ] **BCRP, por departamento.** Abrir [la serie de Ica, pedida de 2020 a 2024](https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/RD41134BA/html/2020/2024/)
+  y comprobar que 2022 muestra 1 568 millones de US$, redondeo de 1 567,8, y que la tabla termina ahí: no hay 2023 ni 2024.
+- [ ] **ENAHO e INEI.** Abrir [la nota del INEI](https://www.gob.pe/institucion/inei/noticias/1164173-pobreza-monetaria-afecto-al-27-6-de-la-poblacion-del-pais-en-el-ano-2024)
   y comprobar que la pobreza nacional de 2024 es 27,6 %. Luego abrir `salidas/comparacion_mapa.csv` y ver que Cajamarca
   tiene 45,01 % y que la referencia de la Sesión 16 dice 45,0 %.
 
