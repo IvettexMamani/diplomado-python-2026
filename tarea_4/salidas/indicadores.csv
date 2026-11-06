@@ -1,0 +1,93 @@
+indicador,grupo,base,codigo,categoria,pct,ee,ic95_inf,ic95_sup,cv_pct,n_muestra,upm,poblacion
+Pobreza monetaria,Perú,hogares,,Perú,27.58,0.506,26.59,28.57,1.83,33691,5359,34482699.0
+Pobreza monetaria,Área,hogares,Rural,Rural,39.3,0.769,37.8,40.81,1.96,11660,1544,6595188.0
+Pobreza monetaria,Área,hogares,Urbana,Urbana,24.81,0.603,23.62,25.99,2.43,22031,3815,27887511.0
+Pobreza monetaria,Dominio,hogares,4,Sierra norte,45.7,1.804,42.16,49.23,3.95,2015,290,1899899.0
+Pobreza monetaria,Dominio,hogares,5,Sierra centro,30.1,1.058,28.02,32.17,3.52,5531,808,4057363.0
+Pobreza monetaria,Dominio,hogares,7,Selva,30.02,0.995,28.07,31.97,3.31,7211,1113,4360929.0
+Pobreza monetaria,Dominio,hogares,8,Lima Metropolitana,28.21,1.197,25.86,30.56,4.24,4090,704,11431707.0
+Pobreza monetaria,Dominio,hogares,6,Sierra sur,25.6,1.176,23.29,27.9,4.59,4523,718,4616008.0
+Pobreza monetaria,Dominio,hogares,1,Costa norte,24.28,1.046,22.23,26.33,4.31,4751,787,5104587.0
+Pobreza monetaria,Dominio,hogares,3,Costa sur,20.15,1.88,16.46,23.83,9.33,2283,400,705004.0
+Pobreza monetaria,Dominio,hogares,2,Costa centro,14.01,1.066,11.92,16.09,7.61,3287,539,2307204.0
+Pobreza monetaria,Departamento,hogares,06,Cajamarca,45.01,2.123,40.85,49.17,4.72,1469,213,1554586.0
+Pobreza monetaria,Departamento,hogares,16,Loreto,42.97,2.122,38.81,47.13,4.94,1359,217,1129071.0
+Pobreza monetaria,Departamento,hogares,21,Puno,39.94,2.302,35.43,44.45,5.76,1123,185,1586886.0
+Pobreza monetaria,Departamento,hogares,19,Pasco,38.97,2.534,34.0,43.94,6.5,865,132,327776.0
+Pobreza monetaria,Departamento,hogares,10,Huánuco,38.96,2.541,33.98,43.94,6.52,1244,183,926653.0
+Pobreza monetaria,Departamento,hogares,07,Callao,33.86,2.399,29.16,38.56,7.09,1027,168,1142618.0
+Pobreza monetaria,Departamento,hogares,09,Huancavelica,33.4,2.187,29.12,37.69,6.55,1042,144,543103.0
+Pobreza monetaria,Departamento,hogares,05,Ayacucho,32.76,2.245,28.36,37.16,6.85,1160,173,775447.0
+Pobreza monetaria,Departamento,hogares,20,Piura,31.86,1.654,28.62,35.1,5.19,1611,257,1988570.0
+Pobreza monetaria,Departamento,hogares,13,La Libertad,30.19,1.827,26.61,33.77,6.05,1509,248,2080789.0
+Pobreza monetaria,Departamento,hogares,25,Ucayali,27.07,2.198,22.76,31.38,8.12,1119,178,558484.0
+Pobreza monetaria,Departamento,hogares,15,Lima,27.07,1.205,24.71,29.43,4.45,4544,776,11279909.0
+Pobreza monetaria,Departamento,hogares,24,Tumbes,26.9,2.449,22.1,31.7,9.1,842,139,261959.0
+Pobreza monetaria,Departamento,hogares,01,Amazonas,25.75,2.464,20.92,30.58,9.57,1243,184,442355.0
+Pobreza monetaria,Departamento,hogares,23,Tacna,23.99,2.863,18.38,29.6,11.94,1271,218,380755.0
+Pobreza monetaria,Departamento,hogares,03,Apurímac,23.96,2.303,19.45,28.47,9.61,913,134,494189.0
+Pobreza monetaria,Departamento,hogares,02,Áncash,22.77,1.843,19.16,26.39,8.09,1393,206,1212494.0
+Pobreza monetaria,Departamento,hogares,22,San Martín,22.02,1.991,18.12,25.92,9.04,1347,202,947446.0
+Pobreza monetaria,Departamento,hogares,08,Cusco,18.54,1.951,14.72,22.36,10.52,1230,189,1409467.0
+Pobreza monetaria,Departamento,hogares,12,Junín,18.5,1.825,14.92,22.08,9.87,1506,230,1450149.0
+Pobreza monetaria,Departamento,hogares,04,Arequipa,15.78,1.558,12.73,18.84,9.87,1506,254,1421684.0
+Pobreza monetaria,Departamento,hogares,14,Lambayeque,14.04,1.873,10.37,17.71,13.34,1302,215,1349731.0
+Pobreza monetaria,Departamento,hogares,17,Madre de Dios,11.15,2.174,6.89,15.41,19.5,603,101,165992.0
+Pobreza monetaria,Departamento,hogares,18,Moquegua,10.97,1.78,7.48,14.46,16.23,963,166,198386.0
+Pobreza monetaria,Departamento,hogares,11,Ica,6.01,0.939,4.17,7.85,15.61,1500,247,854203.0
+Pobreza monetaria,Perú,personas,,Perú,27.53,0.506,26.54,28.52,1.84,108664,5359,34147766.0
+Pobreza monetaria,Área,personas,Rural,Rural,39.44,0.774,37.93,40.96,1.96,36071,1544,6486385.0
+Pobreza monetaria,Área,personas,Urbana,Urbana,24.74,0.602,23.55,25.92,2.44,72593,3815,27661381.0
+Pobreza monetaria,Sexo,personas,Mujer,Mujer,27.68,0.517,26.66,28.69,1.87,56077,5357,17694763.0
+Pobreza monetaria,Sexo,personas,Hombre,Hombre,27.37,0.538,26.32,28.42,1.96,52587,5357,16453003.0
+Pobreza monetaria,Grupo de edad,personas,0-14,0-14,37.52,0.687,36.17,38.86,1.83,26489,5073,7941994.0
+Pobreza monetaria,Grupo de edad,personas,15-29,15-29,25.97,0.651,24.69,27.25,2.51,23122,5118,7512400.0
+Pobreza monetaria,Grupo de edad,personas,30-44,30-44,27.87,0.663,26.57,29.17,2.38,20648,5089,6689119.0
+Pobreza monetaria,Grupo de edad,personas,45-59,45-59,21.41,0.597,20.24,22.58,2.79,19408,5115,6130223.0
+Pobreza monetaria,Grupo de edad,personas,60 y más,60 y más,22.02,0.63,20.78,23.26,2.86,18997,4823,5874030.0
+Pobreza monetaria extrema,Perú,hogares,,Perú,5.5,0.233,5.05,5.96,4.23,33691,5359,34482699.0
+Pobreza monetaria extrema,Área,hogares,Rural,Rural,15.52,0.602,14.34,16.7,3.88,11660,1544,6595188.0
+Pobreza monetaria extrema,Área,hogares,Urbana,Urbana,3.14,0.249,2.65,3.62,7.93,22031,3815,27887511.0
+Pobreza monetaria extrema,Dominio,hogares,4,Sierra norte,21.76,1.483,18.85,24.66,6.82,2015,290,1899899.0
+Pobreza monetaria extrema,Dominio,hogares,5,Sierra centro,8.77,0.614,7.57,9.98,7.0,5531,808,4057363.0
+Pobreza monetaria extrema,Dominio,hogares,7,Selva,7.94,0.624,6.72,9.17,7.85,7211,1113,4360929.0
+Pobreza monetaria extrema,Dominio,hogares,6,Sierra sur,5.98,0.575,4.85,7.1,9.63,4523,718,4616008.0
+Pobreza monetaria extrema,Dominio,hogares,8,Lima Metropolitana,3.28,0.493,2.32,4.25,15.01,4090,704,11431707.0
+Pobreza monetaria extrema,Dominio,hogares,1,Costa norte,1.92,0.336,1.26,2.58,17.5,4751,787,5104587.0
+Pobreza monetaria extrema,Dominio,hogares,3,Costa sur,1.14,0.335,0.48,1.79,29.4,2283,400,705004.0
+Pobreza monetaria extrema,Dominio,hogares,2,Costa centro,1.08,0.273,0.55,1.62,25.2,3287,539,2307204.0
+Pobreza monetaria extrema,Departamento,hogares,06,Cajamarca,19.72,1.737,16.31,23.12,8.81,1469,213,1554586.0
+Pobreza monetaria extrema,Departamento,hogares,16,Loreto,14.98,1.667,11.72,18.25,11.13,1359,217,1129071.0
+Pobreza monetaria extrema,Departamento,hogares,21,Puno,12.49,1.439,9.67,15.31,11.52,1123,185,1586886.0
+Pobreza monetaria extrema,Departamento,hogares,10,Huánuco,12.2,1.733,8.8,15.6,14.2,1244,183,926653.0
+Pobreza monetaria extrema,Departamento,hogares,09,Huancavelica,11.16,1.537,8.15,14.17,13.77,1042,144,543103.0
+Pobreza monetaria extrema,Departamento,hogares,05,Ayacucho,9.09,1.357,6.43,11.75,14.93,1160,173,775447.0
+Pobreza monetaria extrema,Departamento,hogares,19,Pasco,8.33,1.615,5.17,11.5,19.39,865,132,327776.0
+Pobreza monetaria extrema,Departamento,hogares,13,La Libertad,6.56,0.873,4.85,8.27,13.3,1509,248,2080789.0
+Pobreza monetaria extrema,Departamento,hogares,01,Amazonas,6.01,1.28,3.5,8.52,21.3,1243,184,442355.0
+Pobreza monetaria extrema,Departamento,hogares,02,Áncash,5.8,0.841,4.15,7.45,14.5,1393,206,1212494.0
+Pobreza monetaria extrema,Departamento,hogares,03,Apurímac,5.24,1.241,2.8,7.67,23.7,913,134,494189.0
+Pobreza monetaria extrema,Departamento,hogares,07,Callao,5.04,1.1,2.88,7.19,21.82,1027,168,1142618.0
+Pobreza monetaria extrema,Departamento,hogares,20,Piura,4.41,0.797,2.84,5.97,18.1,1611,257,1988570.0
+Pobreza monetaria extrema,Departamento,hogares,22,San Martín,4.39,0.886,2.65,6.13,20.18,1347,202,947446.0
+Pobreza monetaria extrema,Departamento,hogares,12,Junín,3.82,0.792,2.27,5.37,20.71,1506,230,1450149.0
+Pobreza monetaria extrema,Departamento,hogares,25,Ucayali,3.26,0.822,1.65,4.88,25.18,1119,178,558484.0
+Pobreza monetaria extrema,Departamento,hogares,15,Lima,3.12,0.491,2.15,4.08,15.76,4544,776,11279909.0
+Pobreza monetaria extrema,Departamento,hogares,23,Tacna,2.65,0.652,1.37,3.93,24.58,1271,218,380755.0
+Pobreza monetaria extrema,Departamento,hogares,18,Moquegua,2.38,0.578,1.25,3.52,24.29,963,166,198386.0
+Pobreza monetaria extrema,Departamento,hogares,08,Cusco,2.1,0.6,0.93,3.28,28.52,1230,189,1409467.0
+Pobreza monetaria extrema,Departamento,hogares,04,Arequipa,1.65,0.474,0.72,2.58,28.82,1506,254,1421684.0
+Pobreza monetaria extrema,Departamento,hogares,17,Madre de Dios,1.53,0.734,0.09,2.97,47.95,603,101,165992.0
+Pobreza monetaria extrema,Departamento,hogares,24,Tumbes,1.06,0.522,0.04,2.09,49.11,842,139,261959.0
+Pobreza monetaria extrema,Departamento,hogares,14,Lambayeque,0.5,0.176,0.16,0.85,35.22,1302,215,1349731.0
+Pobreza monetaria extrema,Departamento,hogares,11,Ica,0.15,0.148,0.0,0.44,99.99,1500,247,854203.0
+Pobreza monetaria extrema,Perú,personas,,Perú,5.5,0.233,5.04,5.96,4.24,108664,5359,34147766.0
+Pobreza monetaria extrema,Área,personas,Rural,Rural,15.6,0.608,14.41,16.79,3.9,36071,1544,6486385.0
+Pobreza monetaria extrema,Área,personas,Urbana,Urbana,3.13,0.249,2.64,3.62,7.94,72593,3815,27661381.0
+Pobreza monetaria extrema,Sexo,personas,Mujer,Mujer,5.62,0.253,5.12,6.11,4.5,56077,5357,17694763.0
+Pobreza monetaria extrema,Sexo,personas,Hombre,Hombre,5.37,0.233,4.92,5.83,4.33,52587,5357,16453003.0
+Pobreza monetaria extrema,Grupo de edad,personas,0-14,0-14,8.59,0.4,7.81,9.38,4.66,26489,5073,7941994.0
+Pobreza monetaria extrema,Grupo de edad,personas,15-29,15-29,4.5,0.28,3.95,5.05,6.22,23122,5118,7512400.0
+Pobreza monetaria extrema,Grupo de edad,personas,30-44,30-44,5.59,0.316,4.97,6.21,5.65,20648,5089,6689119.0
+Pobreza monetaria extrema,Grupo de edad,personas,45-59,45-59,3.58,0.212,3.17,4.0,5.92,19408,5115,6130223.0
+Pobreza monetaria extrema,Grupo de edad,personas,60 y más,60 y más,4.49,0.254,4.0,4.99,5.66,18997,4823,5874030.0

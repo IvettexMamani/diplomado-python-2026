@@ -1,0 +1,44 @@
+Validación de la ENAHO 2024. Generado por limpiar.py el 2026-11-06 15:08.
+Archivos: 966-Modulo34.zip (sha256 5ee98dad87810d42), 966-Modulo02.zip (sha256 f2a1627a09e3c849).
+
+Lectura y llaves
+[OK   ] Hogares en la sumaria: 33,691 (esperado 33,691)
+[OK   ] Filas del módulo 02: 117,721 (esperado 117,721)
+[OK   ] Llaves y ubigeo como texto de ancho fijo, con sus ceros iniciales (sumaria)
+[OK   ] Llaves y ubigeo como texto de ancho fijo, con sus ceros iniciales (módulo 02)
+[OK   ] Sin hogares repetidos en la sumaria
+[OK   ] Sin personas repetidas en el módulo 02
+
+Residentes habituales y unión
+[OK   ] Residentes habituales: 108,664 de 117,721 filas (esperado 108,664)
+[OK   ] Unión validate='m:1': 0 residentes sin hogar
+[OK   ] La unión no pierde ni duplica personas: 108,664 antes y 108,664 después
+[OK   ] Ubigeo y estrato coinciden entre módulos en 100.0% de los residentes
+[OK   ] Hogares con al menos un residente: 33,691 de 33,691
+
+Territorio
+[OK   ] Códigos territoriales: 25 en hogares y 25 en personas, del 01 al 25, con Lima (15) y Callao (07) separados
+[OK   ] Conglomerados: 5,359 (Ficha Técnica: 5,359)
+
+Factores de expansión
+[OK   ] Pesos faltantes o no positivos: 0
+[OK   ] Población expandida: 34,482,699 con factor07 × mieperho y 34,147,766 con facpob07
+[OK   ] facpob07 es el factor del hogar en 100.0% de los residentes
+
+Pobreza
+[OK   ] pobreza solo toma los valores 1, 2 y 3, sin faltantes
+[OK   ] La variable pobreza se reproduce con gasto mensual por persona < línea en 100.00% de los hogares
+[OK   ] Pobreza nacional (sumaria, factor07 × mieperho): 27.58 % (referencia 27.6 %, tolerancia ±0.1 pp)
+[OK   ] Pobreza nacional (residentes, facpob07): 27.53 % (referencia 27.6 %, tolerancia ±0.1 pp)
+[OK   ] Pobreza urbana: 24.81 % (referencia 24.8 %)
+[OK   ] Pobreza rural: 39.30 % (referencia 39.3 %)
+[OK   ] Pobreza extrema: 5.50 % (referencia 5.5 %)
+[OK   ] Lima Metropolitana: 28.21 % (referencia 28.2 %)
+
+Por qué importa ponderar (solo para comparar)
+        Promedio simple de hogares: 20.22 %. De personas: 25.61 %. Hogares con factor07, sin mieperho: 21.85 %.
+[OK   ] Las cifras ponderadas difieren de los promedios simples
+        27.58 frente a 27.53: mieperho cuenta a los 109,842 miembros del hogar (p204 = 1) y los residentes habituales son 108,664: son dos poblaciones distintas.
+
+Aprobadas: 25. Fallidas: 0. Avisos: 0.
+RESULTADO: APROBADA

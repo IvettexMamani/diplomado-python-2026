@@ -5,3 +5,6 @@ __pycache__/
 
 # datos originales: el catálogo del BCRP y los microdatos de la ENAHO se descargan solos o según el README
 datos/
+
+# bases procesadas: limpiando-enaho las regenera en segundos a partir de datos/
+salidas/*.parquet

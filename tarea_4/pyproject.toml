@@ -5,8 +5,11 @@ description = "Agente de investigación socioeconómica del Perú: MCP del BCRP 
 requires-python = ">=3.11"
 dependencies = [
     "fastmcp>=4,<5",
+    "geopandas>=1.2.0",
     "httpx",
+    "matplotlib>=3.11.2",
     "pandas",
+    "pyarrow>=26.0.1",
     "truststore",   # usa los certificados del sistema: funciona detrás de antivirus o proxies que inspeccionan HTTPS
 ]
 
