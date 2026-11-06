@@ -13,7 +13,7 @@ Modos:
 - mcp: sin terminal ni archivos (--tools ""), con solo el servidor bcrp de .mcp.json. Cada cifra sale de una herramienta.
 - recursos: sin las herramientas del BCRP; solo puede leer recursos MCP.
 - skills: las Skills del proyecto, Read y Bash limitado a `uv run`. El MCP queda fuera.
-- completo: el MCP y las Skills a la vez.
+- completo: el MCP, sus recursos y las Skills a la vez, y Write para escribir el informe. Es el agente de la Parte 3.
 
 Guarda la transcripción completa (stream-json) y un resumen legible con cada llamada, sus argumentos, lo que devolvió y
 la respuesta final, en evidencias_ia/<carpeta>/.
@@ -34,7 +34,7 @@ SKILLS = "Skill,Read,Bash(uv run *)"
 MODOS = {"mcp": ["--tools", "", "--allowedTools", "mcp__bcrp"],
          "recursos": ["--tools", RECURSOS, "--allowedTools", RECURSOS],
          "skills": ["--tools", "Skill,Read,Bash", "--allowedTools", SKILLS],
-         "completo": ["--tools", "Skill,Read,Bash", "--allowedTools", f"mcp__bcrp,{SKILLS}"]}
+         "completo": ["--tools", f"Skill,Read,Write,Bash,{RECURSOS}", "--allowedTools", f"mcp__bcrp,Write,{RECURSOS},{SKILLS}"]}
 PREGUNTA = ("¿Cómo evolucionó la inflación interanual de Lima Metropolitana entre diciembre de 2024 y el último dato "
             "disponible? Dame el valor inicial y el final, el cambio en puntos porcentuales y el máximo del periodo, y "
             "dime si en ese periodo se movió junto con el tipo de cambio interbancario venta. Para cada cifra indica "
@@ -82,7 +82,8 @@ def legible(pregunta, modelo, cmd, eventos, segundos):
     skills = [c["input"].get("skill", "") for c in llamadas if c["name"] == "Skill"]
     if pregunta.startswith("/") and not pregunta.startswith("/mcp__"):  # /nombre carga la skill sin llamar a la herramienta
         skills.insert(0, f"{pregunta.split()[0][1:]} (invocada con /)")
-    scripts = [m for c in llamadas if c["name"] == "Bash" for m in re.findall(r"([\w-]+\.py)", c["input"].get("command", ""))]
+    scripts = [a or b for c in llamadas if c["name"] == "Bash"  # solo lo que se ejecutó, no lo que se leyó con head o cat
+               for a, b in re.findall(r'uv run\s+(?:"[^"]*?([\w-]+\.py)"|\S*?([\w-]+\.py))', c["input"].get("command", ""))]
     usadas =", ".join(f"{nombre} ×{n}" for nombre, n in Counter(c["name"] for c in llamadas).items())
     lineas = [
         "# Demostración en Claude Code", "",
