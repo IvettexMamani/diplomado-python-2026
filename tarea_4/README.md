@@ -6,7 +6,7 @@
 | Parte | Componente | Estado |
 |---|---|---|
 | 1 | Servidor MCP del BCRP (`mcp/`) | ✅ Terminada: 10 de 10 pruebas aprobadas |
-| 2 | Skills para limpiar, graficar y mapear la ENAHO (`.claude/skills/`) | Pendiente |
+| 2 | Skills para limpiar, graficar y mapear la ENAHO (`.claude/skills/`) | ✅ Terminada: 25 validaciones aprobadas, pobreza 27,58 %, 25 de 25 unidades |
 | 3 | Integración y agente de investigación (`informes/`) | Pendiente |
 | 4 | Evaluación, documentación y reproducibilidad (`evaluacion/`) | Pendiente |
 
@@ -17,8 +17,9 @@ internet. No se usa ninguna clave de API.
 
 ```bash
 cd tarea_4
-uv sync                 # crea .venv con FastMCP 4, pandas, httpx y truststore (fijados en uv.lock)
-uv run pytest -q        # 10 passed
+uv sync                  # crea .venv con FastMCP 4, pandas, PyArrow, GeoPandas y Matplotlib (fijados en uv.lock)
+uv run pytest -q         # 10 passed: el servidor MCP
+uv run pytest pruebas -q # 20 passed: las Skills de la ENAHO
 ```
 
 Si hay un antivirus o proxy que inspecciona HTTPS (por ejemplo, Avast), usen `uv sync --system-certs`. El servidor ya
@@ -34,13 +35,21 @@ tarea_4/
 ├── README.md
 ├── pyproject.toml · uv.lock      # entorno reproducible con uv
 ├── .mcp.json                     # conecta el servidor bcrp a Claude Code
-├── .gitignore                    # ignora .venv/ y datos/
+├── .gitignore                    # ignora .venv/, datos/ y las bases procesadas
 ├── mcp/
 │   ├── server.py                 # servidor MCP del BCRP (FastMCP)
 │   ├── test_server.py            # 8 pruebas originales de la Sesión 04 + 2 propias
 │   └── demo_claude.py            # demostración reproducible con claude -p
+├── .claude/skills/
+│   ├── limpiando-enaho/          # SKILL.md, reference.md, scripts/limpiar.py y scripts/estimar.py
+│   ├── graficando-enaho/         # SKILL.md y scripts/graficar.py
+│   └── mapeando-enaho/           # SKILL.md, scripts/mapear.py y referencias/ de la Sesión 16
+├── pruebas/test_skills.py        # 20 pruebas de las Skills
+├── salidas/                      # validaciones, indicadores.csv y comparacion_mapa.csv
+├── figuras/  ·  mapas/           # gráficos y mapas generados por las Skills
 └── evidencias_ia/
-    └── mcp/                      # transcripciones de las demostraciones en Claude Code
+    ├── mcp/                      # transcripciones de las demostraciones del MCP
+    └── skills/                   # transcripciones de las demostraciones de las Skills
 ```
 
 ---
@@ -158,7 +167,7 @@ y un resumen legible (`.md`) con cada llamada, sus argumentos, lo que devolvió 
 ```bash
 uv run mcp/demo_claude.py                                                            # pregunta de la tabla
 MSYS_NO_PATHCONV=1 uv run mcp/demo_claude.py "/mcp__bcrp__informe inflación 2025-01" --nombre demo_prompt_informe
-uv run mcp/demo_claude.py "Lee el recurso bcrp://serie/PN01273PM ..." --recursos --nombre demo_recurso
+uv run mcp/demo_claude.py "Lee el recurso bcrp://serie/PN01273PM ..." --modo recursos --nombre demo_recurso
 ```
 
 `MSYS_NO_PATHCONV=1` solo hace falta en Git Bash, que si no convierte `/mcp__...` en una ruta de Windows. En PowerShell
@@ -197,7 +206,177 @@ Las 8 pruebas originales son **idénticas byte a byte** a las de la Sesión 04: 
 comentario. Ni siquiera el import cambió: `from server import mcp` funciona porque pytest agrega `mcp/` al `sys.path`
 (`testpaths = ["mcp"]` en `pyproject.toml`). Las pruebas piden datos reales al BCRP, así que necesitan internet.
 
+---
+
+## Parte 2 · Skills de la ENAHO
+
+Tres Skills de `.claude/skills/` procesan los microdatos de la ENAHO 2024, con la metodología de la
+[Sesión 16](https://github.com/d2cml-ai/Data-Science-Python/tree/main/sessions/16-skills-enaho): lo que no se discute
+(llaves, filtros, uniones, pesos, validación) va en un script que la Skill corre tal cual, y lo que requiere criterio va
+en `SKILL.md`. Toda cifra, incluidos los títulos de los gráficos, sale del procesamiento: ninguna se escribe a mano.
+
+| Skill | Entra | Sale |
+|---|---|---|
+| `limpiando-enaho` | Los zip de los módulos 34 y 02 | `salidas/personas_2024.parquet`, `hogares_2024.parquet`, `indicadores.csv` y `validacion.txt` |
+| `graficando-enaho` | La base limpia y un pedido en lenguaje natural | `figuras/*.png` a 200 dpi |
+| `mapeando-enaho` | La base limpia y el GeoJSON departamental | `mapas/*.png`, `salidas/comparacion_mapa.csv` y `validacion_mapa.txt` |
+
+### Datos
+
+| Archivo | Una fila por | Filas | Enlace |
+|---|---|---|---|
+| ENAHO 2024, módulo 34 (sumaria) | hogar | 33,691 | [966-Modulo34.zip](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip) |
+| ENAHO 2024, módulo 02 (miembros) | persona | 117,721 | [966-Modulo02.zip](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip) |
+| Límites departamentales | departamento | 25 | [peru_departamental_simple.geojson](https://raw.githubusercontent.com/d2cml-ai/Data-Science-Python/main/sessions/06-geoespacial/lab/Data/peru_departamental_simple.geojson) |
+
+No hay que bajar nada a mano: `limpiar.py` y `mapear.py` descargan lo que falte a `datos/`, que Git ignora. Si el portal
+del INEI no responde, el script dice dónde guardar el archivo bajado desde el navegador. Las bases procesadas tampoco se
+suben: se regeneran en segundos. Sí se suben las validaciones y los indicadores.
+
+### Reproducir todo sin Claude Code
+
+```bash
+uv run .claude/skills/limpiando-enaho/scripts/limpiar.py
+uv run .claude/skills/graficando-enaho/scripts/graficar.py --por area
+uv run .claude/skills/graficando-enaho/scripts/graficar.py --por sexo
+uv run .claude/skills/graficando-enaho/scripts/graficar.py --por grupo_edad
+uv run .claude/skills/graficando-enaho/scripts/graficar.py --por departamento
+uv run .claude/skills/mapeando-enaho/scripts/mapear.py
+```
+
+### `limpiando-enaho`
+
+`limpiar.py` sigue siempre el mismo orden:
+
+1. **Lee** los `.dta` desde el zip con `convert_categoricals=False`. Elige `sumaria-2024.dta`, no `sumaria-2024-12g.dta`
+   del mismo zip.
+2. **Normaliza** los nombres a minúscula; `aÑo` queda `anio`.
+3. **Filtra** a los residentes habituales: `((p204 == 1) & (p205 == 2)) | ((p204 == 2) & (p206 == 1))`.
+4. **Une** personas y hogares por `conglome`, `vivienda` y `hogar` con `merge(..., validate="m:1")`.
+5. **Construye** `departamento = ubigeo[:2]`, `urbano = estrato <= 5`, `pobre = pobreza <= 2` y `pobre_extremo`.
+6. **Valida** y escribe `salidas/validacion.txt`.
+7. **Guarda** las bases y `salidas/indicadores.csv` solo si todo lo esencial pasó.
+
+**Dos bases, según la unidad de análisis.** Las cifras publicadas por el INEI usan la sumaria con `factor07 × mieperho`.
+Sexo y edad solo existen por persona, y ahí se usan los residentes habituales con `facpob07`. Cada gráfico y cada fila
+de `indicadores.csv` usa una sola base y dice cuál.
+
+| Indicador | Calculado | Referencia |
+|---|---:|---:|
+| Pobreza nacional (`factor07 × mieperho`) | 27.58 % | 27.6 % |
+| Pobreza nacional (residentes, `facpob07`) | 27.53 % | 27.6 % |
+| Pobreza urbana | 24.81 % | 24.8 % |
+| Pobreza rural | 39.30 % | 39.3 % |
+| Pobreza extrema | 5.50 % | 5.5 % |
+| Lima Metropolitana | 28.21 % | 28.2 % |
+| Residentes habituales | 108,664 | 108,664 |
+| Unidades territoriales | 25 | 25 |
+
+Las dos cifras nacionales difieren porque cubren poblaciones distintas: `mieperho` cuenta a los 109,842 miembros del
+hogar (`p204 == 1`) y los residentes habituales son 108,664. Ambas quedan a 0.1 puntos o menos de la referencia.
+
+**Por qué importa el factor.** Sin ponderar saldría 20.22 % (hogares) o 25.61 % (personas), y con `factor07` sin
+`mieperho`, 21.85 %, que es el porcentaje de hogares pobres y no de personas.
+
+[`salidas/validacion.txt`](salidas/validacion.txt) tiene 25 comprobaciones sobre lectura, llaves, unión, territorio,
+factores y pobreza. Dos ejemplos que van más allá del mínimo: la población expandida (34.5 millones) y la variable
+`pobreza`, que se reproduce en el 100 % de los hogares comparando el gasto por persona con la línea de pobreza.
+
+Si falla una comprobación esencial, el archivo marca `[FALLA]` y `RESULTADO: RECHAZADA`, no queda ninguna base procesada y
+el proceso termina con error. Las cifras de referencia solo se comparan: ningún paso las usa para ajustar un resultado.
+La validación atrapó un error real durante el desarrollo: `mieperho` llega como `int8` y `12 × mieperho` se desbordaba
+en hogares de 11 miembros o más, así que la pobreza se reproducía solo en el 99.94 % de los hogares. Se corrigió el
+cálculo, no la comprobación.
+
+### Error de muestreo
+
+`estimar.py` calcula también el error estándar según el diseño de la muestra: la UPM es `conglome` y los estratos son
+departamento × estrato, porque la Ficha Técnica describe una muestra independiente en cada departamento. Con eso, los
+gráficos separan las diferencias reales del azar de la muestra. Para Perú, el intervalo de 95 % va de 26.6 % a 28.6 %.
+
+- Un control independiente con jackknife de UPM dio errores casi iguales: 0.5055 frente a 0.5057 en Perú y 2.12 frente a
+  2.13 en Cajamarca.
+- La diferencia entre dos grupos usa su propio intervalo, porque esos grupos comparten hogares y conglomerados. El mismo
+  control dio 1.65 frente a 1.66 para mujeres y hombres en Puno.
+- Un coeficiente de variación mayor a 15 % se marca con † como cifra solo referencial. Es una regla práctica de este
+  proyecto.
+- El INEI no publica estos intervalos en los archivos usados, así que no se pudieron comparar con cifras oficiales.
+
+### `graficando-enaho`
+
+`SKILL.md` traduce el pedido a opciones de `graficar.py`: `--por`, `--indicador` y `--solo columna=valor`. El script
+escribe el título con el hallazgo, dibuja barras desde cero con su intervalo y marca en tono suave a los grupos que no se
+distinguen del total.
+
+| Figura | Hallazgo |
+|---|---|
+| [`pobreza_area.png`](figuras/pobreza_area.png) | Rural 39,3 % y urbana 24,8 %: 14,5 puntos de diferencia (IC 95 %: 12,6 a 16,4) |
+| [`pobreza_sexo.png`](figuras/pobreza_sexo.png) | Mujeres 27,7 % y hombres 27,4 %: la diferencia incluye el cero (IC 95 %: −0,3 a 0,9), no se distingue del error de muestreo |
+| [`pobreza_grupo_edad.png`](figuras/pobreza_grupo_edad.png) | Más alta entre 0 y 14 años (37,5 %) y más baja entre 45 y 59 (21,4 %) |
+| [`pobreza_departamento.png`](figuras/pobreza_departamento.png) | Frente al total nacional: 9 departamentos por encima, 9 por debajo y 7 sin diferencia distinguible |
+| [`pobreza_dominio.png`](figuras/pobreza_dominio.png) | Sierra norte 45,7 % y Costa centro 14,0 % |
+| [`pobreza_sexo_departamento-puno.png`](figuras/pobreza_sexo_departamento-puno.png) | Pedido en lenguaje natural: en Puno, mujeres 42,9 % y hombres 37,8 %, 5,1 puntos (IC 95 %: 1,9 a 8,3) |
+
+![Pobreza por área](figuras/pobreza_area.png)
+
+### `mapeando-enaho`
+
+`mapear.py` une por código, `ubigeo[:2]` con `FIRST_IDDP`, con `validate="1:1"`. Exige 25 unidades con dato y mantiene
+Lima (15) y Callao (07) separados; un recuadro muestra a los dos. Si la unión falla o una cifra se aleja de la referencia,
+termina con error y no guarda el mapa.
+
+La comparación con el archivo de la Sesión 16 está en
+[`salidas/comparacion_mapa.csv`](salidas/comparacion_mapa.csv): la diferencia máxima es 0.05 puntos (Amazonas), con una
+referencia redondeada a un decimal. Ese archivo solo se compara: las cifras del mapa salen de la base procesada.
+
+![Mapa de la pobreza](mapas/pobreza_departamento.png)
+
+### Activación y coordinación
+
+Abran `claude` **dentro de `tarea_4/`**. Las Skills se pueden llamar con `/limpiando-enaho`, `/graficando-enaho` y
+`/mapeando-enaho`, o activar con un pedido en lenguaje natural.
+
+Las demostraciones son sesiones independientes de `claude -p` con Sonnet, solo con las Skills, Read y Bash limitado a
+`uv run`. Para las de coordinación se apartaron antes las bases procesadas. Se corrieron el 6 de noviembre de 2026:
+
+```bash
+uv run mcp/demo_claude.py "Haz un mapa de la pobreza monetaria por departamento con ENAHO 2024." --modo skills --carpeta skills --nombre demo_coordinacion_mapa
+```
+
+| Demostración | Pedido | Skills activadas | Scripts, en orden | Resultado |
+|---|---|---|---|---|
+| [`demo_coordinacion_mapa`](evidencias_ia/skills/demo_coordinacion_mapa.md) | *Haz un mapa de la pobreza monetaria por departamento con ENAHO 2024.* (sin base) | `mapeando-enaho` → `limpiando-enaho` | `limpiar.py` → `mapear.py` | Mapa con 25 de 25 unidades, Cajamarca 45,0 % e Ica 6,0 % |
+| [`demo_coordinacion_grafico`](evidencias_ia/skills/demo_coordinacion_grafico.md) | *Grafica la pobreza por grupos de edad con la ENAHO 2024.* (sin base) | `graficando-enaho` → `limpiando-enaho` | `limpiar.py` → `graficar.py` | Gráfico por edad; 0-14 años, 37,5 % |
+| [`demo_natural_cifra`](evidencias_ia/skills/demo_natural_cifra.md) | *¿Cuál fue la pobreza en Cusco en 2024?* | `limpiando-enaho` | `estimar.py` | 18,5 %, igual a la referencia de la sesión |
+| [`demo_natural_grafico`](evidencias_ia/skills/demo_natural_grafico.md) | *Grafica la pobreza urbana y rural.* | `graficando-enaho` | `graficar.py` | 24,8 % y 39,3 % |
+| [`demo_directa_limpieza`](evidencias_ia/skills/demo_directa_limpieza.md) | `/limpiando-enaho 2024` (sin base) | `limpiando-enaho` | `limpiar.py` | 25 comprobaciones aprobadas |
+| [`demo_directa_grafico`](evidencias_ia/skills/demo_directa_grafico.md) | `/graficando-enaho pobreza por sexo en Puno` | `graficando-enaho` | `graficar.py` | 42,9 % y 37,8 % |
+| [`demo_directa_mapa`](evidencias_ia/skills/demo_directa_mapa.md) | `/mapeando-enaho pobreza extrema` | `mapeando-enaho` | `mapear.py` | Mapa de pobreza extrema; Claude señaló tres fallas del script |
+
+En las dos primeras, Claude abre la Skill que le pidieron, ve que falta la base, carga `limpiando-enaho` y solo entonces
+continúa: la limpieza siempre se ejecuta antes que el gráfico o el mapa.
+
+`demo_directa_mapa` encontró problemas reales, que se corrigieron después: el título se cortaba, la escala tenía solo dos
+clases y la validación pisaba la del mapa oficial, cuya comparación tampoco aplica a la pobreza extrema. Esa transcripción
+y sus quejas corresponden a la versión anterior de `mapear.py`; [`pobreza_extrema_departamento.png`](mapas/pobreza_extrema_departamento.png)
+ya es la versión corregida. Las demás demostraciones no dependen de esos cambios. Una segunda corrida completa con el
+código final se detuvo por falta de memoria en la laptop y queda pendiente.
+
+### Pruebas
+
+`uv run pytest pruebas -q` corre 20 pruebas, separadas de las 10 del MCP para que `uv run pytest` siga dando `10 passed`.
+
+| Grupo | Qué comprueba |
+|---|---|
+| Estimador | El valor y el error estándar coinciden con un cálculo a mano sobre una muestra de juguete; el peso cambia el resultado; un subgrupo conserva las UPM de fuera |
+| Datos reales | Las validaciones aprueban y se reproducen 27.58 % y 27.53 % |
+| Daños a propósito | Siete daños hacen fallar su comprobación: llaves sin ceros, factor a la mitad, sin factor, pobreza alterada, persona repetida, sin Callao y filtro equivocado |
+| Parada | Un hogar repetido rompe la unión; un módulo dañado termina en error, `RESULTADO: RECHAZADA` y sin bases, incluso si había una anterior |
+| Mapa | Une las 25 unidades; rechaza una llave sin cero y la falta de Callao; coincide con la Sesión 16 |
+| Mensajes | Sin base, pide correr `limpiando-enaho`; otro año se rechaza |
+
 ## Uso de IA
 
-El servidor, las pruebas y esta documentación se desarrollaron con Claude Code (Claude Opus 5.5). La conversación
-completa se exporta a `evidencias_ia/mcp/`.
+El servidor, las Skills, las pruebas y esta documentación se desarrollaron con Claude Code (Claude Opus 5.5). La
+conversación completa se exporta a `evidencias_ia/`. Las demostraciones están en `evidencias_ia/mcp/` y
+`evidencias_ia/skills/`.
