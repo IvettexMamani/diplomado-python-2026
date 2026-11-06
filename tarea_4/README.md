@@ -357,16 +357,15 @@ uv run mcp/demo_claude.py "Haz un mapa de la pobreza monetaria por departamento 
 | [`demo_natural_grafico`](evidencias_ia/skills/demo_natural_grafico.md) | *Grafica la pobreza urbana y rural.* | `graficando-enaho` | `graficar.py` | 24,8 % y 39,3 % |
 | [`demo_directa_limpieza`](evidencias_ia/skills/demo_directa_limpieza.md) | `/limpiando-enaho 2024` (sin base) | `limpiando-enaho` | `limpiar.py` | 25 comprobaciones aprobadas |
 | [`demo_directa_grafico`](evidencias_ia/skills/demo_directa_grafico.md) | `/graficando-enaho pobreza por sexo en Puno` | `graficando-enaho` | `graficar.py` | 42,9 % y 37,8 % |
-| [`demo_directa_mapa`](evidencias_ia/skills/demo_directa_mapa.md) | `/mapeando-enaho pobreza extrema` | `mapeando-enaho` | `mapear.py` | Mapa de pobreza extrema; Claude señaló tres fallas del script |
+| [`demo_directa_mapa`](evidencias_ia/skills/demo_directa_mapa.md) | `/mapeando-enaho pobreza extrema` | `mapeando-enaho` | `mapear.py` | Mapa de pobreza extrema con 25 unidades; aclara que la referencia de la sesión no cubre ese indicador |
 
 En las dos primeras, Claude abre la Skill que le pidieron, ve que falta la base, carga `limpiando-enaho` y solo entonces
 continúa: la limpieza siempre se ejecuta antes que el gráfico o el mapa.
 
-`demo_directa_mapa` encontró problemas reales, que se corrigieron después: el título se cortaba, la escala tenía solo dos
-clases y la validación pisaba la del mapa oficial, cuya comparación tampoco aplica a la pobreza extrema. Esa transcripción
-y sus quejas corresponden a la versión anterior de `mapear.py`; [`pobreza_extrema_departamento.png`](mapas/pobreza_extrema_departamento.png)
-ya es la versión corregida. Las demás demostraciones no dependen de esos cambios. Una segunda corrida completa con el
-código final se detuvo por falta de memoria en la laptop y queda pendiente.
+Una [primera corrida del mapa de pobreza extrema](evidencias_ia/skills/primera_corrida_demo_directa_mapa.md) encontró
+problemas reales en `mapear.py`: el título se cortaba, la escala tenía solo dos clases y la validación pisaba la del mapa
+oficial, cuya comparación tampoco aplica a la pobreza extrema. Se corrigieron y luego se repitieron las siete
+demostraciones. Las de la tabla son las de esa segunda corrida, con el código final.
 
 ### Pruebas
 
