@@ -461,7 +461,7 @@ pobreza. Ica y Lambayeque combinan mucha exportación y poca pobreza, y Piura y 
 
 [`informes/verificacion.md`](informes/verificacion.md) recalcula 13 afirmaciones de las dos fuentes por un camino
 distinto: las series mensuales del BCRP, no las anuales, y los `.dta` originales con una media ponderada propia. Las 13
-coinciden. El archivo trae además tres comprobaciones manuales con sus enlaces, las tres frases sin respaldo que se
+coinciden. El archivo trae además tres comprobaciones manuales ya hechas por la estudiante, las tres frases sin respaldo que se
 corrigieron a mano en el informe y las fallas de la primera corrida.
 
 | Evidencia | Qué muestra |
