@@ -1,0 +1,6 @@
+Validación del mapa, ENAHO 2024: Pobreza monetaria
+
+[OK   ] Unión por código FIRST_IDDP = ubigeo[:2]: 25 de 25 unidades con geometría y dato
+[OK   ] Frente a la referencia de la Sesión 16: diferencia máxima 0.05 pp (Amazonas), tolerancia 0.1 pp
+
+RESULTADO: APROBADO
