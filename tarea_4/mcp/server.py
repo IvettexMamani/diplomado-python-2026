@@ -1,10 +1,11 @@
-"""Servidor MCP del BCRP · Tarea 4, Parte 1. Adaptado del proyecto de la Sesión 04 (d2cml-ai/Data-Science-Python).
+"""Servidor MCP del BCRP · Tarea 4. Adaptado del proyecto de la Sesión 04 (d2cml-ai/Data-Science-Python).
 
     uv run pytest -q          # 10 pruebas: las 8 originales de la Sesión 04 y 2 de la herramienta propia
     uv run mcp/server.py      # el servidor, por stdio (Claude Code lo lanza solo gracias a .mcp.json)
 
-Herramientas: buscar_series, serie, resumen y correlacion (la propia). Recurso: bcrp://serie/{codigo}.
-Prompt: informe. Las cuentas las hace Python, no el modelo: así cada cifra sale de una llamada que se puede repetir.
+Herramientas: buscar_series, serie, resumen, correlacion (la propia) y guardar_series (la Parte 3: pasa los datos a los
+scripts de las Skills). Recurso: bcrp://serie/{codigo}. Prompt: informe. Las cuentas las hace Python, no el modelo: así
+cada cifra sale de una llamada que se puede repetir.
 """
 import math
 import re
@@ -26,9 +27,12 @@ CATALOGO = AQUI.parent / "datos" / "bcrp" / "catalogo_bcrp.csv"
 URL_CATALOGO = "https://estadisticas.bcrp.gob.pe/estadisticas/series/metadata"
 API = "https://estadisticas.bcrp.gob.pe/estadisticas/series/api"
 WEB = "https://estadisticas.bcrp.gob.pe/estadisticas/series"
+SALIDAS_BCRP = AQUI.parent / "salidas" / "bcrp"
 SOLO_LECTURA = {"readOnlyHint": True, "openWorldHint": True}
+ESCRIBE_ARCHIVO = {"readOnlyHint": False, "destructiveHint": False, "idempotentHint": True, "openWorldHint": True}
 TLS = truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)  # certificados del sistema: sirve detrás de antivirus o proxies
 MAX_PUNTOS = 3000   # más que esto no cabe bien en el contexto del modelo: para eso están resumen y correlacion
+MAX_SERIES = 60     # las 25 regiones y «sin ubigeo», en dos grupos de productos, caben con margen
 
 # Frecuencias del catálogo y su código de pandas, de la más fina a la más gruesa
 FRECUENCIAS = {"Diaria": "D", "Mensual": "M", "Trimestral": "Q", "Anual": "Y"}
@@ -41,9 +45,9 @@ MESES = {m: i for i, m in enumerate(
 mcp = FastMCP("bcrp", instructions=(
     "Series oficiales del Banco Central de Reserva del Perú (BCRP). Primero busca el código con buscar_series; "
     "luego usa resumen para variaciones, promedios y extremos, serie para los datos y correlacion para ver si dos "
-    "indicadores se mueven juntos. La ficha de cada serie está en el recurso bcrp://serie/{codigo}. No calcules a "
-    "mano: cita siempre el código de la serie, el periodo y la fuente (fuente_web), y no presentes una correlación "
-    "como si fuera una relación causal."))
+    "indicadores se mueven juntos. Si un script necesita los datos, usa guardar_series: no copies cifras a mano. La "
+    "ficha de cada serie está en el recurso bcrp://serie/{codigo}. No calcules a mano: cita siempre el código de la "
+    "serie, el periodo y la fuente (fuente_web), y no presentes una correlación como si fuera una relación causal."))
 
 
 def _sin_tildes(s):
@@ -390,6 +394,44 @@ def correlacion(codigo_a: str, codigo_b: str, desde: str, hasta: str | None = No
         resultado["datos"] = [{"periodo": _texto(p), "a": _r(fila.a, 6), "b": _r(fila.b, 6)}
                               for p, fila in pares.iterrows()]
     return resultado
+
+
+# ---------------------------------------------------------------------------- datos para scripts, sin copiarlos
+@mcp.tool(annotations=ESCRIBE_ARCHIVO)
+def guardar_series(codigos: list[str], desde: str, nombre: str, hasta: str | None = None) -> dict:
+    """Guarda varias series del BCRP en salidas/bcrp/{nombre}.csv para que un script o una Skill las procese.
+
+    Úsenla cuando los datos deban pasar a un script: así ninguna cifra pasa por el modelo ni se copia a mano.
+    codigos: de 1 a 60 códigos de buscar_series. desde y hasta: como en serie. nombre: minúsculas, números, _ o -.
+    El CSV tiene una fila por dato: codigo, nombre, frecuencia, periodo, valor y fuente_web.
+    Una serie sin datos en el periodo no detiene la consulta: aparece en "sin_datos" con el motivo, y esa limitación
+    hay que declararla. Devuelve "archivo", "filas", "consultado", "series" y "sin_datos". En "series", "desde" y "hasta"
+    son el tramo guardado, e "inicio_catalogo" dice desde cuándo existe la serie.
+    """
+    if not re.fullmatch(r"[a-z0-9_-]{1,60}", nombre):
+        raise ToolError(f"El nombre {nombre!r} no sirve: usen minúsculas, números, guion o guion bajo.")
+    unicos = list(dict.fromkeys(c.strip().upper() for c in codigos))
+    if not 1 <= len(unicos) <= MAX_SERIES:
+        raise ToolError(f"Recibí {len(unicos)} códigos. El máximo por archivo es {MAX_SERIES}.")
+    inicio, fin = _instante(desde, True), _instante(hasta, False)
+    filas, series, sin_datos = [], [], []
+    for codigo in unicos:
+        try:
+            ficha, s, _, web = _datos(codigo, inicio, fin)
+        except ToolError as e:
+            sin_datos.append({"codigo": codigo, "motivo": str(e)})
+            continue
+        comun = {"codigo": ficha["codigo"], "nombre": ficha["nombre"], "frecuencia": ficha["frecuencia"]}
+        filas += [comun | _punto(s, p) | {"fuente_web": web} for p in s.index]
+        series.append(comun | {"desde": _texto(s.index[0]), "hasta": _texto(s.index[-1]), "n": len(s),
+                               "inicio_catalogo": ficha["inicio"]})
+    if not filas:
+        raise ToolError(f"Ninguna serie tiene datos en ese periodo. Primer motivo: {sin_datos[0]['motivo']}")
+    SALIDAS_BCRP.mkdir(parents=True, exist_ok=True)
+    ruta = SALIDAS_BCRP / f"{nombre}.csv"
+    pd.DataFrame(filas).to_csv(ruta, index=False, encoding="utf-8")
+    return {"archivo": f"salidas/bcrp/{ruta.name}", "filas": len(filas), "consultado": date.today().isoformat(),
+            "series": series, "sin_datos": sin_datos}
 
 
 # ------------------------------------------------------------------------------------------------- recurso
