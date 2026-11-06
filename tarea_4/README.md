@@ -1,14 +1,55 @@
 # Tarea 4 · Agente de investigación socioeconómica del Perú
 
-**Pregunta guía:** ¿puede un agente de IA investigar la realidad socioeconómica peruana con datos oficiales del INEI
-(ENAHO 2024) y del BCRP, combinando servidores MCP, Skills de Claude Code y análisis reproducible?
+## Objetivo
+
+¿Puede un agente de IA investigar la realidad socioeconómica peruana con datos oficiales del INEI (ENAHO 2024) y del BCRP,
+combinando servidores MCP, Skills de Claude Code y análisis reproducible?
+
+Este proyecto construye ese agente. Claude Code planifica e interpreta, y cada cifra sale de una herramienta que se puede
+repetir: el modelo no calcula ni copia números.
 
 | Parte | Componente | Estado |
 |---|---|---|
-| 1 | Servidor MCP del BCRP (`mcp/`) | ✅ Terminada: 10 de 10 pruebas aprobadas |
-| 2 | Skills para limpiar, graficar y mapear la ENAHO (`.claude/skills/`) | ✅ Terminada: 25 validaciones aprobadas, pobreza 27,58 %, 25 de 25 unidades |
-| 3 | Integración y agente de investigación (`informes/`) | ✅ Terminada: 4 Skills y 3 herramientas MCP en una ejecución; 13 de 13 cifras verificadas |
-| 4 | Evaluación, documentación y reproducibilidad (`evaluacion/`) | Pendiente |
+| 1 | Servidor MCP del BCRP (`mcp/`) | ✅ 10 de 10 pruebas aprobadas |
+| 2 | Skills para limpiar, graficar y mapear la ENAHO (`.claude/skills/`) | ✅ 25 validaciones aprobadas, pobreza 27,58 %, 25 de 25 unidades |
+| 3 | Integración y agente de investigación (`informes/`) | ✅ 4 Skills y 3 herramientas MCP en una ejecución; 13 de 13 cifras verificadas |
+| 4 | Evaluación, documentación y reproducibilidad (`evaluacion/`) | ✅ 9 de 10 correctas con MCP y Skills, 6 de 10 sin ellos |
+
+| Se pide | Dónde está |
+|---|---|
+| 1. Objetivo | Esta sección |
+| 2. Arquitectura general | [Arquitectura general](#arquitectura-general) |
+| 3. Herramientas MCP | [Herramientas](#herramientas) |
+| 4. Las tres Skills | [Parte 2](#parte-2--skills-de-la-enaho) |
+| 5. Fuentes y enlaces de los datos | [Datos](#datos) |
+| 6. Instalación con `uv` | [Instalación](#instalación) |
+| 7. Conectar el MCP a Claude Code | [Conexión con Claude Code](#conexión-con-claude-code) |
+| 8. Reproducir el procesamiento y las pruebas | [Reproducir todo](#reproducir-todo) |
+| 9. Resultados de la evaluación | [Parte 4](#parte-4--evaluación) |
+| 10. Limitaciones y problemas | [Limitaciones y problemas encontrados](#limitaciones-y-problemas-encontrados) |
+| 11. Ejemplo de una ejecución completa | [Ejemplo de una ejecución completa](#ejemplo-de-una-ejecución-completa) |
+| 12. Evidencias del uso de IA | [Uso de IA](#uso-de-ia) |
+
+## Arquitectura general
+
+```
+                          Pregunta en lenguaje natural
+                                      │
+                               Claude Code (agente)
+                       planifica, elige e interpreta; no calcula
+                 ┌────────────────────┴────────────────────┐
+        MCP bcrp (mcp/server.py)                 Skills (.claude/skills/)
+        buscar_series · serie · resumen          limpiando-enaho ─ graficando-enaho ─ mapeando-enaho
+        correlacion · guardar_series             investigando-peru, que coordina todo
+        recurso y prompt                                   │
+                 │                                         │
+        API del BCRP ─► salidas/bcrp/*.csv ──────► microdatos del INEI ─► bases validadas
+                 └────────────────────┬────────────────────┘
+                     salidas/, figuras/, mapas/, informes/informe_final.md
+```
+
+El punto de unión es `guardar_series`: el MCP escribe los datos en un archivo y los scripts de las Skills lo leen, así que
+ninguna cifra pasa por el modelo.
 
 ## Instalación
 
@@ -27,6 +68,37 @@ usa los certificados del sistema mediante `truststore`, así que no necesita nad
 
 La primera vez, el servidor baja el catálogo oficial del BCRP (17 167 series, unos 7 MB) a `datos/bcrp/`. Git ignora
 esa carpeta, y basta con borrarla para volver a bajar el catálogo.
+
+## Reproducir todo
+
+Desde `tarea_4/`, en este orden. Los datos se descargan solos.
+
+```bash
+# Pruebas
+uv run pytest -q
+uv run pytest pruebas -q
+
+# ENAHO: limpieza, gráficos y mapa, sin Claude Code
+uv run .claude/skills/limpiando-enaho/scripts/limpiar.py
+uv run .claude/skills/graficando-enaho/scripts/graficar.py --por area
+uv run .claude/skills/graficando-enaho/scripts/graficar.py --por sexo
+uv run .claude/skills/graficando-enaho/scripts/graficar.py --por grupo_edad
+uv run .claude/skills/graficando-enaho/scripts/graficar.py --por departamento
+uv run .claude/skills/mapeando-enaho/scripts/mapear.py
+
+# Agente: necesita Claude Code. Comando completo en la Parte 3
+uv run mcp/demo_claude.py "/investigando-peru <pregunta>" --modo completo --carpeta integracion --nombre ejecucion_agente
+uv run informes/verificar.py
+
+# Evaluación: necesita Claude Code
+uv run evaluacion/construir_preguntas.py
+uv run evaluacion/evaluar.py --preparar
+uv run evaluacion/evaluar.py --modo A
+uv run evaluacion/evaluar.py --modo B
+uv run evaluacion/evaluar.py --resumir
+```
+
+En Git Bash, antepongan `MSYS_NO_PATHCONV=1` a un pedido que empiece con `/`.
 
 ## Estructura
 
@@ -51,10 +123,15 @@ tarea_4/
 ├── informes/
 │   ├── informe_final.md · plan.md   # generados por el agente
 │   └── verificacion.md · verificar.py   # comprobación independiente de las cifras
+├── evaluacion/
+│   ├── preguntas.csv · construir_preguntas.py   # 10 preguntas y respuestas esperadas
+│   ├── evaluar.py                # corre y califica los dos modos
+│   └── resultados.csv · comparacion.md   # resultados y análisis
 └── evidencias_ia/
     ├── mcp/                      # transcripciones de las demostraciones del MCP
     ├── skills/                   # transcripciones de las demostraciones de las Skills
-    └── integracion/              # la ejecución del agente, su primera corrida y el caso sin datos
+    ├── integracion/              # la ejecución del agente, su primera corrida y el caso sin datos
+    └── evaluacion/               # las 20 sesiones de la evaluación
 ```
 
 ---
@@ -234,21 +311,11 @@ en `SKILL.md`. Toda cifra, incluidos los títulos de los gráficos, sale del pro
 | ENAHO 2024, módulo 34 (sumaria) | hogar | 33,691 | [966-Modulo34.zip](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo34.zip) |
 | ENAHO 2024, módulo 02 (miembros) | persona | 117,721 | [966-Modulo02.zip](https://proyectos.inei.gob.pe/iinei/srienaho/descarga/STATA/966-Modulo02.zip) |
 | Límites departamentales | departamento | 25 | [peru_departamental_simple.geojson](https://raw.githubusercontent.com/d2cml-ai/Data-Science-Python/main/sessions/06-geoespacial/lab/Data/peru_departamental_simple.geojson) |
+| Series del BCRP | dato | 17 167 series | [BCRPData](https://estadisticas.bcrp.gob.pe/estadisticas/series/); las consulta el servidor MCP |
 
 No hay que bajar nada a mano: `limpiar.py` y `mapear.py` descargan lo que falte a `datos/`, que Git ignora. Si el portal
 del INEI no responde, el script dice dónde guardar el archivo bajado desde el navegador. Las bases procesadas tampoco se
 suben: se regeneran en segundos. Sí se suben las validaciones y los indicadores.
-
-### Reproducir todo sin Claude Code
-
-```bash
-uv run .claude/skills/limpiando-enaho/scripts/limpiar.py
-uv run .claude/skills/graficando-enaho/scripts/graficar.py --por area
-uv run .claude/skills/graficando-enaho/scripts/graficar.py --por sexo
-uv run .claude/skills/graficando-enaho/scripts/graficar.py --por grupo_edad
-uv run .claude/skills/graficando-enaho/scripts/graficar.py --por departamento
-uv run .claude/skills/mapeando-enaho/scripts/mapear.py
-```
 
 ### `limpiando-enaho`
 
@@ -429,10 +496,19 @@ uv run informes/verificar.py
 
 También se puede escribir el pedido `/investigando-peru ...` en una sesión de `claude` abierta dentro de `tarea_4/`.
 
-### Ejecución demostrable
+### Ejemplo de una ejecución completa
 
 Fue una sola sesión de `claude -p` con Sonnet, el 6 de noviembre de 2026, partiendo sin las bases procesadas: 37 turnos,
-213 segundos y US$ 0,61.
+213 segundos y US$ 0,61. [La transcripción](evidencias_ia/integracion/ejecucion_agente.md) muestra cada llamada:
+
+1. `buscar_series` encuentra las series nacionales y las 50 regionales, y el recurso `bcrp://serie/{codigo}` da su ficha.
+2. `guardar_series` deja los datos en `salidas/bcrp/`. El agente saca dos series nacionales duplicadas.
+3. Escribe `informes/plan.md`.
+4. La Skill `limpiando-enaho` corre `limpiar.py`: 25 comprobaciones aprobadas.
+5. `graficando-enaho` hace el gráfico por departamento y `mapeando-enaho`, el mapa: 25 de 25 unidades.
+6. `graficar_bcrp.py` hace el gráfico nacional y `cruzar.py`, el cruce, que suma lo mismo que el total nacional.
+7. `resumen` da la evolución de cada componente. El agente lee las pruebas de sensibilidad.
+8. Escribe `informes/informe_final.md`.
 
 | Requisito | Pedido | Logrado |
 |---|---|---|
@@ -473,8 +549,66 @@ corrigieron a mano en el informe y las fallas de la primera corrida.
 Las limitaciones principales están en la sección 6 del informe: las series regionales terminan en 2022, se comparan años
 distintos, las fichas no explican cómo se asigna cada exportación a un departamento y Lima y Callao pesan en el resultado.
 
+---
+
+## Parte 4 · Evaluación
+
+¿Mejoran las respuestas con el MCP y las Skills? Se hicieron las mismas 10 preguntas (4 del BCRP, 4 de la ENAHO y 2
+combinadas) en dos modos, con Sonnet y una sesión independiente por pregunta.
+
+**[Análisis completo](evaluacion/comparacion.md)** · [preguntas](evaluacion/preguntas.csv) ·
+[resultados](evaluacion/resultados.csv) · [20 sesiones](evidencias_ia/evaluacion/)
+
+| Modo | Herramientas | Correctas | Parciales | Sin respuesta | Incorrectas | Tiempo promedio |
+|---|---|---:|---:|---:|---:|---:|
+| A, sin MCP ni Skills | Solo búsqueda web, en una carpeta vacía | 6 | 2 | 2 | 0 | 44,6 s |
+| B, con MCP y Skills | Lo mismo, más los componentes del proyecto | 9 | 1 | 0 | 0 | 26,4 s |
+
+- **Mejoraron** P07 y P08, que requieren microdatos, y P09, donde el modo A usó una cifra equivocada de una fuente
+  secundaria. **Ninguna empeoró.**
+- **Empate en datos públicos:** el modo A también acertó las 4 preguntas del BCRP. Sabe usar la API pública y calculó dentro
+  del modelo. Acertó, pero ese cálculo no se puede repetir ni auditar.
+- **P10 falló en ambos modos:** los dos dieron el total nacional en vez del de Cajamarca. La nota no se cambió.
+- **Conclusión:** el MCP y las Skills mejoran las respuestas cuando hay que procesar datos que nadie publicó, y hacen cada
+  cifra verificable. Con 10 preguntas y una corrida no es concluyente: 3 mejoras y 0 empeoramientos dan p = 0,25.
+
+**Cómo se evitó sesgar el resultado.** Las respuestas esperadas se calcularon sin el código del proyecto y se publicaron con
+las reglas de calificación en el commit `ee0ce5c`, antes de la primera corrida. El modo A no podía leer archivos ni GitHub,
+y el modo B trabajó en una copia sin los archivos que contienen las respuestas. Ninguna de las 20 sesiones tocó esos
+archivos, y ninguna nota se corrigió a mano.
+
+---
+
+## Limitaciones y problemas encontrados
+
+**Limitaciones**
+
+- Las series regionales del BCRP terminan en 2022, y la ENAHO usada es de 2024: el cruce compara años distintos.
+- El proyecto solo cubre la ENAHO 2024, módulos 34 y 02. Educación, salud y empleo no están en la base.
+- Las fichas del BCRP no explican cómo se asigna cada exportación a un departamento.
+- Las exportaciones están en dólares corrientes: no se separa precio de volumen.
+- Con 25 departamentos y cifras muestrales, el orden entre departamentos cercanos no es seguro. Ica, Moquegua y Madre de
+  Dios tienen un coeficiente de variación mayor a 15 %.
+- La evaluación tiene 10 preguntas y una corrida por modo, y dos preguntas favorecen al proyecto por diseño.
+- Claude no es determinista: otra corrida del agente puede elegir otras series o redactar distinto.
+
+**Problemas encontrados**
+
+| Problema | Solución |
+|---|---|
+| Avast intercepta HTTPS y `httpx` rechazaba el certificado | `truststore` usa los certificados del sistema; `uv sync --system-certs` |
+| `pd.Period("2025-13")` se convertía en enero de 2026 sin avisar | Validar la fecha antes de crear el periodo |
+| `12 × mieperho` se desbordaba en `int8` en hogares de 11 miembros o más | Lo detectó la validación; se pasó a decimal |
+| El BCRP a veces responde con una página HTML cuando recibe muchas consultas | Reintentos con espera creciente |
+| Git Bash convierte `/mcp__bcrp__informe` en una ruta de Windows | `MSYS_NO_PATHCONV=1` |
+| La primera corrida del agente corrió los scripts sin invocar las Skills | `investigando-peru` exige la herramienta `Skill` |
+| Una definición parcial de agroexportaciones cambiaba la conclusión | La pregunta fija la definición y `cruzar.py` repite el cruce por producto |
+| La laptop tiene 7,5 GB de memoria y un aviso indicó que un lote se había detenido | El lote había terminado solo; se revisa el registro antes de darlo por perdido |
+
 ## Uso de IA
 
 El servidor, las Skills, las pruebas y esta documentación se desarrollaron con Claude Code (Claude Opus 5.5). La
-conversación completa se exporta a `evidencias_ia/`. Las demostraciones están en `evidencias_ia/mcp/`,
-`evidencias_ia/skills/` y `evidencias_ia/integracion/`.
+conversación completa con el asistente está en `evidencias_ia/`, y cubre el MCP, las Skills, la integración, las pruebas,
+las correcciones y el informe. Las ejecuciones de Claude Code están en `evidencias_ia/mcp/`, `evidencias_ia/skills/`,
+`evidencias_ia/integracion/` y `evidencias_ia/evaluacion/`. Antes de publicarlas se revisó que no tuvieran claves,
+contraseñas, tokens ni datos personales.
