@@ -7,7 +7,7 @@
 |---|---|---|
 | 1 | Servidor MCP del BCRP (`mcp/`) | ✅ Terminada: 10 de 10 pruebas aprobadas |
 | 2 | Skills para limpiar, graficar y mapear la ENAHO (`.claude/skills/`) | ✅ Terminada: 25 validaciones aprobadas, pobreza 27,58 %, 25 de 25 unidades |
-| 3 | Integración y agente de investigación (`informes/`) | Pendiente |
+| 3 | Integración y agente de investigación (`informes/`) | ✅ Terminada: 4 Skills y 3 herramientas MCP en una ejecución; 13 de 13 cifras verificadas |
 | 4 | Evaluación, documentación y reproducibilidad (`evaluacion/`) | Pendiente |
 
 ## Instalación
@@ -19,7 +19,7 @@ internet. No se usa ninguna clave de API.
 cd tarea_4
 uv sync                  # crea .venv con FastMCP 4, pandas, PyArrow, GeoPandas y Matplotlib (fijados en uv.lock)
 uv run pytest -q         # 10 passed: el servidor MCP
-uv run pytest pruebas -q # 20 passed: las Skills de la ENAHO
+uv run pytest pruebas -q # 31 passed: las Skills de la ENAHO y la integración
 ```
 
 Si hay un antivirus o proxy que inspecciona HTTPS (por ejemplo, Avast), usen `uv sync --system-certs`. El servidor ya
@@ -43,13 +43,18 @@ tarea_4/
 ├── .claude/skills/
 │   ├── limpiando-enaho/          # SKILL.md, reference.md, scripts/limpiar.py y scripts/estimar.py
 │   ├── graficando-enaho/         # SKILL.md y scripts/graficar.py
-│   └── mapeando-enaho/           # SKILL.md, scripts/mapear.py y referencias/ de la Sesión 16
-├── pruebas/test_skills.py        # 20 pruebas de las Skills
-├── salidas/                      # validaciones, indicadores.csv y comparacion_mapa.csv
+│   ├── mapeando-enaho/           # SKILL.md, scripts/mapear.py y referencias/ de la Sesión 16
+│   └── investigando-peru/        # SKILL.md, scripts/graficar_bcrp.py y scripts/cruzar.py
+├── pruebas/                      # test_skills.py y test_integracion.py: 31 pruebas
+├── salidas/                      # validaciones, indicadores, series del BCRP y cruce
 ├── figuras/  ·  mapas/           # gráficos y mapas generados por las Skills
+├── informes/
+│   ├── informe_final.md · plan.md   # generados por el agente
+│   └── verificacion.md · verificar.py   # comprobación independiente de las cifras
 └── evidencias_ia/
     ├── mcp/                      # transcripciones de las demostraciones del MCP
-    └── skills/                   # transcripciones de las demostraciones de las Skills
+    ├── skills/                   # transcripciones de las demostraciones de las Skills
+    └── integracion/              # la ejecución del agente, su primera corrida y el caso sin datos
 ```
 
 ---
@@ -79,6 +84,7 @@ Claude Code ──stdio──► mcp/server.py (FastMCP "bcrp")
 | `serie` | Descarga los datos de un periodo, sin los `n.d.`. Devuelve los periodos como `2025-01`, `2026-10-01`, `2025-T1` o `2025` | `codigo="PN01271PM", desde="2025-01", hasta="2025-12"` |
 | `resumen` | Calcula el primer y último dato, el cambio, la variación %, el promedio, la desviación estándar, el máximo y el mínimo (cada extremo con su periodo). Si la serie ya es una tasa, avisa que el cambio está en puntos porcentuales | `codigo="PN01273PM", desde="2025-12", hasta="2026-09"` |
 | **`correlacion`** (propia) | Calcula la correlación entre dos series, con periodos alineados, faltantes tratados y rezago opcional | `codigo_a="PN01273PM", codigo_b="PD04638PD", desde="2024-01", hasta="2025-12"` |
+| `guardar_series` (Parte 3) | Guarda hasta 60 series en `salidas/bcrp/{nombre}.csv` para que los scripts las procesen sin que ninguna cifra pase por el modelo. Informa las que no tienen datos | `codigos=["PM40050BA"], desde="2020", hasta="2024", nombre="agro_nacional"` |
 
 Todas las herramientas devuelven tres datos de procedencia:
 
@@ -152,7 +158,7 @@ servidor, y cada una hizo fallar una prueba:
 
 Abran `claude` **dentro de `tarea_4/`** y aprueben el servidor `bcrp` cuando se lo pida. Luego prueben:
 
-1. `/mcp`: muestra `bcrp` conectado, con sus 4 herramientas.
+1. `/mcp`: muestra `bcrp` conectado, con sus 5 herramientas.
 2. Una pregunta: *«¿Cuál fue la inflación de Lima a 12 meses en setiembre de 2026?»*. Claude debería llamar a
    `buscar_series` y luego a `resumen` o `serie`, en vez de calcular.
 3. El recurso: `@bcrp:bcrp://serie/PN01273PM ¿qué área del BCRP publica esta serie?`
@@ -364,7 +370,8 @@ código final se detuvo por falta de memoria en la laptop y queda pendiente.
 
 ### Pruebas
 
-`uv run pytest pruebas -q` corre 20 pruebas, separadas de las 10 del MCP para que `uv run pytest` siga dando `10 passed`.
+`pruebas/test_skills.py` tiene 20 pruebas, separadas de las 10 del MCP para que `uv run pytest` siga dando `10 passed`.
+Con las de la integración, `uv run pytest pruebas -q` da `31 passed`.
 
 | Grupo | Qué comprueba |
 |---|---|
@@ -375,8 +382,99 @@ código final se detuvo por falta de memoria en la laptop y queda pendiente.
 | Mapa | Une las 25 unidades; rechaza una llave sin cero y la falta de Callao; coincide con la Sesión 16 |
 | Mensajes | Sin base, pide correr `limpiando-enaho`; otro año se rechaza |
 
+---
+
+## Parte 3 · Agente de investigación
+
+**Pregunta:** ¿cómo evolucionaron las agroexportaciones peruanas entre 2020 y 2024, y los departamentos que más
+agroexportaban en 2022 tenían menos pobreza monetaria en 2024?
+
+El informe entiende agroexportaciones como la suma de los productos tradicionales agrícolas y los no tradicionales
+agropecuarios. La pregunta exige las dos fuentes: el BCRP mide las exportaciones y la ENAHO, la pobreza. La ENAHO no
+registra exportaciones, y el BCRP no mide pobreza.
+
+**[Informe final](informes/informe_final.md)** · [plan](informes/plan.md) · [verificación](informes/verificacion.md) ·
+[ejecución completa](evidencias_ia/integracion/ejecucion_agente.md)
+
+### Cómo funciona el agente
+
+```
+/investigando-peru <pregunta>
+  1. Plan                 informes/plan.md
+  2. MCP del BCRP         buscar_series · recurso bcrp://serie/{codigo} · resumen · guardar_series  ──► salidas/bcrp/*.csv
+  3. Skills de la ENAHO   limpiando-enaho ─► graficando-enaho ─► mapeando-enaho                     ──► bases, gráfico, mapa
+  4. Cruce                graficar_bcrp.py · cruzar.py                                              ──► salidas/, figuras/
+  5. Contraste            validaciones, referencia de la Sesión 16 y total nacional
+  6. Informe              informes/informe_final.md
+```
+
+Dos piezas se agregaron para unir ambos mundos sin copiar cifras a mano:
+
+- **`guardar_series`:** el MCP escribe los datos en un CSV, y un script los lee. Así el modelo elige las series, pero
+  ningún número pasa por él.
+- **`investigando-peru`:** la cuarta Skill coordina el trabajo. `cruzar.py` une por departamento, contrasta la suma con el
+  total nacional, compara a los 5 mayores exportadores con el resto según el diseño de la muestra y repite todo sin Lima
+  y Callao y por grupo de producto.
+
+Las series regionales del BCRP no traen ubigeo: el departamento solo aparece en su nombre. `cruzar.py` lo convierte al
+código del INEI y exige identificar las 25 unidades. `informes/verificar.py` confirma la suma derivando el departamento de
+la posición del código de cada serie, no del nombre.
+
+### Reproducir la ejecución
+
+```bash
+MSYS_NO_PATHCONV=1 uv run mcp/demo_claude.py "/investigando-peru ¿Cómo evolucionaron las agroexportaciones peruanas entre 2020 y 2024, y los departamentos que más agroexportaban en 2022 tenían menos pobreza monetaria en 2024? Entiende agroexportaciones como la suma de los productos tradicionales agrícolas y los no tradicionales agropecuarios." --modo completo --carpeta integracion --nombre ejecucion_agente
+uv run informes/verificar.py
+```
+
+También se puede escribir el pedido `/investigando-peru ...` en una sesión de `claude` abierta dentro de `tarea_4/`.
+
+### Ejecución demostrable
+
+Fue una sola sesión de `claude -p` con Sonnet, el 6 de noviembre de 2026, partiendo sin las bases procesadas: 37 turnos,
+213 segundos y US$ 0,61.
+
+| Requisito | Pedido | Logrado |
+|---|---|---|
+| Herramientas MCP distintas | Al menos 2 | 3: `buscar_series` ×4, `guardar_series` ×3 y `resumen` ×2, más el recurso ×3 |
+| Skills distintas | Al menos 2 | 4: `investigando-peru`, `limpiando-enaho`, `graficando-enaho` y `mapeando-enaho` |
+| Scripts, en orden | | `limpiar.py`, `graficar.py`, `mapear.py`, `graficar_bcrp.py` y `cruzar.py` |
+
+Durante la ejecución, el agente notó que dos series nacionales repetían los valores de otras dos y las sacó para no
+sumarlas dos veces.
+
+### Hallazgos
+
+1. **Las agroexportaciones crecieron 65,08 %:** de 7 466,5 millones de US$ en 2020 a 12 325,6 en 2024, en dólares
+   corrientes. No mide volumen.
+2. **Estaban concentradas:** en 2022, La Libertad, Lima, Ica, Piura y Lambayeque reunieron el 77,72 %.
+3. **La pobreza de esos cinco fue menor, pero el resultado no es firme:** 26,0 % frente a 29,3 % del resto, con una
+   diferencia que se distingue del error de muestreo. Sin Lima y Callao pasa a 28,1 % frente a 27,2 %, y deja de
+   distinguirse. La correlación de rangos es −0,17 (p = 0,41).
+4. **La respuesta depende de la definición:** solo con los no tradicionales hay una brecha distinguible; solo con los
+   tradicionales, no.
+
+**Conclusión del informe:** los datos no permiten afirmar que los departamentos que más agroexportaban tuvieran menos
+pobreza. Ica y Lambayeque combinan mucha exportación y poca pobreza, y Piura y Cajamarca, todo lo contrario.
+
+### Verificación y manejo de errores
+
+[`informes/verificacion.md`](informes/verificacion.md) recalcula 13 afirmaciones de las dos fuentes por un camino
+distinto: las series mensuales del BCRP, no las anuales, y los `.dta` originales con una media ponderada propia. Las 13
+coinciden. El archivo trae además tres comprobaciones manuales con sus enlaces, las tres frases sin respaldo que se
+corrigieron a mano en el informe y las fallas de la primera corrida.
+
+| Evidencia | Qué muestra |
+|---|---|
+| [`ejecucion_agente`](evidencias_ia/integracion/ejecucion_agente.md) | La ejecución final |
+| [`primera_corrida`](evidencias_ia/integracion/primera_corrida.md) y [su informe](evidencias_ia/integracion/primera_corrida_informe.md) | El primer intento, con cuatro fallas: no invocó las Skills, usó una definición parcial, hizo una afirmación sin fuente y describió mal la cobertura. Se corrigieron la Skill y `cruzar.py` |
+| [`demo_datos_inexistentes`](evidencias_ia/integracion/demo_datos_inexistentes.md) | Ante *¿cuánto agroexportó Ica en 2024, y cuál fue su pobreza en 2023?*, el agente dice que ninguno de los dos datos existe en sus fuentes y ofrece lo que sí hay, sin inventar |
+
+Las limitaciones principales están en la sección 6 del informe: las series regionales terminan en 2022, se comparan años
+distintos, las fichas no explican cómo se asigna cada exportación a un departamento y Lima y Callao pesan en el resultado.
+
 ## Uso de IA
 
 El servidor, las Skills, las pruebas y esta documentación se desarrollaron con Claude Code (Claude Opus 5.5). La
-conversación completa se exporta a `evidencias_ia/`. Las demostraciones están en `evidencias_ia/mcp/` y
-`evidencias_ia/skills/`.
+conversación completa se exporta a `evidencias_ia/`. Las demostraciones están en `evidencias_ia/mcp/`,
+`evidencias_ia/skills/` y `evidencias_ia/integracion/`.
