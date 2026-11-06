@@ -1,0 +1,174 @@
+{
+ "departamentos": 25,
+ "primeros": [
+  "La Libertad",
+  "Lima",
+  "Ica",
+  "Piura",
+  "Lambayeque"
+ ],
+ "participacion_primeros_pct": 77.72323661209037,
+ "spearman_valor": {
+  "rho": -0.17307692307692307,
+  "p_valor": 0.40532973351332435,
+  "n": 25
+ },
+ "spearman_por_habitante": {
+  "rho": -0.27615384615384614,
+  "p_valor": 0.18019099045047748,
+  "n": 25
+ },
+ "spearman_valor_sin_lima_callao": {
+  "rho": -0.25592885375494073,
+  "p_valor": 0.23633818309084545,
+  "n": 23
+ },
+ "comparacion_primeros": {
+  "grupo": {
+   "pct": 25.95544248408198,
+   "ee": 0.8451943832084563,
+   "ic95_inf": 24.298861492993407,
+   "ic95_sup": 27.612023475170556,
+   "cv_pct": 3.256328162106268,
+   "n_muestra": 10466,
+   "upm": 1743,
+   "poblacion": 17553201.29059279
+  },
+  "resto": {
+   "pct": 29.26332492165068,
+   "ee": 0.5516879309821761,
+   "ic95_inf": 28.182016576925616,
+   "ic95_sup": 30.34463326637574,
+   "cv_pct": 1.885253751784049,
+   "n_muestra": 23225,
+   "upm": 3616,
+   "poblacion": 16929498.020726085
+  },
+  "diferencia": {
+   "dif": -3.307882437568699,
+   "ee": 1.0093131915310118,
+   "ic95_inf": -5.286136292969482,
+   "ic95_sup": -1.3296285821679152,
+   "distinguible": true
+  }
+ },
+ "primeros_sin_lima_callao": [
+  "La Libertad",
+  "Ica",
+  "Piura",
+  "Lambayeque",
+  "Cajamarca"
+ ],
+ "comparacion_sin_lima_callao": {
+  "grupo": {
+   "pct": 28.134441597240183,
+   "ee": 0.8520774191913343,
+   "ic95_inf": 26.46436985562517,
+   "ic95_sup": 29.804513338855198,
+   "cv_pct": 3.028591899527581,
+   "n_muestra": 7391,
+   "upm": 1180,
+   "poblacion": 7827878.306366086
+  },
+  "resto": {
+   "pct": 27.174634772401586,
+   "ee": 0.5778462250929834,
+   "ic95_inf": 26.042056171219336,
+   "ic95_sup": 28.307213373583835,
+   "cv_pct": 2.1264176314886156,
+   "n_muestra": 20729,
+   "upm": 3235,
+   "poblacion": 14232294.397508025
+  },
+  "diferencia": {
+   "dif": 0.9598068248385994,
+   "ee": 1.0295349377995755,
+   "ic95_inf": -1.0580816532485686,
+   "ic95_sup": 2.9776953029257673,
+   "distinguible": false
+  }
+ },
+ "anio_bcrp": 2022,
+ "anio_enaho": 2024,
+ "unidad": "millones de US$",
+ "fuera_de_departamentos": 0.0,
+ "contraste_con_total_nacional": {
+  "suma_departamentos": 9721.879163,
+  "total_nacional": 9721.92,
+  "diferencia_pct": -0.0004200507718654656,
+  "coincide": true
+ },
+ "pobreza_nacional_pct": 27.579468163569082,
+ "sensibilidad_por_producto": {
+  "Productos no tradicionales - Agropecuarios": {
+   "primeros": [
+    "La Libertad",
+    "Lima",
+    "Ica",
+    "Piura",
+    "Lambayeque"
+   ],
+   "spearman_valor": {
+    "rho": -0.2553846153846154,
+    "p_valor": 0.21798910054497275,
+    "n": 25
+   },
+   "primeros_sin_lima_callao": [
+    "La Libertad",
+    "Ica",
+    "Piura",
+    "Lambayeque",
+    "Áncash"
+   ],
+   "diferencia_primeros": {
+    "dif": -3.307882437568699,
+    "ee": 1.0093131915310118,
+    "ic95_inf": -5.286136292969482,
+    "ic95_sup": -1.3296285821679152,
+    "distinguible": true
+   },
+   "diferencia_sin_lima_callao": {
+    "dif": -5.680424407797549,
+    "ee": 1.0136827538813118,
+    "ic95_inf": -7.66724260540492,
+    "ic95_sup": -3.6936062101901785,
+    "distinguible": true
+   }
+  },
+  "Productos tradicionales - Agrícolas": {
+   "primeros": [
+    "Cajamarca",
+    "Lima",
+    "Callao",
+    "Junín",
+    "Lambayeque"
+   ],
+   "spearman_valor": {
+    "rho": 0.17244038981854795,
+    "p_valor": 0.4096795160241988,
+    "n": 25
+   },
+   "primeros_sin_lima_callao": [
+    "Cajamarca",
+    "Junín",
+    "Lambayeque",
+    "La Libertad",
+    "Amazonas"
+   ],
+   "diferencia_primeros": {
+    "dif": -0.3402836289388478,
+    "ee": 1.0244601250860434,
+    "ic95_inf": -2.3482254741074926,
+    "ic95_sup": 1.6676582162297973,
+    "distinguible": false
+   },
+   "diferencia_sin_lima_callao": {
+    "dif": 0.15125042269151234,
+    "ee": 1.0827587568035504,
+    "ic95_inf": -1.9709567406434463,
+    "ic95_sup": 2.273457586026471,
+    "distinguible": false
+   }
+  }
+ }
+}
